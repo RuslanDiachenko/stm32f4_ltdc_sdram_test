@@ -44,6 +44,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ltdc.h"
+#include "sdram.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +54,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+#define BUFFER_OFFSET          ((uint32_t)0x50000)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -66,6 +68,8 @@ LTDC_HandleTypeDef hltdc;
 
 SPI_HandleTypeDef hspi5;
 
+SDRAM_HandleTypeDef hsdram1;
+
 /* USER CODE BEGIN PV */
 volatile uint32_t rgbData_g[38400] = {0x00000000};
 /* USER CODE END PV */
@@ -75,6 +79,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_SPI5_Init(void);
+static void MX_FMC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -112,13 +117,13 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-
   MX_SPI5_Init();
+  MX_FMC_Init();
   /* USER CODE BEGIN 2 */
   LCD_PowerOn();
   MX_LTDC_Init();
-
-  HAL_LTDC_SetAddress(&hltdc,(uint32_t) &rgbData_g,0);
+  SDRAM_init(&hsdram1);
+  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER,0);
 
   /* USER CODE END 2 */
 
@@ -240,11 +245,11 @@ static void MX_LTDC_Init(void)
   pLayerCfg.WindowX1 = 240;
   pLayerCfg.WindowY0 = 0;
   pLayerCfg.WindowY1 = 320;
-  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB565;
+  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_ARGB8888;
   pLayerCfg.Alpha = 255;
   pLayerCfg.Alpha0 = 0;
-  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_CA;
-  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_CA;
+  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;
+  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
   pLayerCfg.FBStartAdress = 0;
   pLayerCfg.ImageWidth = 240;
   pLayerCfg.ImageHeight = 320;
@@ -299,6 +304,41 @@ static void MX_SPI5_Init(void)
 
 }
 
+/* FMC initialization function */
+static void MX_FMC_Init(void)
+{
+  FMC_SDRAM_TimingTypeDef SdramTiming;
+
+  /** Perform the SDRAM1 memory initialization sequence
+  */
+  hsdram1.Instance = FMC_SDRAM_DEVICE;
+  /* hsdram1.Init */
+  hsdram1.Init.SDBank = FMC_SDRAM_BANK2;
+  hsdram1.Init.ColumnBitsNumber = FMC_SDRAM_COLUMN_BITS_NUM_8;
+  hsdram1.Init.RowBitsNumber = FMC_SDRAM_ROW_BITS_NUM_12;
+  hsdram1.Init.MemoryDataWidth = FMC_SDRAM_MEM_BUS_WIDTH_16;
+  hsdram1.Init.InternalBankNumber = FMC_SDRAM_INTERN_BANKS_NUM_4;
+  hsdram1.Init.CASLatency = FMC_SDRAM_CAS_LATENCY_3;
+  hsdram1.Init.WriteProtection = FMC_SDRAM_WRITE_PROTECTION_DISABLE;
+  hsdram1.Init.SDClockPeriod = FMC_SDRAM_CLOCK_PERIOD_2;
+  hsdram1.Init.ReadBurst = FMC_SDRAM_RBURST_DISABLE;
+  hsdram1.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_1;
+  /* SdramTiming */
+  SdramTiming.LoadToActiveDelay = 2;
+  SdramTiming.ExitSelfRefreshDelay = 7;
+  SdramTiming.SelfRefreshTime = 4;
+  SdramTiming.RowCycleDelay = 7;
+  SdramTiming.WriteRecoveryTime = 3;
+  SdramTiming.RPDelay = 2;
+  SdramTiming.RCDDelay = 2;
+
+  if (HAL_SDRAM_Init(&hsdram1, &SdramTiming) != HAL_OK)
+  {
+    Error_Handler( );
+  }
+
+}
+
 /**
   * @brief GPIO Initialization Function
   * @param None
@@ -313,8 +353,9 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
+  __HAL_RCC_GPIOE_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LTDC_NCS_GPIO_Port, LTDC_NCS_Pin, GPIO_PIN_SET);

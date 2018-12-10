@@ -144,12 +144,21 @@ void LCD_WriteData(uint8_t data)
 	HAL_GPIO_WritePin(LTDC_NCS_GPIO_Port, LTDC_NCS_Pin, GPIO_PIN_SET);
 }
 
-void LCD_FillScreen(uint32_t color)
+void LCD_FillScreen_565(uint32_t color)
 {
 	uint32_t n = hltdc.LayerCfg[0].ImageHeight*hltdc.LayerCfg[0].ImageWidth;
 	for(uint32_t i = 0; i < n; i++)
 	{
 		*(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*2)) = (uint16_t) color;
+	}
+}
+
+void LCD_FillScreen(uint32_t color)
+{
+	uint32_t n = hltdc.LayerCfg[0].ImageHeight*hltdc.LayerCfg[0].ImageWidth;
+	for(uint32_t i = 0; i < n; i++)
+	{
+		*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*4)) = color;
 	}
 }
 
