@@ -40,9 +40,10 @@ void LCD_WriteCommand(uint8_t com);
 void LCD_WriteData(uint8_t data);
 
 void LCD_Test(void);
+
 void LCD_FillScreen(uint32_t color);
-void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color);
-void LCD_DrawPixel(uint32_t x, uint32_t y, uint16_t color);
+void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color);
+void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color);
 void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color);
 
 #endif /* LTDC_H */

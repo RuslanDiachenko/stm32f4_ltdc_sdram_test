@@ -147,45 +147,47 @@ void LCD_WriteData(uint8_t data)
 void LCD_FillScreen(uint32_t color)
 {
 	uint32_t n = hltdc.LayerCfg[0].ImageHeight*hltdc.LayerCfg[0].ImageWidth;
-	for(uint32_t i = 0; i < n; i++)
+	for (uint32_t i = 0; i < (n); i++)
 	{
-		*(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*2)) = (uint16_t) color;
+		*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*3)) = color;
 	}
 }
 
 void LCD_Test(void)
 {
-	uint16_t color = 0x00;
+	uint32_t color = 0x00;
 	uint32_t n = hltdc.LayerCfg[0].ImageHeight*hltdc.LayerCfg[0].ImageWidth;
-	for (uint32_t i = 0; i < n; i++)
+	for (uint32_t i = 0; i < (n); i++)
 	{
-		*(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*2)) = (uint16_t) color;
+		*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*3)) = color;
 		color++;
-		if (color == 0xFFFF)
+		if (color == 0xFFFFFF)
 		{
 			color = 0x00;
 		}
 	}
 }
 
-void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint16_t color)
+void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color)
 {
 	uint32_t xPos, yPos;
 	if(x1 > x2) swap(x1, x2);
 	if(y1 > y2) swap(y1, y2);
 
-	for (yPos = y1; yPos < y2; yPos++)
+	for (yPos = y1; yPos <= y2; yPos++)
 	{
-		for (xPos = x1; xPos < x2; xPos++)
+		for (xPos = x1; xPos <= x2; xPos++)
 		{
-			*(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (2*(yPos*hltdc.LayerCfg[0].ImageWidth + xPos))) = (uint16_t) color;
+			*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(yPos*hltdc.LayerCfg[0].ImageWidth + xPos))) = color;
 		}
 	}
 }
 
-void LCD_DrawPixel(uint32_t x, uint32_t y, uint16_t color)
+//void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t );
+
+void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 {
-	*(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (2*(y*hltdc.LayerCfg[0].ImageWidth + x))) = (uint16_t) color;
+	*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))) = color;
 }
 
 void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
