@@ -54,8 +54,10 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
+#define LCD_FRAME_BUFFER       ((uint32_t *)0xD0000000)
 #define BUFFER_OFFSET          ((uint32_t)0x50000)
+
+uint32_t *ptr = LCD_FRAME_BUFFER + 1;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -71,7 +73,7 @@ SPI_HandleTypeDef hspi5;
 SDRAM_HandleTypeDef hsdram1;
 
 /* USER CODE BEGIN PV */
-volatile uint32_t rgbData_g[38400] = {0x00000000};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -120,24 +122,30 @@ int main(void)
   MX_SPI5_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
+  SDRAM_init(&hsdram1);
   LCD_PowerOn();
   MX_LTDC_Init();
-  SDRAM_init(&hsdram1);
-  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER,0);
+  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
 
+
+  LCD_FillScreen(0xFF0000);
+  HAL_Delay(2000);
+  LCD_FillScreen(0x0FF0FF);
+  HAL_Delay(1000);
+  LCD_Test();
+  HAL_Delay(1000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  LCD_FillScreen(0xF800);
+	  LCD_FillRectangle(0,0,200,200, 0xFF00FF);
+	  *ptr = 0xFFFFFF;
 	  HAL_Delay(1000);
-	  LCD_Test();
-	  HAL_Delay(1000);
-	  LCD_FillScreen(0x0);
-	  LCD_DrawLine(0, 200, 200, 0, 0xFFFF);
-	  LCD_DrawLine(100, 0, 0, 100, 0xAFF);
+	  LCD_FillScreen(0x00);
+	  LCD_DrawLine(0,0,200,200, 0xFF00);
+	  LCD_DrawLine(0,200,200,0, 0xF0F0F0);
 	  HAL_Delay(1000);
     /* USER CODE END WHILE */
 
@@ -245,11 +253,11 @@ static void MX_LTDC_Init(void)
   pLayerCfg.WindowX1 = 240;
   pLayerCfg.WindowY0 = 0;
   pLayerCfg.WindowY1 = 320;
-  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_ARGB8888;
+  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB888;
   pLayerCfg.Alpha = 255;
   pLayerCfg.Alpha0 = 0;
-  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;
-  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
+  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_CA;
+  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_CA;
   pLayerCfg.FBStartAdress = 0;
   pLayerCfg.ImageWidth = 240;
   pLayerCfg.ImageHeight = 320;
@@ -328,7 +336,7 @@ static void MX_FMC_Init(void)
   SdramTiming.ExitSelfRefreshDelay = 7;
   SdramTiming.SelfRefreshTime = 4;
   SdramTiming.RowCycleDelay = 7;
-  SdramTiming.WriteRecoveryTime = 3;
+  SdramTiming.WriteRecoveryTime = 2;
   SdramTiming.RPDelay = 2;
   SdramTiming.RCDDelay = 2;
 
