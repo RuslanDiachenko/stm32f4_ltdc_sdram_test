@@ -54,10 +54,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define LCD_FRAME_BUFFER       ((uint32_t *)0xD0000000)
+#define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
 #define BUFFER_OFFSET          ((uint32_t)0x50000)
 
-uint32_t *ptr = LCD_FRAME_BUFFER + 1;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -66,6 +65,8 @@ uint32_t *ptr = LCD_FRAME_BUFFER + 1;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+DMA2D_HandleTypeDef hdma2d;
+
 LTDC_HandleTypeDef hltdc;
 
 SPI_HandleTypeDef hspi5;
@@ -82,6 +83,7 @@ static void MX_GPIO_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_SPI5_Init(void);
 static void MX_FMC_Init(void);
+static void MX_DMA2D_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,7 +100,11 @@ static void MX_FMC_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	uint8_t *dma2d_in1;
+	uint8_t *dma2d_in2;
 
+	dma2d_in1 = (uint8_t *) ((uint32_t)(3) * LCD_FRAME_BUFFER);
+	dma2d_in2 = (uint8_t *) ((uint32_t)(4) * LCD_FRAME_BUFFER);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -121,6 +127,7 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI5_Init();
   MX_FMC_Init();
+  MX_DMA2D_Init();
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
   LCD_PowerOn();
@@ -140,13 +147,18 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  for (int i = 0; i < 50; i++)
+	  {
+		  LCD_FillScreen(0x3*i);
+	  }
+	  HAL_Delay(500);
+	  /*
 	  LCD_FillRectangle(0,0,200,200, 0xFF00FF);
-	  *ptr = 0xFFFFFF;
 	  HAL_Delay(1000);
 	  LCD_FillScreen(0x00);
 	  LCD_DrawLine(0,0,200,200, 0xFF00);
 	  LCD_DrawLine(0,200,200,0, 0xF0F0F0);
-	  HAL_Delay(1000);
+	  HAL_Delay(1000);*/
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -210,6 +222,51 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief DMA2D Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_DMA2D_Init(void)
+{
+
+  /* USER CODE BEGIN DMA2D_Init 0 */
+
+  /* USER CODE END DMA2D_Init 0 */
+
+  /* USER CODE BEGIN DMA2D_Init 1 */
+
+  /* USER CODE END DMA2D_Init 1 */
+  hdma2d.Instance = DMA2D;
+  hdma2d.Init.Mode = DMA2D_M2M_BLEND;
+  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB888;
+  hdma2d.Init.OutputOffset = 0;
+  hdma2d.LayerCfg[0].InputOffset = 0;
+  hdma2d.LayerCfg[0].InputColorMode = DMA2D_INPUT_RGB888;
+  hdma2d.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
+  hdma2d.LayerCfg[0].InputAlpha = 0;
+  hdma2d.LayerCfg[1].InputOffset = 0;
+  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB888;
+  hdma2d.LayerCfg[1].AlphaMode = DMA2D_REPLACE_ALPHA;
+  hdma2d.LayerCfg[1].InputAlpha = 0;
+  if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_DMA2D_ConfigLayer(&hdma2d, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DMA2D_Init 2 */
+
+  /* USER CODE END DMA2D_Init 2 */
+
 }
 
 /**

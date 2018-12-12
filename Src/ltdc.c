@@ -5,6 +5,7 @@
 
 extern LTDC_HandleTypeDef hltdc;
 extern SPI_HandleTypeDef hspi5;
+extern DMA2D_HandleTypeDef hdma2d;
 
 void LCD_PowerOn(void)
 {
@@ -146,11 +147,21 @@ void LCD_WriteData(uint8_t data)
 
 void LCD_FillScreen(uint32_t color)
 {
+	hdma2d.Init.Mode = DMA2D_R2M;
+	hdma2d.Init.OutputOffset = 0;
+	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+	{
+		if (HAL_DMA2D_Start(&hdma2d, color, hltdc.LayerCfg[0].FBStartAdress,
+				hltdc.LayerCfg[0].ImageWidth, hltdc.LayerCfg[0].ImageHeight) == HAL_OK)
+		{
+			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+		}
+	}/*
 	uint32_t n = hltdc.LayerCfg[0].ImageHeight*hltdc.LayerCfg[0].ImageWidth;
 	for (uint32_t i = 0; i < (n); i++)
 	{
 		*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (i*3)) = color;
-	}
+	}*/
 }
 
 void LCD_Test(void)
@@ -182,8 +193,6 @@ void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint3
 		}
 	}
 }
-
-//void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t );
 
 void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 {
