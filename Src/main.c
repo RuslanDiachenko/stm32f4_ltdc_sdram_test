@@ -141,24 +141,37 @@ int main(void)
   HAL_Delay(1000);
   LCD_Test();
   HAL_Delay(1000);
+  LCD_FillScreen(LCD_COLOR_BLACK);
+  LCD_FontsInit();
+  LCD_SetFont(&Font24);
+  LCD_SetTextColor(LCD_COLOR_YELLOW);
+  LCD_SetBackColor(LCD_COLOR_BLUE);
+  LCD_DrawChar(10, 10, (uint8_t) 'T');
+  LCD_DrawChar(27, 10, (uint8_t) 'e');
+  LCD_DrawChar(44, 10, (uint8_t) 's');
+  LCD_DrawChar(61, 10, (uint8_t) 't');
+
+  LCD_SetFont(&Font16);
+  LCD_SetBackColor(LCD_COLOR_DARKBLUE);
+  LCD_SetTextColor(LCD_COLOR_LIGHTRED);
+  LCD_DrawString(10, 30, (uint8_t *)"Left 16", LEFT_MODE);
+
+  LCD_SetFont(&Font8);
+  LCD_SetBackColor(LCD_COLOR_DARKCYAN);
+  LCD_SetTextColor(LCD_COLOR_MAGENTA);
+  LCD_DrawString(10, 50, (uint8_t *)"Right 8", RIGHT_MODE);
+
+  LCD_SetFont(&Font24);
+  LCD_SetBackColor(LCD_COLOR_BLACK);
+  LCD_SetTextColor(LCD_COLOR_CYAN);
+  LCD_DrawString(10, 100, (uint8_t *)"Center 24", CENTER_MODE);
+  HAL_Delay(2000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  for (int i = 0; i < 50; i++)
-	  {
-		  LCD_FillScreen(0x3*i);
-	  }
-	  HAL_Delay(500);
-	  /*
-	  LCD_FillRectangle(0,0,200,200, 0xFF00FF);
-	  HAL_Delay(1000);
-	  LCD_FillScreen(0x00);
-	  LCD_DrawLine(0,0,200,200, 0xFF00);
-	  LCD_DrawLine(0,200,200,0, 0xF0F0F0);
-	  HAL_Delay(1000);*/
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

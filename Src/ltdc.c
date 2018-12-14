@@ -7,6 +7,12 @@ extern LTDC_HandleTypeDef hltdc;
 extern SPI_HandleTypeDef hspi5;
 extern DMA2D_HandleTypeDef hdma2d;
 
+uint16_t X_SIZE = 240, Y_SIZE = 320;
+
+LCD_DrawPropTypeDef lcdProp;
+
+const uint8_t *ch;
+
 void LCD_PowerOn(void)
 {
 	LCD_WriteCommand(0xCA);
@@ -181,7 +187,23 @@ void LCD_Test(void)
 
 void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color)
 {
+	if(x1 > x2) swap(x1, x2);
+	if(y1 > y2) swap(y1, y2);
+
+	uint32_t addr = 0;
+	addr = (hltdc.LayerCfg[0].FBStartAdress) + 3*(y1*hltdc.LayerCfg[0].ImageWidth + x1);
+	hdma2d.Init.Mode = DMA2D_R2M;
+	hdma2d.Init.OutputOffset = hltdc.LayerCfg[0].ImageWidth-(x2-x1);
+
+	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+	{
+		if (HAL_DMA2D_Start(&hdma2d, color, addr, x2-x1, y2-y1) == HAL_OK)
+		{
+			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+		}
+	}/*
 	uint32_t xPos, yPos;
+
 	if(x1 > x2) swap(x1, x2);
 	if(y1 > y2) swap(y1, y2);
 
@@ -191,12 +213,73 @@ void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint3
 		{
 			*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(yPos*hltdc.LayerCfg[0].ImageWidth + xPos))) = color;
 		}
-	}
+	}*/
+}
+
+void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color)
+{
+    int x = -radius, y = 0, err = 2-2*radius, e2;
+    do {/*
+    	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+    	{
+    		if (HAL_DMA2D_Start(&hdma2d, color, hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos-x) + 240*(Ypos+y)))
+    				, 1, 1) == HAL_OK)
+    		{
+    			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+    		}
+    	}
+    	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+    	{
+    		if (HAL_DMA2D_Start(&hdma2d, color, hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos+x) + 240*(Ypos+y)))
+   				, 1, 1) == HAL_OK)
+    	    {
+      			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+    		}
+    	}
+    	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+    	{
+    		if (HAL_DMA2D_Start(&hdma2d, color, hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos+x) + 240*(Ypos-y)))
+    				, 1, 1) == HAL_OK)
+    		{
+    			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+    		}
+    	}
+    	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+    	{
+    		if (HAL_DMA2D_Start(&hdma2d, color, hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos-x) + 240*(Ypos-y)))
+   				, 1, 1) == HAL_OK)
+    	    {
+      			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+    		}
+    	}*/
+        *(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos-x) + 240*(Ypos+y)))) = color;
+        *(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos+x) + 240*(Ypos+y)))) = color;
+        *(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos+x) + 240*(Ypos-y)))) = color;
+        *(__IO uint16_t*) (hltdc.LayerCfg[0].FBStartAdress + (2*((Xpos-x) + 240*(Ypos-y)))) = color;
+
+        e2 = err;
+        if (e2 <= y) {
+            err += ++y*2+1;
+            if (-x == y && e2 <= x) e2 = 0;
+        }
+        if (e2 > x) err += ++x*2+1;
+    }
+    while (x <= 0);
 }
 
 void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 {
-	*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))) = color;
+	hdma2d.Init.Mode = DMA2D_R2M;
+	hdma2d.Init.OutputOffset = 0;
+	if (HAL_DMA2D_Init(&hdma2d) == HAL_OK)
+	{
+		if (HAL_DMA2D_Start(&hdma2d, color, hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))
+				, 1, 1) == HAL_OK)
+		{
+			HAL_DMA2D_PollForTransfer(&hdma2d, 10);
+		}
+	}
+	//*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))) = color;
 }
 
 void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
@@ -229,5 +312,106 @@ void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t c
 			y1 += ystep;
 			err+=dx;
 		}
+	}
+}
+
+void LCD_FontsInit(void)
+{
+	lcdProp.BackColor = LCD_COLOR_BLACK;
+	lcdProp.TextColor = LCD_COLOR_GREEN;
+	lcdProp.pFont = &Font16;
+}
+
+void LCD_SetFont(sFONT *fonts)
+{
+	lcdProp.pFont = fonts;
+}
+
+void LCD_SetTextColor(uint32_t color)
+{
+	lcdProp.TextColor = color;
+}
+
+void LCD_SetBackColor(uint32_t color)
+{
+	lcdProp.BackColor = color;
+}
+
+void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
+{
+  uint16_t height, width;
+  uint8_t offset;
+  uint8_t *pchar;
+  uint32_t line;
+
+  ch = &lcdProp.pFont->table[(c-' ') * lcdProp.pFont->Height * ((lcdProp.pFont->Width + 7) / 8)];
+  height = lcdProp.pFont->Height;
+  width = lcdProp.pFont->Width;
+  offset = 8*((width + 7)/8) - width;
+
+  for (uint32_t i = 0; i < height; i++)
+  {
+	  pchar = ((uint8_t *)ch + (width + 7)/8 * i);
+	  switch ((width + 7)/8)
+	  {
+	  	  case 1:
+	  		  line = pchar[0];
+	  		  break;
+	  	  case 2:
+	  		  line = (pchar[0] << 8) | pchar[1];
+	  		  break;
+	  	  case 3:
+	  	  default:
+	  		  line = (pchar[0]<< 16) | (pchar[1]<< 8) | pchar[2];
+	  		  break;
+	  }
+
+	  for (uint32_t j = 0; j < width; j++)
+	  {
+		  if (line & (1 << (width- j + offset- 1)))
+		  {
+			  LCD_DrawPixel((x + j), y, lcdProp.TextColor);
+		  }
+		  else
+		  {
+			  LCD_DrawPixel((x + j), y, lcdProp.BackColor);
+		  }
+	  }
+	  y++;
+  }
+}
+
+void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode)
+{
+	uint16_t ref_column = 1, i = 0;
+	uint32_t size = 0, xsize = 0;
+	uint8_t *ptr = Text;
+	while (*ptr++) size++;
+	xsize = (X_SIZE/lcdProp.pFont->Width);
+
+	switch (Mode)
+	{
+		case CENTER_MODE:
+			ref_column = Xpos + ((xsize - size) * lcdProp.pFont->Width) / 2;
+			break;
+		case RIGHT_MODE:
+			ref_column = - Xpos + ((xsize - size) * lcdProp.pFont->Width);
+			break;
+		case LEFT_MODE:
+		default:
+			ref_column = Xpos;
+			break;
+	}
+
+	if ((ref_column < 1) || (ref_column >= 0x8000))
+	{
+		ref_column = 1;
+	}
+	while ((*Text != 0) & (((X_SIZE - (i*lcdProp.pFont->Width)) & 0xFFFF) >= lcdProp.pFont->Width))
+	{
+		LCD_DrawChar(ref_column, Ypos, *Text);
+		ref_column += lcdProp.pFont->Width;
+		Text++;
+		i++;
 	}
 }
