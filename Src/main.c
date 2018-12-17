@@ -45,6 +45,7 @@
 /* USER CODE BEGIN Includes */
 #include "ltdc.h"
 #include "sdram.h"
+#include "touch.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,10 +55,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define LCD_FRAME_BUFFER       ((uint32_t *)0xD0000000)
+#define LCD_FRAME_BUFFER       ((uint32_t)0xD0000000)
 #define BUFFER_OFFSET          ((uint32_t)0x50000)
 
-uint32_t *ptr = LCD_FRAME_BUFFER + 1;
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -66,6 +66,10 @@ uint32_t *ptr = LCD_FRAME_BUFFER + 1;
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+DMA2D_HandleTypeDef hdma2d;
+
+I2C_HandleTypeDef hi2c3;
+
 LTDC_HandleTypeDef hltdc;
 
 SPI_HandleTypeDef hspi5;
@@ -82,6 +86,8 @@ static void MX_GPIO_Init(void);
 static void MX_LTDC_Init(void);
 static void MX_SPI5_Init(void);
 static void MX_FMC_Init(void);
+static void MX_DMA2D_Init(void);
+static void MX_I2C3_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,7 +104,11 @@ static void MX_FMC_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	uint8_t *dma2d_in1;
+	uint8_t *dma2d_in2;
 
+	dma2d_in1 = (uint8_t *) ((uint32_t)(3) * LCD_FRAME_BUFFER);
+	dma2d_in2 = (uint8_t *) ((uint32_t)(4) * LCD_FRAME_BUFFER);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -119,14 +129,16 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_LTDC_Init();
   MX_SPI5_Init();
   MX_FMC_Init();
+  MX_DMA2D_Init();
+  MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
   LCD_PowerOn();
-  MX_LTDC_Init();
   HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
-
+  TP_Config();
 
   LCD_FillScreen(0xFF0000);
   HAL_Delay(2000);
@@ -134,19 +146,55 @@ int main(void)
   HAL_Delay(1000);
   LCD_Test();
   HAL_Delay(1000);
+  LCD_FillScreen(LCD_COLOR_BLACK);
+  LCD_FontsInit();
+  LCD_SetFont(&Font24);
+  LCD_SetTextColor(LCD_COLOR_YELLOW);
+  LCD_SetBackColor(LCD_COLOR_BLUE);
+  LCD_DrawChar(10, 10, (uint8_t) 'T');
+  LCD_DrawChar(27, 10, (uint8_t) 'e');
+  LCD_DrawChar(44, 10, (uint8_t) 's');
+  LCD_DrawChar(61, 10, (uint8_t) 't');
+
+  LCD_SetFont(&Font16);
+  LCD_SetBackColor(LCD_COLOR_DARKBLUE);
+  LCD_SetTextColor(LCD_COLOR_LIGHTRED);
+  LCD_DrawString(10, 30, (uint8_t *)"Left 16", LEFT_MODE);
+
+  LCD_SetFont(&Font8);
+  LCD_SetBackColor(LCD_COLOR_DARKCYAN);
+  LCD_SetTextColor(LCD_COLOR_MAGENTA);
+  LCD_DrawString(10, 50, (uint8_t *)"Right 8", RIGHT_MODE);
+
+  LCD_SetFont(&Font24);
+  LCD_SetBackColor(LCD_COLOR_BLACK);
+  LCD_SetTextColor(LCD_COLOR_CYAN);
+  LCD_DrawString(10, 100, (uint8_t *)"Center 24", CENTER_MODE);
+
+  LCD_SetTextColor(LCD_COLOR_DARKMAGENTA);
+  LCD_DrawString(0, 200, (uint8_t *)"Left 24", LEFT_MODE);
+  HAL_Delay(2000);
+  LCD_SetFont(&Font20);
+  LCD_SetTextColor(LCD_COLOR_ORANGE);
+  LCD_FillScreen(0x00);
+
+  tp_state_t tp_state;
+  char str[20] = {0};
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  LCD_FillRectangle(0,0,200,200, 0xFF00FF);
-	  *ptr = 0xFFFFFF;
-	  HAL_Delay(1000);
-	  LCD_FillScreen(0x00);
-	  LCD_DrawLine(0,0,200,200, 0xFF00);
-	  LCD_DrawLine(0,200,200,0, 0xF0F0F0);
-	  HAL_Delay(1000);
+	  TP_GetState(&tp_state);
+	  if (tp_state.touchDetected)
+	  {
+		  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
+		  LCD_FillScreen(0x00);
+		  LCD_DrawString(0,20, (uint8_t*)str, CENTER_MODE);
+		  LCD_DrawCross(tp_state.x, tp_state.y, LCD_COLOR_WHITE);
+		  HAL_Delay(1);
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -204,12 +252,103 @@ void SystemClock_Config(void)
   }
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
   PeriphClkInitStruct.PLLSAI.PLLSAIN = 60;
-  PeriphClkInitStruct.PLLSAI.PLLSAIR = 5;
+  PeriphClkInitStruct.PLLSAI.PLLSAIR = 2;
   PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_4;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief DMA2D Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_DMA2D_Init(void)
+{
+
+  /* USER CODE BEGIN DMA2D_Init 0 */
+
+  /* USER CODE END DMA2D_Init 0 */
+
+  /* USER CODE BEGIN DMA2D_Init 1 */
+
+  /* USER CODE END DMA2D_Init 1 */
+  hdma2d.Instance = DMA2D;
+  hdma2d.Init.Mode = DMA2D_M2M_BLEND;
+  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB888;
+  hdma2d.Init.OutputOffset = 0;
+  hdma2d.LayerCfg[0].InputOffset = 0;
+  hdma2d.LayerCfg[0].InputColorMode = DMA2D_INPUT_RGB888;
+  hdma2d.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
+  hdma2d.LayerCfg[0].InputAlpha = 0;
+  hdma2d.LayerCfg[1].InputOffset = 0;
+  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB888;
+  hdma2d.LayerCfg[1].AlphaMode = DMA2D_REPLACE_ALPHA;
+  hdma2d.LayerCfg[1].InputAlpha = 0;
+  if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_DMA2D_ConfigLayer(&hdma2d, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DMA2D_Init 2 */
+
+  /* USER CODE END DMA2D_Init 2 */
+
+}
+
+/**
+  * @brief I2C3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_I2C3_Init(void)
+{
+
+  /* USER CODE BEGIN I2C3_Init 0 */
+
+  /* USER CODE END I2C3_Init 0 */
+
+  /* USER CODE BEGIN I2C3_Init 1 */
+
+  /* USER CODE END I2C3_Init 1 */
+  hi2c3.Instance = I2C3;
+  hi2c3.Init.ClockSpeed = 100000;
+  hi2c3.Init.DutyCycle = I2C_DUTYCYCLE_2;
+  hi2c3.Init.OwnAddress1 = 130;
+  hi2c3.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c3.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c3.Init.OwnAddress2 = 0;
+  hi2c3.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c3.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /**Configure Analogue filter 
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c3, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /**Configure Digital filter 
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c3, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C3_Init 2 */
+
+  /* USER CODE END I2C3_Init 2 */
+
 }
 
 /**
@@ -336,7 +475,7 @@ static void MX_FMC_Init(void)
   SdramTiming.ExitSelfRefreshDelay = 7;
   SdramTiming.SelfRefreshTime = 4;
   SdramTiming.RowCycleDelay = 7;
-  SdramTiming.WriteRecoveryTime = 2;
+  SdramTiming.WriteRecoveryTime = 3;
   SdramTiming.RPDelay = 2;
   SdramTiming.RCDDelay = 2;
 
@@ -384,6 +523,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(LTDC_WRX_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : TP_INT_Pin */
+  GPIO_InitStruct.Pin = TP_INT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(TP_INT_GPIO_Port, &GPIO_InitStruct);
 
 }
 
