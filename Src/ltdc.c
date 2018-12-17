@@ -282,6 +282,19 @@ void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 	//*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))) = color;
 }
 
+void LCD_DrawCross(uint32_t x, uint32_t y, uint32_t color)
+{
+	LCD_DrawPixel(x, y, color);
+	for (uint8_t i = 1; i < 4; i++)
+		LCD_DrawPixel(x+i, y, color);
+	for (uint8_t i = 1; i < 4; i++)
+		LCD_DrawPixel(x, y+i, color);
+	for (uint8_t i = 1; i < 4; i++)
+		LCD_DrawPixel(x-i, y, color);
+	for (uint8_t i = 1; i < 4; i++)
+		LCD_DrawPixel(x, y-i, color);
+}
+
 void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
 {
 	int steep = abs(y2-y1)>abs(x2-x1);

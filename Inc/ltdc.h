@@ -101,5 +101,5 @@ void LCD_SetBackColor(uint32_t color);
 void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c);
 void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
 void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color);
-
+void LCD_DrawCross(uint32_t x, uint32_t y, uint32_t color);
 #endif /* LTDC_H */

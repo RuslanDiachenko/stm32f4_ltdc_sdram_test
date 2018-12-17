@@ -45,6 +45,7 @@
 /* USER CODE BEGIN Includes */
 #include "ltdc.h"
 #include "sdram.h"
+#include "touch.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -137,7 +138,7 @@ int main(void)
   SDRAM_init(&hsdram1);
   LCD_PowerOn();
   HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
-
+  TP_Config();
 
   LCD_FillScreen(0xFF0000);
   HAL_Delay(2000);
@@ -169,13 +170,31 @@ int main(void)
   LCD_SetBackColor(LCD_COLOR_BLACK);
   LCD_SetTextColor(LCD_COLOR_CYAN);
   LCD_DrawString(10, 100, (uint8_t *)"Center 24", CENTER_MODE);
+
+  LCD_SetTextColor(LCD_COLOR_DARKMAGENTA);
+  LCD_DrawString(0, 200, (uint8_t *)"Left 24", LEFT_MODE);
   HAL_Delay(2000);
+  LCD_SetFont(&Font20);
+  LCD_SetTextColor(LCD_COLOR_ORANGE);
+  LCD_FillScreen(0x00);
+
+  tp_state_t tp_state;
+  char str[20] = {0};
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  TP_GetState(&tp_state);
+	  if (tp_state.touchDetected)
+	  {
+		  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
+		  LCD_FillScreen(0x00);
+		  LCD_DrawString(0,20, (uint8_t*)str, CENTER_MODE);
+		  LCD_DrawCross(tp_state.x, tp_state.y, LCD_COLOR_WHITE);
+		  HAL_Delay(1);
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
