@@ -127,6 +127,11 @@ void LTDC_init(void)
 
     LCD_PowerOn(); /* may not be needed */
 }
+
+void Layer_init(void)
+{
+
+}
 /*********************************************************************
 *
 *       Configuration checking
@@ -176,42 +181,17 @@ void LTDC_init(void)
 *   
 */
 void LCD_X_Config(void) {
-  //
-  // At first initialize use of multiple buffers on demand
-  //
-  #if (NUM_BUFFERS > 1)
-    GUI_MULTIBUF_Config(NUM_BUFFERS);
-  #endif
-  //
-  // Set display driver and color conversion for 1st layer
-  //
-  GUI_DEVICE_CreateAndLink(DISPLAY_DRIVER, COLOR_CONVERSION, 0, 0);
-  //
-  // Display driver configuration, required for Lin-driver
-  //
-  if (LCD_GetSwapXY()) {
-    LCD_SetSizeEx (0, YSIZE_PHYS, XSIZE_PHYS);
-    LCD_SetVSizeEx(0, YSIZE_PHYS * NUM_VSCREENS, XSIZE_PHYS);
-  } else {
-    LCD_SetSizeEx (0, XSIZE_PHYS, YSIZE_PHYS);
-    LCD_SetVSizeEx(0, XSIZE_PHYS, YSIZE_PHYS * NUM_VSCREENS);
-  }
-  LCD_SetVRAMAddrEx(0, (void *)VRAM_ADDR);
-  //
-  // Set user palette data (only required if no fixed palette is used)
-  //
-  #if defined(PALETTE)
-    LCD_SetLUTEx(0, PALETTE);
-  #endif
-  
-  //
-  // Set custom functions for several operations to optimize native processes
-  //
-  LCD_SetDevFunc(0, LCD_DEVFUNC_COPYBUFFER, (void(*)(void))CUSTOM_LCD_CopyBuffer);
-  LCD_SetDevFunc(0, LCD_DEVFUNC_COPYRECT,   (void(*)(void))CUSTOM_LCD_CopyRect);
-  LCD_SetDevFunc(0, LCD_DEVFUNC_FILLRECT, (void(*)(void))CUSTOM_LCD_FillRect);
-  LCD_SetDevFunc(0, LCD_DEVFUNC_DRAWBMP_8BPP, (void(*)(void))CUSTOM_LCD_DrawBitmap8bpp); 
-  LCD_SetDevFunc(0, LCD_DEVFUNC_DRAWBMP_16BPP, (void(*)(void))CUSTOM_LCD_DrawBitmap16bpp);
+	LTDC_init();
+
+	GUI_DEVICE_CreateAndLink(GUIDRV_LIN_32, GUICC_M8888I, 0, 0); // may change to GUICC_888
+	LCD_SetVSizeEx(0, XSIZE_PHYS, YSIZE_PHYS);
+	LCD_SetSizeEx(0, XSIZE_PHYS, YSIZE_PHYS);
+	LCD_SetVRAMAddrEx(0, (void *)FRAME_BUFFER_ADDRESS);
+	GUI_MULTIBUF_Config(NUM_BUFFERS);
+	LCD_SetDevFunc(0, LCD_DEVFUNC_COPYBUFFER, (void (*)(void)) CUSTOM_CopyBuffer);
+	LCD_SetDevFunc(0, LCD_DEVFUNC_COPYRECT, (void (*)(void)) CUSTOM_CopyRect);
+	LCD_SetDevFunc(0, LCD_DEVFUNC_FILLRECT, (void (*)(void)) CUSTOM_FillRect); //still can't dispose of bugs
+	LCD_SetDevFunc(0, LCD_DEVFUNC_DRAWBMP_32BPP, (void (*)(void)) CUSTOM_DrawBitmap32bpp);
 }
 
 /*********************************************************************
@@ -237,6 +217,7 @@ void LCD_X_Config(void) {
 */
 int LCD_X_DisplayDriver(unsigned LayerIndex, unsigned Cmd, void * pData) {
   int r;
+  int xPos, yPos;
 
   switch (Cmd) {
   case LCD_X_INITCONTROLLER: {
