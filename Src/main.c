@@ -153,14 +153,18 @@ int main(void)
   __HAL_RCC_CRC_CLK_ENABLE();
   GUI_Init();
   GUI_SetBkColor(GUI_DARKBLUE);
-  GUI_Clear();
+  GUI_Clear();/*
   GUI_SetFont(&GUI_Font8_1);
   GUI_SetTextAlign(GUI_TA_CENTER);
   GUI_SetColor(GUI_ORANGE);
   GUI_DispStringAt("STemWin", 0, 0);
   GUI_SetColor(GUI_RED);
   GUI_DrawLine(0,0,100,100);
-  GUI_FillRect(100,100,200,200);
+  GUI_FillRect(100,100,200,200);*/
+  LCD_SetColor(0xFFFFFF);
+  LCD_DrawPixel(200,200);
+  LCD_DrawPixel(0,0);
+  LCD_DrawPixel(1,1);
   /*
   LCD_FillScreen(LCD_COLOR_BLACK);
   LCD_FontsInit();
@@ -297,11 +301,11 @@ static void MX_DMA2D_Init(void)
   /* USER CODE END DMA2D_Init 1 */
   hdma2d.Instance = DMA2D;
   hdma2d.Init.Mode = DMA2D_M2M;
-  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB888;
+  hdma2d.Init.ColorMode = DMA2D_OUTPUT_ARGB8888;
   hdma2d.Init.OutputOffset = 0;
   hdma2d.LayerCfg[1].InputOffset = 0;
-  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB888;
-  hdma2d.LayerCfg[1].AlphaMode = DMA2D_NO_MODIF_ALPHA;
+  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_ARGB8888;
+  hdma2d.LayerCfg[1].AlphaMode = DMA2D_REPLACE_ALPHA;
   hdma2d.LayerCfg[1].InputAlpha = 0;
   if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
   {
