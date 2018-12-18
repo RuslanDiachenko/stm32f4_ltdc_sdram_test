@@ -104,11 +104,13 @@ static void MX_I2C3_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	/*
 	uint8_t *dma2d_in1;
 	uint8_t *dma2d_in2;
 
-	dma2d_in1 = (uint8_t *) ((uint32_t)(3) * LCD_FRAME_BUFFER);
-	dma2d_in2 = (uint8_t *) ((uint32_t)(4) * LCD_FRAME_BUFFER);
+	dma2d_in1 = (uint8_t *) ((uint32_t)(3 * BUFFER_OFFSET) + LCD_FRAME_BUFFER);
+	dma2d_in2 = (uint8_t *) ((uint32_t)(4 * BUFFER_OFFSET) + LCD_FRAME_BUFFER);
+	*/
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -140,12 +142,6 @@ int main(void)
   HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
   TP_Config();
 
-  LCD_FillScreen(0xFF0000);
-  HAL_Delay(2000);
-  LCD_FillScreen(0x0FF0FF);
-  HAL_Delay(1000);
-  LCD_Test();
-  HAL_Delay(1000);
   LCD_FillScreen(LCD_COLOR_BLACK);
   LCD_FontsInit();
   LCD_SetFont(&Font24);
@@ -186,15 +182,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  TP_GetState(&tp_state);
-	  if (tp_state.touchDetected)
+	  if (HAL_GPIO_ReadPin(TP_INT_GPIO_Port, TP_INT_Pin) == 1)
 	  {
-		  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
-		  LCD_FillScreen(0x00);
-		  LCD_DrawString(0,20, (uint8_t*)str, CENTER_MODE);
-		  LCD_DrawCross(tp_state.x, tp_state.y, LCD_COLOR_WHITE);
-		  HAL_Delay(1);
-	  }
+		  TP_GetState(&tp_state);
+		  if (tp_state.touchDetected)
+		  {
+			  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
+			  LCD_DrawString(0, 20, (uint8_t*)str, CENTER_MODE);
+			  LCD_DrawPixel(tp_state.x, tp_state.y, LCD_COLOR_LIGHTRED);
+		  }
+  	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
