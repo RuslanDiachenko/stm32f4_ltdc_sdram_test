@@ -50,6 +50,12 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
+#include "GUI.h"
+#include "ili9341.h"
+#include "HW_Init.h"
+#include "GUI_App.h"
+#include "STemwin_wrapper.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -80,10 +86,13 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LTDC_NCS_Pin GPIO_PIN_2
 #define LTDC_NCS_GPIO_Port GPIOC
+#define LTDC_RDX_Pin GPIO_PIN_12
+#define LTDC_RDX_GPIO_Port GPIOD
 #define LTDC_WRX_Pin GPIO_PIN_13
 #define LTDC_WRX_GPIO_Port GPIOD
 #define TP_INT_Pin GPIO_PIN_15
 #define TP_INT_GPIO_Port GPIOA
+void   MX_SPI5_Init(void);
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

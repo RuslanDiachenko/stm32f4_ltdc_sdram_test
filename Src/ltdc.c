@@ -9,131 +9,131 @@ extern DMA2D_HandleTypeDef hdma2d;
 
 uint16_t X_SIZE = 240, Y_SIZE = 320;
 
-LCD_DrawPropTypeDef lcdProp;
+MyLCD_DrawPropTypeDef lcdProp;
 
 const uint8_t *ch;
 
-void LCD_PowerOn(void)
+void MyLCD_PowerOn(void)
 {
-	LCD_WriteCommand(0xCA);
-	LCD_WriteData(0xC3);
-	LCD_WriteData(0x08);
-	LCD_WriteData(0x50);
-	LCD_WriteCommand(LCD_POWERB);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0xC1);
-	LCD_WriteData(0x30);
-	LCD_WriteCommand(LCD_POWER_SEQ);
-	LCD_WriteData(0x64);
-	LCD_WriteData(0x03);
-	LCD_WriteData(0x12);
-	LCD_WriteData(0x81);
-	LCD_WriteCommand(LCD_DTCA);
-	LCD_WriteData(0x85);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x78);
-	LCD_WriteCommand(LCD_POWERA);
-	LCD_WriteData(0x39);
-	LCD_WriteData(0x2C);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x34);
-	LCD_WriteData(0x02);
-	LCD_WriteCommand(LCD_PRC);
-	LCD_WriteData(0x20);
-	LCD_WriteCommand(LCD_DTCB);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x00);
-	LCD_WriteCommand(LCD_FRC);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x1B);
-	LCD_WriteCommand(LCD_DFC);
-	LCD_WriteData(0x0A);
-	LCD_WriteData(0xA2);
-	LCD_WriteCommand(LCD_POWER1);
-	LCD_WriteData(0x10);
-	LCD_WriteCommand(LCD_POWER2);
-	LCD_WriteData(0x10);
-	LCD_WriteCommand(LCD_VCOM1);
-	LCD_WriteData(0x45);
-	LCD_WriteData(0x15);
-	LCD_WriteCommand(LCD_VCOM2);
-	LCD_WriteData(0x90);
-	LCD_WriteCommand(LCD_MAC);
-	LCD_WriteData(0xC8);
-	LCD_WriteCommand(LCD_3GAMMA_EN);
-	LCD_WriteData(0x00);
-	LCD_WriteCommand(LCD_RGB_INTERFACE);
-	LCD_WriteData(0xC2);
-	LCD_WriteCommand(LCD_DFC);
-	LCD_WriteData(0x0A);
-	LCD_WriteData(0xA7);
-	LCD_WriteData(0x27);
-	LCD_WriteData(0x04);
+	MyLCD_WriteCommand(0xCA);
+	MyLCD_WriteData(0xC3);
+	MyLCD_WriteData(0x08);
+	MyLCD_WriteData(0x50);
+	MyLCD_WriteCommand(MyLCD_POWERB);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0xC1);
+	MyLCD_WriteData(0x30);
+	MyLCD_WriteCommand(MyLCD_POWER_SEQ);
+	MyLCD_WriteData(0x64);
+	MyLCD_WriteData(0x03);
+	MyLCD_WriteData(0x12);
+	MyLCD_WriteData(0x81);
+	MyLCD_WriteCommand(MyLCD_DTCA);
+	MyLCD_WriteData(0x85);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x78);
+	MyLCD_WriteCommand(MyLCD_POWERA);
+	MyLCD_WriteData(0x39);
+	MyLCD_WriteData(0x2C);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x34);
+	MyLCD_WriteData(0x02);
+	MyLCD_WriteCommand(MyLCD_PRC);
+	MyLCD_WriteData(0x20);
+	MyLCD_WriteCommand(MyLCD_DTCB);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteCommand(MyLCD_FRC);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x1B);
+	MyLCD_WriteCommand(MyLCD_DFC);
+	MyLCD_WriteData(0x0A);
+	MyLCD_WriteData(0xA2);
+	MyLCD_WriteCommand(MyLCD_POWER1);
+	MyLCD_WriteData(0x10);
+	MyLCD_WriteCommand(MyLCD_POWER2);
+	MyLCD_WriteData(0x10);
+	MyLCD_WriteCommand(MyLCD_VCOM1);
+	MyLCD_WriteData(0x45);
+	MyLCD_WriteData(0x15);
+	MyLCD_WriteCommand(MyLCD_VCOM2);
+	MyLCD_WriteData(0x90);
+	MyLCD_WriteCommand(MyLCD_MAC);
+	MyLCD_WriteData(0xC8);
+	MyLCD_WriteCommand(MyLCD_3GAMMA_EN);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteCommand(MyLCD_RGB_INTERFACE);
+	MyLCD_WriteData(0xC2);
+	MyLCD_WriteCommand(MyLCD_DFC);
+	MyLCD_WriteData(0x0A);
+	MyLCD_WriteData(0xA7);
+	MyLCD_WriteData(0x27);
+	MyLCD_WriteData(0x04);
 
 	/* colomn address set */
-	LCD_WriteCommand(LCD_COLUMN_ADDR);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0xEF);
+	MyLCD_WriteCommand(MyLCD_COLUMN_ADDR);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0xEF);
 	/* Page Address Set */
-	LCD_WriteCommand(LCD_PAGE_ADDR);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x01);
-	LCD_WriteData(0x3F);
-	LCD_WriteCommand(LCD_INTERFACE);
-	LCD_WriteData(0x01);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x06);
+	MyLCD_WriteCommand(MyLCD_PAGE_ADDR);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x01);
+	MyLCD_WriteData(0x3F);
+	MyLCD_WriteCommand(MyLCD_INTERFACE);
+	MyLCD_WriteData(0x01);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x06);
 
-	LCD_WriteCommand(LCD_GRAM);
+	MyLCD_WriteCommand(MyLCD_GRAM);
 	HAL_Delay(100);
 
-	LCD_WriteCommand(LCD_GAMMA);
-	LCD_WriteData(0x01);
+	MyLCD_WriteCommand(MyLCD_GAMMA);
+	MyLCD_WriteData(0x01);
 
-	LCD_WriteCommand(LCD_PGAMMA);
-	LCD_WriteData(0x0F);
-	LCD_WriteData(0x29);
-	LCD_WriteData(0x24);
-	LCD_WriteData(0x0C);
-	LCD_WriteData(0x0E);
-	LCD_WriteData(0x09);
-	LCD_WriteData(0x4E);
-	LCD_WriteData(0x78);
-	LCD_WriteData(0x3C);
-	LCD_WriteData(0x09);
-	LCD_WriteData(0x13);
-	LCD_WriteData(0x05);
-	LCD_WriteData(0x17);
-	LCD_WriteData(0x11);
-	LCD_WriteData(0x00);
-	LCD_WriteCommand(LCD_NGAMMA);
-	LCD_WriteData(0x00);
-	LCD_WriteData(0x16);
-	LCD_WriteData(0x1B);
-	LCD_WriteData(0x04);
-	LCD_WriteData(0x11);
-	LCD_WriteData(0x07);
-	LCD_WriteData(0x31);
-	LCD_WriteData(0x33);
-	LCD_WriteData(0x42);
-	LCD_WriteData(0x05);
-	LCD_WriteData(0x0C);
-	LCD_WriteData(0x0A);
-	LCD_WriteData(0x28);
-	LCD_WriteData(0x2F);
-	LCD_WriteData(0x0F);
+	MyLCD_WriteCommand(MyLCD_PGAMMA);
+	MyLCD_WriteData(0x0F);
+	MyLCD_WriteData(0x29);
+	MyLCD_WriteData(0x24);
+	MyLCD_WriteData(0x0C);
+	MyLCD_WriteData(0x0E);
+	MyLCD_WriteData(0x09);
+	MyLCD_WriteData(0x4E);
+	MyLCD_WriteData(0x78);
+	MyLCD_WriteData(0x3C);
+	MyLCD_WriteData(0x09);
+	MyLCD_WriteData(0x13);
+	MyLCD_WriteData(0x05);
+	MyLCD_WriteData(0x17);
+	MyLCD_WriteData(0x11);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteCommand(MyLCD_NGAMMA);
+	MyLCD_WriteData(0x00);
+	MyLCD_WriteData(0x16);
+	MyLCD_WriteData(0x1B);
+	MyLCD_WriteData(0x04);
+	MyLCD_WriteData(0x11);
+	MyLCD_WriteData(0x07);
+	MyLCD_WriteData(0x31);
+	MyLCD_WriteData(0x33);
+	MyLCD_WriteData(0x42);
+	MyLCD_WriteData(0x05);
+	MyLCD_WriteData(0x0C);
+	MyLCD_WriteData(0x0A);
+	MyLCD_WriteData(0x28);
+	MyLCD_WriteData(0x2F);
+	MyLCD_WriteData(0x0F);
 
-	LCD_WriteCommand(LCD_SLEEP_OUT);
+	MyLCD_WriteCommand(MyLCD_SLEEP_OUT);
 	HAL_Delay(100);
-	LCD_WriteCommand(LCD_DISPLAY_ON);
+	MyLCD_WriteCommand(MyLCD_DISPLAY_ON);
 	/* GRAM start writing */
-	LCD_WriteCommand(LCD_GRAM);
+	MyLCD_WriteCommand(MyLCD_GRAM);
 }
 
-void LCD_WriteCommand(uint8_t com)
+void MyLCD_WriteCommand(uint8_t com)
 {
 	uint8_t buf[2] = {com, 0};
 	HAL_GPIO_WritePin(LTDC_WRX_GPIO_Port, LTDC_WRX_Pin, GPIO_PIN_RESET);
@@ -142,7 +142,7 @@ void LCD_WriteCommand(uint8_t com)
 	HAL_GPIO_WritePin(LTDC_NCS_GPIO_Port, LTDC_NCS_Pin, GPIO_PIN_SET);
 }
 
-void LCD_WriteData(uint8_t data)
+void MyLCD_WriteData(uint8_t data)
 {
 	uint8_t buf[2] = {data, 0};
 	HAL_GPIO_WritePin(LTDC_WRX_GPIO_Port, LTDC_WRX_Pin, GPIO_PIN_SET);
@@ -151,7 +151,7 @@ void LCD_WriteData(uint8_t data)
 	HAL_GPIO_WritePin(LTDC_NCS_GPIO_Port, LTDC_NCS_Pin, GPIO_PIN_SET);
 }
 
-void LCD_FillScreen(uint32_t color)
+void MyLCD_FillScreen(uint32_t color)
 {
 	hdma2d.Init.Mode = DMA2D_R2M;
 	hdma2d.Init.OutputOffset = 0;
@@ -170,7 +170,7 @@ void LCD_FillScreen(uint32_t color)
 	}*/
 }
 
-void LCD_Test(void)
+void MyLCD_Test(void)
 {
 	uint32_t color = 0x00;
 	uint32_t n = hltdc.LayerCfg[0].ImageHeight*hltdc.LayerCfg[0].ImageWidth;
@@ -185,7 +185,7 @@ void LCD_Test(void)
 	}
 }
 
-void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color)
+void MyLCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color)
 {
 	if(x1 > x2) swap(x1, x2);
 	if(y1 > y2) swap(y1, y2);
@@ -216,7 +216,7 @@ void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint3
 	}*/
 }
 
-void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color)
+void MyLCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color)
 {
     int x = -radius, y = 0, err = 2-2*radius, e2;
     do {/*
@@ -267,7 +267,7 @@ void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t colo
     while (x <= 0);
 }
 
-void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
+void MyLCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 {
 	hdma2d.Init.Mode = DMA2D_R2M;
 	hdma2d.Init.OutputOffset = 0;
@@ -282,20 +282,20 @@ void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 	//*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))) = color;
 }
 
-void LCD_DrawCross(uint32_t x, uint32_t y, uint32_t color)
+void MyLCD_DrawCross(uint32_t x, uint32_t y, uint32_t color)
 {
-	LCD_DrawPixel(x, y, color);
+	MyLCD_DrawPixel(x, y, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x+i, y, color);
+		MyLCD_DrawPixel(x+i, y, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x, y+i, color);
+		MyLCD_DrawPixel(x, y+i, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x-i, y, color);
+		MyLCD_DrawPixel(x-i, y, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x, y-i, color);
+		MyLCD_DrawPixel(x, y-i, color);
 }
 
-void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
+void MyLCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
 {
 	int steep = abs(y2-y1)>abs(x2-x1);
 	if (steep)
@@ -317,8 +317,8 @@ void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t c
 	else  ystep = -1;
 	for (;x1<=x2;x1++)
 	{
-		if (steep) LCD_DrawPixel(y1,x1,color);
-		else LCD_DrawPixel(x1,y1,color);
+		if (steep) MyLCD_DrawPixel(y1,x1,color);
+		else MyLCD_DrawPixel(x1,y1,color);
 		err-=dy;
 		if (err<0)
 		{
@@ -328,29 +328,29 @@ void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t c
 	}
 }
 
-void LCD_FontsInit(void)
+void MyLCD_FontsInit(void)
 {
-	lcdProp.BackColor = LCD_COLOR_BLACK;
-	lcdProp.TextColor = LCD_COLOR_GREEN;
+	lcdProp.BackColor = MyLCD_COLOR_BLACK;
+	lcdProp.TextColor = MyLCD_COLOR_GREEN;
 	lcdProp.pFont = &Font16;
 }
 
-void LCD_SetFont(sFONT *fonts)
+void MyLCD_SetFont(sFONT *fonts)
 {
 	lcdProp.pFont = fonts;
 }
 
-void LCD_SetTextColor(uint32_t color)
+void MyLCD_SetTextColor(uint32_t color)
 {
 	lcdProp.TextColor = color;
 }
 
-void LCD_SetBackColor(uint32_t color)
+void MyLCD_SetBackColor(uint32_t color)
 {
 	lcdProp.BackColor = color;
 }
 
-void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
+void MyLCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
 {
   uint16_t height, width;
   uint8_t offset;
@@ -383,18 +383,18 @@ void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
 	  {
 		  if (line & (1 << (width- j + offset- 1)))
 		  {
-			  LCD_DrawPixel((x + j), y, lcdProp.TextColor);
+			  MyLCD_DrawPixel((x + j), y, lcdProp.TextColor);
 		  }
 		  else
 		  {
-			  LCD_DrawPixel((x + j), y, lcdProp.BackColor);
+			  MyLCD_DrawPixel((x + j), y, lcdProp.BackColor);
 		  }
 	  }
 	  y++;
   }
 }
 
-void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode)
+void MyLCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode)
 {
 	uint16_t ref_column = 1, i = 0;
 	uint32_t size = 0, xsize = 0;
@@ -422,7 +422,7 @@ void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeT
 	}
 	while ((*Text != 0) & (((X_SIZE - (i*lcdProp.pFont->Width)) & 0xFFFF) >= lcdProp.pFont->Width))
 	{
-		LCD_DrawChar(ref_column, Ypos, *Text);
+		MyLCD_DrawChar(ref_column, Ypos, *Text);
 		ref_column += lcdProp.pFont->Width;
 		Text++;
 		i++;

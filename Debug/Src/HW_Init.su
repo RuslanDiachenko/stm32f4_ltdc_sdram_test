@@ -1,0 +1,4 @@
+HW_Init.c:86:6:MX_LCD_Init	64	static
+HW_Init.c:141:6:MX_FMC_Init	40	static
+HW_Init.c:180:6:MX_SDRAM_InitEx	16	static
+HW_Init.c:236:6:MX_DMA2D_Init	8	static

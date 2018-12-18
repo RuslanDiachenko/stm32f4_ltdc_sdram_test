@@ -72,6 +72,8 @@
 
 /* External variables --------------------------------------------------------*/
 extern DMA2D_HandleTypeDef hdma2d;
+extern void GRAPHICS_IncTick(void);
+
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -200,6 +202,7 @@ void SysTick_Handler(void)
 
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
+  GRAPHICS_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
 
   /* USER CODE END SysTick_IRQn 1 */
