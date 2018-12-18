@@ -151,7 +151,7 @@ void LCD_WriteData(uint8_t data)
 	HAL_GPIO_WritePin(LTDC_NCS_GPIO_Port, LTDC_NCS_Pin, GPIO_PIN_SET);
 }
 
-void LCD_FillScreen(uint32_t color)
+void MyLCD_FillScreen(uint32_t color)
 {
 	hdma2d.Init.Mode = DMA2D_R2M;
 	hdma2d.Init.OutputOffset = 0;
@@ -185,13 +185,13 @@ void LCD_Test(void)
 	}
 }
 
-void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color)
+void MyLCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color)
 {
 	if(x1 > x2) swap(x1, x2);
 	if(y1 > y2) swap(y1, y2);
 
 	uint32_t addr = 0;
-	addr = (hltdc.LayerCfg[0].FBStartAdress) + 3*(y1*hltdc.LayerCfg[0].ImageWidth + x1);
+	addr = (hltdc.LayerCfg[0].FBStartAdress) + 4*(y1*hltdc.LayerCfg[0].ImageWidth + x1);
 	hdma2d.Init.Mode = DMA2D_R2M;
 	hdma2d.Init.OutputOffset = hltdc.LayerCfg[0].ImageWidth-(x2-x1);
 
@@ -216,7 +216,7 @@ void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint3
 	}*/
 }
 
-void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color)
+void MyLCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color)
 {
     int x = -radius, y = 0, err = 2-2*radius, e2;
     do {/*
@@ -267,7 +267,7 @@ void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t colo
     while (x <= 0);
 }
 
-void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
+void MyLCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 {
 	hdma2d.Init.Mode = DMA2D_R2M;
 	hdma2d.Init.OutputOffset = 0;
@@ -282,20 +282,20 @@ void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color)
 	//*(__IO uint32_t*) (hltdc.LayerCfg[0].FBStartAdress + (3*(y*hltdc.LayerCfg[0].ImageWidth + x))) = color;
 }
 
-void LCD_DrawCross(uint32_t x, uint32_t y, uint32_t color)
+void MyLCD_DrawCross(uint32_t x, uint32_t y, uint32_t color)
 {
-	LCD_DrawPixel(x, y, color);
+	MyLCD_DrawPixel(x, y, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x+i, y, color);
+		MyLCD_DrawPixel(x+i, y, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x, y+i, color);
+		MyLCD_DrawPixel(x, y+i, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x-i, y, color);
+		MyLCD_DrawPixel(x-i, y, color);
 	for (uint8_t i = 1; i < 4; i++)
-		LCD_DrawPixel(x, y-i, color);
+		MyLCD_DrawPixel(x, y-i, color);
 }
 
-void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
+void MyLCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color)
 {
 	int steep = abs(y2-y1)>abs(x2-x1);
 	if (steep)
@@ -317,8 +317,8 @@ void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t c
 	else  ystep = -1;
 	for (;x1<=x2;x1++)
 	{
-		if (steep) LCD_DrawPixel(y1,x1,color);
-		else LCD_DrawPixel(x1,y1,color);
+		if (steep) MyLCD_DrawPixel(y1,x1,color);
+		else MyLCD_DrawPixel(x1,y1,color);
 		err-=dy;
 		if (err<0)
 		{
@@ -328,29 +328,29 @@ void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t c
 	}
 }
 
-void LCD_FontsInit(void)
+void MyLCD_FontsInit(void)
 {
 	lcdProp.BackColor = LCD_COLOR_BLACK;
 	lcdProp.TextColor = LCD_COLOR_GREEN;
 	lcdProp.pFont = &Font16;
 }
 
-void LCD_SetFont(sFONT *fonts)
+void MyLCD_SetFont(sFONT *fonts)
 {
 	lcdProp.pFont = fonts;
 }
 
-void LCD_SetTextColor(uint32_t color)
+void MyLCD_SetTextColor(uint32_t color)
 {
 	lcdProp.TextColor = color;
 }
 
-void LCD_SetBackColor(uint32_t color)
+void MyLCD_SetBackColor(uint32_t color)
 {
 	lcdProp.BackColor = color;
 }
 
-void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
+void MyLCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
 {
   uint16_t height, width;
   uint8_t offset;
@@ -383,18 +383,18 @@ void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c)
 	  {
 		  if (line & (1 << (width- j + offset- 1)))
 		  {
-			  LCD_DrawPixel((x + j), y, lcdProp.TextColor);
+			  MyLCD_DrawPixel((x + j), y, lcdProp.TextColor);
 		  }
 		  else
 		  {
-			  LCD_DrawPixel((x + j), y, lcdProp.BackColor);
+			  MyLCD_DrawPixel((x + j), y, lcdProp.BackColor);
 		  }
 	  }
 	  y++;
   }
 }
 
-void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode)
+void MyLCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode)
 {
 	uint16_t ref_column = 1, i = 0;
 	uint32_t size = 0, xsize = 0;
@@ -422,7 +422,7 @@ void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeT
 	}
 	while ((*Text != 0) & (((X_SIZE - (i*lcdProp.pFont->Width)) & 0xFFFF) >= lcdProp.pFont->Width))
 	{
-		LCD_DrawChar(ref_column, Ypos, *Text);
+		MyLCD_DrawChar(ref_column, Ypos, *Text);
 		ref_column += lcdProp.pFont->Width;
 		Text++;
 		i++;

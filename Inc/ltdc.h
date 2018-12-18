@@ -88,18 +88,18 @@ void LCD_WriteData(uint8_t data);
 void LCD_Test(void);
 
 /* Primitive graphics */
-void LCD_FillScreen(uint32_t color);
-void LCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color);
-void LCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color);
-void LCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color);
+void MyLCD_FillScreen(uint32_t color);
+void MyLCD_FillRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color);
+void MyLCD_DrawPixel(uint32_t x, uint32_t y, uint32_t color);
+void MyLCD_DrawLine(uint32_t x1, uint32_t y1, uint32_t x2, uint32_t y2, uint32_t color);
 
 /* Text */
-void LCD_FontsInit(void);
-void LCD_SetFont(sFONT *fonts);
-void LCD_SetTextColor(uint32_t color);
-void LCD_SetBackColor(uint32_t color);
-void LCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c);
-void LCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
-void LCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color);
-void LCD_DrawCross(uint32_t x, uint32_t y, uint32_t color);
+void MyLCD_FontsInit(void);
+void MyLCD_SetFont(sFONT *fonts);
+void MyLCD_SetTextColor(uint32_t color);
+void MyLCD_SetBackColor(uint32_t color);
+void MyLCD_DrawChar(uint16_t x, uint16_t y, const uint8_t c);
+void MyLCD_DrawString(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
+void MyLCD_DrawCircle(uint16_t Xpos, uint16_t Ypos, uint16_t radius, uint32_t color);
+void MyLCD_DrawCross(uint32_t x, uint32_t y, uint32_t color);
 #endif /* LTDC_H */

@@ -146,14 +146,21 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
-  LCD_PowerOn();
-  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
+//  LCD_PowerOn();
+  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER,0);
   TP_Config();
 
   __HAL_RCC_CRC_CLK_ENABLE();
   GUI_Init();
   GUI_SetBkColor(GUI_DARKBLUE);
   GUI_Clear();
+  GUI_SetFont(&GUI_Font8_1);
+  GUI_SetTextAlign(GUI_TA_CENTER);
+  GUI_SetColor(GUI_ORANGE);
+  GUI_DispStringAt("STemWin", 0, 0);
+  GUI_SetColor(GUI_RED);
+  GUI_DrawLine(0,0,100,100);
+  GUI_FillRect(100,100,200,200);
   /*
   LCD_FillScreen(LCD_COLOR_BLACK);
   LCD_FontsInit();
@@ -398,11 +405,11 @@ static void MX_LTDC_Init(void)
   pLayerCfg.WindowX1 = 240;
   pLayerCfg.WindowY0 = 0;
   pLayerCfg.WindowY1 = 320;
-  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB888;
+  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_ARGB8888;
   pLayerCfg.Alpha = 255;
   pLayerCfg.Alpha0 = 0;
-  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_CA;
-  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_CA;
+  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;
+  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
   pLayerCfg.FBStartAdress = 0;
   pLayerCfg.ImageWidth = 240;
   pLayerCfg.ImageHeight = 320;

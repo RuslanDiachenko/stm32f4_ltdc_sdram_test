@@ -1,0 +1,11 @@
+LCDConf.c:102:6:LTDC_init	8	static
+LCDConf.c:131:6:Layer_init	8	static
+LCDConf.c:152:13:CUSTOM_CopyBuffer	48	static
+LCDConf.c:162:13:DMA2D_CopyBuffer	24	static
+LCDConf.c:175:13:CUSTOM_CopyRect	48	static
+LCDConf.c:183:13:CUSTOM_DrawBitmap32bpp	56	static
+LCDConf.c:240:6:LCD_X_Config	8	static
+LCDConf.c:275:5:LCD_X_DisplayDriver	48	static
+LCDConf.c:330:13:DMA2D_FillBuffer	24	static
+LCDConf.c:342:13:CUSTOM_FillRect	56	static
+LCDConf.c:352:6:HAL_LTDC_LineEventCallback	32	static

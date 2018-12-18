@@ -1,0 +1,16 @@
+ltdc.c:16:6:LCD_PowerOn	8	static
+ltdc.c:136:6:LCD_WriteCommand	24	static
+ltdc.c:145:6:LCD_WriteData	24	static
+ltdc.c:154:6:MyLCD_FillScreen	24	static
+ltdc.c:173:6:LCD_Test	24	static
+ltdc.c:188:6:MyLCD_FillRectangle	40	static
+ltdc.c:219:6:MyLCD_DrawCircle	40	static
+ltdc.c:270:6:MyLCD_DrawPixel	32	static
+ltdc.c:285:6:MyLCD_DrawCross	32	static
+ltdc.c:298:6:MyLCD_DrawLine	56	static
+ltdc.c:331:6:MyLCD_FontsInit	4	static
+ltdc.c:338:6:MyLCD_SetFont	16	static
+ltdc.c:343:6:MyLCD_SetTextColor	16	static
+ltdc.c:348:6:MyLCD_SetBackColor	16	static
+ltdc.c:353:6:MyLCD_DrawChar	40	static
+ltdc.c:397:6:MyLCD_DrawString	40	static
