@@ -1,2 +1,2 @@
-graphics.c:4:6:DrawPlay	40	static
-graphics.c:16:6:graphicsMain	16	static
+graphics.c:8:6:DrawPlay	40	static
+graphics.c:20:6:graphicsMain	24	static
