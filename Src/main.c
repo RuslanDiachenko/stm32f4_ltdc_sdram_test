@@ -94,6 +94,8 @@ static void MX_FMC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_TIM6_Init(void);
+
+extern void graphicsMain(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -146,79 +148,17 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
-//  LCD_PowerOn();
-  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER,0);
   TP_Config();
 
   __HAL_RCC_CRC_CLK_ENABLE();
   GUI_Init();
-  GUI_SetBkColor(GUI_DARKBLUE);
-  GUI_Clear();/*
-  GUI_SetFont(&GUI_Font8_1);
-  GUI_SetTextAlign(GUI_TA_CENTER);
-  GUI_SetColor(GUI_ORANGE);
-  GUI_DispStringAt("STemWin", 0, 0);
-  GUI_SetColor(GUI_RED);
-  GUI_DrawLine(0,0,100,100);
-  GUI_FillRect(100,100,200,200);*/
-  LCD_SetColor(0xFFFFFF);
-  LCD_DrawPixel(200,200);
-  LCD_DrawPixel(0,0);
-  LCD_DrawPixel(1,1);
-  /*
-  LCD_FillScreen(LCD_COLOR_BLACK);
-  LCD_FontsInit();
-  LCD_SetFont(&Font24);
-  LCD_SetTextColor(LCD_COLOR_YELLOW);
-  LCD_SetBackColor(LCD_COLOR_BLUE);
-  LCD_DrawChar(10, 10, (uint8_t) 'T');
-  LCD_DrawChar(27, 10, (uint8_t) 'e');
-  LCD_DrawChar(44, 10, (uint8_t) 's');
-  LCD_DrawChar(61, 10, (uint8_t) 't');
-
-  LCD_SetFont(&Font16);
-  LCD_SetBackColor(LCD_COLOR_DARKBLUE);
-  LCD_SetTextColor(LCD_COLOR_LIGHTRED);
-  LCD_DrawString(10, 30, (uint8_t *)"Left 16", LEFT_MODE);
-
-  LCD_SetFont(&Font8);
-  LCD_SetBackColor(LCD_COLOR_DARKCYAN);
-  LCD_SetTextColor(LCD_COLOR_MAGENTA);
-  LCD_DrawString(10, 50, (uint8_t *)"Right 8", RIGHT_MODE);
-
-  LCD_SetFont(&Font24);
-  LCD_SetBackColor(LCD_COLOR_BLACK);
-  LCD_SetTextColor(LCD_COLOR_CYAN);
-  LCD_DrawString(10, 100, (uint8_t *)"Center 24", CENTER_MODE);
-
-  LCD_SetTextColor(LCD_COLOR_DARKMAGENTA);
-  LCD_DrawString(0, 200, (uint8_t *)"Left 24", LEFT_MODE);
-  HAL_Delay(2000);
-  LCD_SetFont(&Font20);
-  LCD_SetTextColor(LCD_COLOR_ORANGE);
-  LCD_FillScreen(0x00);
-
-  tp_state_t tp_state;
-  char str[20] = {0};
-  */
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  graphicsMain();
   while (1)
   {
-	  /*
-	  if (HAL_GPIO_ReadPin(TP_INT_GPIO_Port, TP_INT_Pin) == 1)
-	  {
-		  TP_GetState(&tp_state);
-		  if (tp_state.touchDetected)
-		  {
-			  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
-			  LCD_DrawString(0, 20, (uint8_t*)str, CENTER_MODE);
-			  LCD_DrawPixel(tp_state.x, tp_state.y, LCD_COLOR_LIGHTRED);
-		  }
-  	  }
-  	  */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
