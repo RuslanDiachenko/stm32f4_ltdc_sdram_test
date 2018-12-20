@@ -96,6 +96,7 @@ static void MX_I2C3_Init(void);
 static void MX_TIM6_Init(void);
 
 extern void graphicsMain(void);
+extern void mainWindow(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -156,7 +157,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  graphicsMain();
+  //graphicsMain();
+  mainWindow();
   while (1)
   {
     /* USER CODE END WHILE */

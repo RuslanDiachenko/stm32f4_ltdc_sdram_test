@@ -1,0 +1,4 @@
+FramewinDLG.c:1055:21:_GetImageById	16	static
+FramewinDLG.c:1073:13:_cbDialog	40	static
+FramewinDLG.c:1134:9:CreateFramewin	24	static
+FramewinDLG.c:1142:6:mainWindow	16	static

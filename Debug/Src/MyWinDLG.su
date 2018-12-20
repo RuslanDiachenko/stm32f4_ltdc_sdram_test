@@ -1,0 +1,4 @@
+MyWinDLG.c:650:21:_GetImageById	16	static
+MyWinDLG.c:666:13:_cbDialog	48	static
+MyWinDLG.c:779:9:CreateMyWin	24	static
+MyWinDLG.c:786:6:mainWindow	16	static

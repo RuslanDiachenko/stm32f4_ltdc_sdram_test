@@ -1,0 +1,3 @@
+CheckBoxDLG.c:76:13:_cbDialog	32	static
+CheckBoxDLG.c:158:9:CreateCheckBox	24	static
+CheckBoxDLG.c:165:6:mainWindow	16	static
