@@ -39,6 +39,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "GUI.h"
+#include "GUI_Type.h"
+#include "touch.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -255,7 +257,25 @@ void TIM6_DAC_IRQHandler(void)
   /* USER CODE END TIM6_DAC_IRQn 0 */
   HAL_TIM_IRQHandler(&htim6);
   /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+  GUI_PID_STATE pidState;
+  tp_state_t tpState;
+  static uint8_t prevState = 0;
 
+  TP_GetState(&tpState);
+
+  if (tpState.touchDetected)
+  {
+	  pidState.Pressed = tpState.touchDetected;
+	  pidState.x = tpState.x;
+	  pidState.y = tpState.y;
+  }
+
+  if (prevState != tpState.touchDetected)
+  {
+	  prevState = tpState.touchDetected;
+	  pidState.Layer = 0;
+	  GUI_TOUCH_StoreStateEx(&pidState);
+  }
   /* USER CODE END TIM6_DAC_IRQn 1 */
 }
 

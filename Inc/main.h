@@ -86,6 +86,10 @@ void Error_Handler(void);
 #define LTDC_WRX_GPIO_Port GPIOD
 #define TP_INT_Pin GPIO_PIN_15
 #define TP_INT_GPIO_Port GPIOA
+#define LED1_Pin GPIO_PIN_13
+#define LED1_GPIO_Port GPIOG
+#define LED2_Pin GPIO_PIN_14
+#define LED2_GPIO_Port GPIOG
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

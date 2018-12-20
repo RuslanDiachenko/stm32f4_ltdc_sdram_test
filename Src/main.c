@@ -94,11 +94,8 @@ static void MX_FMC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_TIM6_Init(void);
-
-extern void graphicsMain(void);
-extern void mainWindow(void);
 /* USER CODE BEGIN PFP */
-
+extern void graphicsMain(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -150,15 +147,14 @@ int main(void)
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
   TP_Config();
-
+  //HAL_TIM_Base_Start_IT(&htim6);
   __HAL_RCC_CRC_CLK_ENABLE();
   GUI_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //graphicsMain();
-  mainWindow();
+  graphicsMain();
   while (1)
   {
     /* USER CODE END WHILE */
@@ -449,7 +445,7 @@ static void MX_TIM6_Init(void)
   htim6.Instance = TIM6;
   htim6.Init.Prescaler = 10000;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 200;
+  htim6.Init.Period = 500;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
     Error_Handler();
@@ -542,6 +538,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LTDC_WRX_GPIO_Port, LTDC_WRX_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOG, LED1_Pin|LED2_Pin, GPIO_PIN_RESET);
+
   /*Configure GPIO pin : LTDC_NCS_Pin */
   GPIO_InitStruct.Pin = LTDC_NCS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -561,6 +560,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(TP_INT_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : LED1_Pin LED2_Pin */
+  GPIO_InitStruct.Pin = LED1_Pin|LED2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
 }
 

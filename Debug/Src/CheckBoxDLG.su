@@ -1,3 +1,8 @@
-CheckBoxDLG.c:76:13:_cbDialog	32	static
-CheckBoxDLG.c:158:9:CreateCheckBox	24	static
-CheckBoxDLG.c:165:6:mainWindow	16	static
+CheckBoxDLG.c:81:13:_cbDialog	32	static
+CheckBoxDLG.c:173:9:CreateCheckBox	24	static
+CheckBoxDLG.c:206:9:MW_Create	96	static
+CheckBoxDLG.c:233:6:MYWIDGET_Callback	80	static
+CheckBoxDLG.c:316:5:MYWIDGET_GetUserData	72	static
+CheckBoxDLG.c:347:5:MYWIDGET_SetUserData	72	static
+CheckBoxDLG.c:380:6:_cbMyWidget	48	static
+CheckBoxDLG.c:400:6:mainWindow	16	static
