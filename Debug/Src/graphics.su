@@ -1,3 +1,14 @@
-graphics.c:11:6:DrawPlay	40	static
-graphics.c:23:6:drawTest	16	static
-graphics.c:150:6:graphicsMain	8	static
+graphics.c:47:6:UI_SetDefault	4	static
+graphics.c:55:6:UI_SetState	16	static
+graphics.c:63:6:UI_GetState	16	static
+graphics.c:71:13:drawAllNotActive	16	static
+graphics.c:196:13:disablePrevMode	24	static
+graphics.c:260:13:enableNextMode	24	static
+graphics.c:323:13:disablePrevZoneState	24	static
+graphics.c:514:13:enableNextZoneState	24	static
+graphics.c:687:13:enableNextZoneMode	16	static
+graphics.c:789:13:setZoneMode	24	static
+graphics.c:836:6:UI_ChangeMode	24	static
+graphics.c:859:6:UI_ChangeZoneState	24	static
+graphics.c:900:6:graphicsMain	40	static
+graphics.c:1151:6:drawTest	16	static
