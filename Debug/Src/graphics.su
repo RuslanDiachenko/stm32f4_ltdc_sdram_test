@@ -10,5 +10,5 @@ graphics.c:687:13:enableNextZoneMode	16	static
 graphics.c:789:13:setZoneMode	24	static
 graphics.c:836:6:UI_ChangeMode	24	static
 graphics.c:859:6:UI_ChangeZoneState	24	static
-graphics.c:900:6:graphicsMain	40	static
-graphics.c:1151:6:drawTest	16	static
+graphics.c:900:6:graphicsMain	24	static
+graphics.c:1039:6:drawTest	16	static

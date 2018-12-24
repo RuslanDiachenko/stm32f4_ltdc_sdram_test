@@ -899,6 +899,11 @@ void UI_ChangeZoneState(ui_zone_state_t state, uint8_t numOfZone)
 
 void graphicsMain(void)
 {
+	GUI_SetBkColor(GUI_TRANSPARENT);
+	GUI_SelectLayer(1);
+	GUI_Clear();
+	GUI_SetBkColor(GUI_TRANSPARENT);
+	GUI_SelectLayer(0);
 	tp_state_t tpState;
 	ui_state_t uiState;
 	UI_SetDefault();
@@ -909,8 +914,6 @@ void graphicsMain(void)
 	UI_ChangeZoneState(uiState.state[ZONE_TOP], ZONE_TOP);
 	UI_ChangeZoneState(uiState.state[ZONE_MID], ZONE_MID);
 	UI_ChangeZoneState(uiState.state[ZONE_BOT], ZONE_BOT);
-
-	char str[20];
 
 	while (1)
 	{
@@ -1032,122 +1035,7 @@ void graphicsMain(void)
 		*/
 	}
 }
-/*
-disablePrevZoneState(6, ZONE_BOT);
-enableNextZoneMode(1, ZONE_BOT);
-HAL_Delay(500);
-disablePrevZoneState(1, ZONE_BOT);
-enableNextZoneMode(2, ZONE_BOT);
-HAL_Delay(500);
-disablePrevZoneState(2, ZONE_BOT);
-enableNextZoneMode(3, ZONE_BOT);
-HAL_Delay(500);
-disablePrevZoneState(3, ZONE_BOT);
-enableNextZoneMode(4, ZONE_BOT);
-HAL_Delay(500);
-disablePrevZoneState(4, ZONE_BOT);
-enableNextZoneMode(5, ZONE_BOT);
-HAL_Delay(500);
-disablePrevZoneState(5, ZONE_BOT);
-enableNextZoneMode(6, ZONE_BOT);
-HAL_Delay(500);
 
-
-disablePrevZoneState(6, ZONE_TOP);
-enableNextZoneMode(1, ZONE_TOP);
-HAL_Delay(500);
-disablePrevZoneState(1, ZONE_TOP);
-enableNextZoneMode(2, ZONE_TOP);
-HAL_Delay(500);
-disablePrevZoneState(2, ZONE_TOP);
-enableNextZoneMode(3, ZONE_TOP);
-HAL_Delay(500);
-disablePrevZoneState(3, ZONE_TOP);
-enableNextZoneMode(4, ZONE_TOP);
-HAL_Delay(500);
-disablePrevZoneState(4, ZONE_TOP);
-enableNextZoneMode(5, ZONE_TOP);
-HAL_Delay(500);
-disablePrevZoneState(5, ZONE_TOP);
-enableNextZoneMode(6, ZONE_TOP);
-HAL_Delay(500);
-
-disablePrevZoneState(6, ZONE_MID);
-enableNextZoneMode(1, ZONE_MID);
-HAL_Delay(500);
-disablePrevZoneState(1, ZONE_MID);
-enableNextZoneMode(2, ZONE_MID);
-HAL_Delay(500);
-disablePrevZoneState(2, ZONE_MID);
-enableNextZoneMode(3, ZONE_MID);
-HAL_Delay(500);
-disablePrevZoneState(3, ZONE_MID);
-enableNextZoneMode(4, ZONE_MID);
-HAL_Delay(500);
-disablePrevZoneState(4, ZONE_MID);
-enableNextZoneMode(5, ZONE_MID);
-HAL_Delay(500);
-disablePrevZoneState(5, ZONE_MID);
-enableNextZoneMode(6, ZONE_MID);
-HAL_Delay(500);
-
-disablePrevZoneState(L_AUTO, ZONE_TOP);
-disablePrevZoneState(L_AUTO, ZONE_MID);
-disablePrevZoneState(L_AUTO, ZONE_BOT);
-enableNextZoneState(L_ONE, ZONE_TOP);
-enableNextZoneState(L_ONE, ZONE_MID);
-enableNextZoneState(L_ONE, ZONE_BOT);
-GUI_Delay(500);
-disablePrevZoneState(1, ZONE_TOP);
-disablePrevZoneState(1, ZONE_MID);
-disablePrevZoneState(1, ZONE_BOT);
-enableNextZoneState(2, ZONE_TOP);
-enableNextZoneState(2, ZONE_MID);
-enableNextZoneState(2, ZONE_BOT);
-GUI_Delay(500);
-disablePrevZoneState(2, ZONE_TOP);
-disablePrevZoneState(2, ZONE_MID);
-disablePrevZoneState(2, ZONE_BOT);
-enableNextZoneState(3, ZONE_TOP);
-enableNextZoneState(3, ZONE_MID);
-enableNextZoneState(3, ZONE_BOT);
-GUI_Delay(500);
-disablePrevZoneState(3, ZONE_TOP);
-disablePrevZoneState(3, ZONE_MID);
-disablePrevZoneState(3, ZONE_BOT);
-enableNextZoneState(4, ZONE_TOP);
-enableNextZoneState(4, ZONE_MID);
-enableNextZoneState(4, ZONE_BOT);
-GUI_Delay(500);
-disablePrevZoneState(4, ZONE_TOP);
-disablePrevZoneState(4, ZONE_MID);
-disablePrevZoneState(4, ZONE_BOT);
-enableNextZoneState(5, ZONE_TOP);
-enableNextZoneState(5, ZONE_MID);
-enableNextZoneState(5, ZONE_BOT);
-GUI_Delay(500);
-disablePrevZoneState(5, ZONE_TOP);
-disablePrevZoneState(5, ZONE_MID);
-disablePrevZoneState(5, ZONE_BOT);
-enableNextZoneState(6, ZONE_TOP);
-enableNextZoneState(6, ZONE_MID);
-enableNextZoneState(6, ZONE_BOT);
-GUI_Delay(500);
-*/
-/*
-uiState.mode = ALL_DIM;
-UI_ChangeState(uiState);
-GUI_Delay(500);
-uiState.mode = ALL_CLEAR;
-UI_ChangeState(uiState);
-GUI_Delay(500);
-uiState.mode = PRESENTATION;
-UI_ChangeState(uiState);
-GUI_Delay(500);
-uiState.mode = ALL_AUTO;
-UI_ChangeState(uiState);
-GUI_Delay(500);
-*/
 void drawTest(void)
 {
 
