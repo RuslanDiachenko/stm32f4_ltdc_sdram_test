@@ -40,6 +40,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -80,6 +81,8 @@ TIM_HandleTypeDef htim6;
 
 SDRAM_HandleTypeDef hsdram1;
 
+osThreadId defaultTaskHandle;
+osThreadId testTaskHandle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -94,6 +97,8 @@ static void MX_FMC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_I2C3_Init(void);
 static void MX_TIM6_Init(void);
+void StartDefaultTask(void const * argument);
+void StartTestTask(void const * argument);
 /* USER CODE BEGIN PFP */
 extern void graphicsMain(void);
 /* USER CODE END PFP */
@@ -152,9 +157,42 @@ int main(void)
   GUI_Init();
   /* USER CODE END 2 */
 
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* Create the thread(s) */
+  /* definition and creation of defaultTask */
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+
+  osThreadDef(testTask, StartTestTask, osPriorityNormal, 0, 128);
+  testTaskHandle = osThreadCreate(osThread(testTask), NULL);
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+ 
+
+  /* Start scheduler */
+  osKernelStart();
+  
+  /* We should never get here as control is now taken by the scheduler */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  graphicsMain();
+  //graphicsMain();
   while (1)
   {
     /* USER CODE END WHILE */
@@ -472,10 +510,10 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Stream2_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Stream2_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream2_IRQn);
   /* DMA1_Stream4_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Stream4_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream4_IRQn);
 
 }
@@ -573,6 +611,40 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used 
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+
+  /* USER CODE BEGIN 5 */
+	graphicsMain();
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END 5 */ 
+}
+
+void StartTestTask(void const * argument)
+{
+	osDelay(5000);
+	while (1)
+	{
+		GUI_SetColor(GUI_YELLOW);
+		GUI_FillCircle(10,10,6);
+		osDelay(500);
+		GUI_SetColor(GUI_BLACK);
+		GUI_FillCircle(10,10,6);
+		osDelay(500);
+	}
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.
