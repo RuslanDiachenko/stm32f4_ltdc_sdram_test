@@ -22,6 +22,12 @@ Archive member included to satisfy reference by file (symbol)
                               /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o) (GUI_DispString)
 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DispStringInRectEx.o)
                               /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DispString.o) (GUI_DispStringInRectEx)
+/home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+                              Src/main.o (GUI_FillRect)
+/home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o) (GL_DrawLineToEx)
+/home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o) (GL_FillPolygon)
 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
                               Middlewares/StemWin/Config/LCDConf.o (GUI_MULTIBUF_ConfirmEx)
 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_OnKey.o)
@@ -96,6 +102,10 @@ Archive member included to satisfy reference by file (symbol)
                               /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o) (LCD_API_ColorConv_0)
 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
                               /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_WriteToActiveAlpha.o) (LCD_Index2Color_8888)
+/home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o) (GUI_MoveRel)
+/home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o) (GL_DrawArc)
 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Char.o)
                               /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o) (GUI_GetYAdjust)
 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharLine.o)
@@ -184,6 +194,16 @@ Archive member included to satisfy reference by file (symbol)
                               Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.o (memset)
 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strcpy.o)
                               /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o) (strcpy)
+/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o) (ceil)
+/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o) (floor)
+/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+                              /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o) (__aeabi_dadd)
+/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_cmpdf2.o)
+                              /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o) (__aeabi_dcmpgt)
+/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_fixdfsi.o)
+                              /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o) (__aeabi_d2iz)
 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_aeabi_uldivmod.o)
                               Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o (__aeabi_uldivmod)
 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_udivmoddi4.o)
@@ -1948,6 +1968,79 @@ Discarded input sections
  .ARM.attributes
                 0x0000000000000000       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DispStringInRectEx.o)
  COMMON         0x0000000000000000        0x8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DispStringInRectEx.o)
+ .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .bss           0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawHLine
+                0x0000000000000000       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawPie
+                0x0000000000000000       0x6c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawPixel
+                0x0000000000000000       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GL_DrawPoint
+                0x0000000000000000       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawPoint
+                0x0000000000000000       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GL_DrawPolygon
+                0x0000000000000000       0x62 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawPolygon
+                0x0000000000000000       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawPolyLine
+                0x0000000000000000       0x74 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawVLine
+                0x0000000000000000       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_FillRectEx
+                0x0000000000000000       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_InvertRect
+                0x0000000000000000       0x68 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawBitmapExp
+                0x0000000000000000       0xb8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawBitmapHWAlpha
+                0x0000000000000000       0x80 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawBitmapMag
+                0x0000000000000000       0xfc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text.GUI_DrawFocusRect
+                0x0000000000000000       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+ .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .bss           0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text._SetLineColor
+                0x0000000000000000       0x90 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GUI_sin  0x0000000000000000       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GUI_cos  0x0000000000000000        0x8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GL_DrawLine1Ex
+                0x0000000000000000      0x1ac /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GL_DrawLine1
+                0x0000000000000000       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GL_DrawLineEx
+                0x0000000000000000      0x1b0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GL_DrawLine
+                0x0000000000000000       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GUI_DrawLine
+                0x0000000000000000       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GUI_DrawLineRel
+                0x0000000000000000       0x44 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GL_DrawLineToEx
+                0x0000000000000000       0x2c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GL_DrawLineTo
+                0x0000000000000000       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text.GUI_DrawLineTo
+                0x0000000000000000       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .rodata        0x0000000000000000       0x44 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .comment       0x0000000000000000       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLine.o)
+ .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .bss           0x0000000000000000       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .text._Add     0x0000000000000000       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .text.GL_FillPolygon
+                0x0000000000000000      0x1d4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .text.GUI_FillPolygon
+                0x0000000000000000       0x80 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .comment       0x0000000000000000       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_FillPolygon.o)
  .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
  .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
  .text.GUI_MULTIBUF_BeginEx
@@ -2645,6 +2738,34 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
  .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
  .bss           0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
+ .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .bss           0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .text.GUI_MoveRel
+                0x0000000000000000       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .text.GL_MoveTo
+                0x0000000000000000       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .text.GUI_MoveTo
+                0x0000000000000000       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .text.GUI_DrawRect
+                0x0000000000000000       0x90 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .text.GUI_DrawRectEx
+                0x0000000000000000       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .comment       0x0000000000000000       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_2DLib.o)
+ .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .bss           0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .text._DrawArc.isra.0
+                0x0000000000000000      0x2dc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .text.GL_DrawArc
+                0x0000000000000000      0x100 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .text.GUI_DrawArc
+                0x0000000000000000       0x58 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .comment       0x0000000000000000       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
+ .ARM.attributes
+                0x0000000000000000       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Arc.o)
  .text          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Char.o)
  .data          0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Char.o)
  .bss           0x0000000000000000        0x0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Char.o)
@@ -3275,6 +3396,38 @@ Discarded input sections
  .debug_frame   0x0000000000000000       0x20 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strcpy.o)
  .ARM.attributes
                 0x0000000000000000       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-strcpy.o)
+ .text          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+ .text.ceil     0x0000000000000000      0x108 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+ .debug_frame   0x0000000000000000       0x30 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+ .ARM.attributes
+                0x0000000000000000       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_ceil.o)
+ .text          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+ .text.floor    0x0000000000000000      0x108 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+ .debug_frame   0x0000000000000000       0x30 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+ .ARM.attributes
+                0x0000000000000000       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libm.a(lib_a-s_floor.o)
+ .text          0x0000000000000000      0x370 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000000000       0xac /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_addsubdf3.o)
+ .text          0x0000000000000000      0x110 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_cmpdf2.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_cmpdf2.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000000000000000       0xc4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_cmpdf2.o)
+ .text          0x0000000000000000       0x50 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_fixdfsi.o)
+ .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_fixdfsi.o)
+ .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000000000       0x24 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_arm_fixdfsi.o)
  .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_aeabi_uldivmod.o)
  .bss           0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_aeabi_uldivmod.o)
  .data          0x0000000000000000        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_udivmoddi4.o)
@@ -3386,7 +3539,7 @@ LOAD /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-
                 0x0000000008000000                g_pfnVectors
                 0x00000000080001ac                . = ALIGN (0x4)
 
-.text           0x00000000080001b0     0xcedc
+.text           0x00000000080001b0     0xcf44
                 0x00000000080001b0                . = ALIGN (0x4)
  *(.text)
  .text          0x00000000080001b0       0x40 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
@@ -3851,923 +4004,926 @@ LOAD /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-
  .text.main     0x000000000800714c       0xa0 Src/main.o
                 0x000000000800714c                main
  .text.StartDefaultTask
-                0x00000000080071ec       0x44 Src/main.o
+                0x00000000080071ec       0x58 Src/main.o
                 0x00000000080071ec                StartDefaultTask
  .text.SystemClock_Config
-                0x0000000008007230      0x114 Src/main.o
-                0x0000000008007230                SystemClock_Config
+                0x0000000008007244      0x114 Src/main.o
+                0x0000000008007244                SystemClock_Config
  .text.MX_I2C3_Init
-                0x0000000008007344       0x80 Src/main.o
+                0x0000000008007358       0x80 Src/main.o
  .text.MX_SPI5_Init
-                0x00000000080073c4       0x6c Src/main.o
+                0x00000000080073d8       0x6c Src/main.o
  .text.MX_FMC_Init
-                0x0000000008007430       0x90 Src/main.o
+                0x0000000008007444       0x90 Src/main.o
  .text.MX_GPIO_Init
-                0x00000000080074c0      0x15c Src/main.o
+                0x00000000080074d4      0x15c Src/main.o
  .text.Error_Handler
-                0x000000000800761c        0xe Src/main.o
-                0x000000000800761c                Error_Handler
- *fill*         0x000000000800762a        0x2 
+                0x0000000008007630        0xe Src/main.o
+                0x0000000008007630                Error_Handler
+ *fill*         0x000000000800763e        0x2 
  .text.SDRAM_init
-                0x000000000800762c       0xd0 Src/sdram.o
-                0x000000000800762c                SDRAM_init
+                0x0000000008007640       0xd0 Src/sdram.o
+                0x0000000008007640                SDRAM_init
  .text.HAL_MspInit
-                0x00000000080076fc       0x58 Src/stm32f4xx_hal_msp.o
-                0x00000000080076fc                HAL_MspInit
+                0x0000000008007710       0x58 Src/stm32f4xx_hal_msp.o
+                0x0000000008007710                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x0000000008007754       0xd4 Src/stm32f4xx_hal_msp.o
-                0x0000000008007754                HAL_I2C_MspInit
+                0x0000000008007768       0xd4 Src/stm32f4xx_hal_msp.o
+                0x0000000008007768                HAL_I2C_MspInit
  .text.HAL_FMC_MspInit
-                0x0000000008007828      0x118 Src/stm32f4xx_hal_msp.o
+                0x000000000800783c      0x118 Src/stm32f4xx_hal_msp.o
  .text.HAL_SDRAM_MspInit
-                0x0000000008007940       0x14 Src/stm32f4xx_hal_msp.o
-                0x0000000008007940                HAL_SDRAM_MspInit
+                0x0000000008007954       0x14 Src/stm32f4xx_hal_msp.o
+                0x0000000008007954                HAL_SDRAM_MspInit
  .text.NMI_Handler
-                0x0000000008007954        0xe Src/stm32f4xx_it.o
-                0x0000000008007954                NMI_Handler
+                0x0000000008007968        0xe Src/stm32f4xx_it.o
+                0x0000000008007968                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008007962        0x6 Src/stm32f4xx_it.o
-                0x0000000008007962                HardFault_Handler
+                0x0000000008007976        0x6 Src/stm32f4xx_it.o
+                0x0000000008007976                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008007968        0x6 Src/stm32f4xx_it.o
-                0x0000000008007968                MemManage_Handler
+                0x000000000800797c        0x6 Src/stm32f4xx_it.o
+                0x000000000800797c                MemManage_Handler
  .text.BusFault_Handler
-                0x000000000800796e        0x6 Src/stm32f4xx_it.o
-                0x000000000800796e                BusFault_Handler
+                0x0000000008007982        0x6 Src/stm32f4xx_it.o
+                0x0000000008007982                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008007974        0x6 Src/stm32f4xx_it.o
-                0x0000000008007974                UsageFault_Handler
+                0x0000000008007988        0x6 Src/stm32f4xx_it.o
+                0x0000000008007988                UsageFault_Handler
  .text.DebugMon_Handler
-                0x000000000800797a        0xe Src/stm32f4xx_it.o
-                0x000000000800797a                DebugMon_Handler
+                0x000000000800798e        0xe Src/stm32f4xx_it.o
+                0x000000000800798e                DebugMon_Handler
  .text.SysTick_Handler
-                0x0000000008007988       0x10 Src/stm32f4xx_it.o
-                0x0000000008007988                SysTick_Handler
+                0x000000000800799c       0x10 Src/stm32f4xx_it.o
+                0x000000000800799c                SysTick_Handler
  .text.LTDC_IRQHandler
-                0x0000000008007998       0x14 Src/stm32f4xx_it.o
-                0x0000000008007998                LTDC_IRQHandler
- .text.DMA2D_IRQHandler
                 0x00000000080079ac       0x14 Src/stm32f4xx_it.o
-                0x00000000080079ac                DMA2D_IRQHandler
+                0x00000000080079ac                LTDC_IRQHandler
+ .text.DMA2D_IRQHandler
+                0x00000000080079c0       0x14 Src/stm32f4xx_it.o
+                0x00000000080079c0                DMA2D_IRQHandler
  .text.SystemInit
-                0x00000000080079c0       0x6c Src/system_stm32f4xx.o
-                0x00000000080079c0                SystemInit
+                0x00000000080079d4       0x6c Src/system_stm32f4xx.o
+                0x00000000080079d4                SystemInit
  .text.touchReset
-                0x0000000008007a2c       0x50 Src/touch.o
- .text.fnctCmd  0x0000000008007a7c       0x8c Src/touch.o
+                0x0000000008007a40       0x50 Src/touch.o
+ .text.fnctCmd  0x0000000008007a90       0x8c Src/touch.o
  .text.ioAFConfig
-                0x0000000008007b08       0x8c Src/touch.o
+                0x0000000008007b1c       0x8c Src/touch.o
  .text.TP_Config
-                0x0000000008007b94      0x128 Src/touch.o
-                0x0000000008007b94                TP_Config
+                0x0000000008007ba8      0x128 Src/touch.o
+                0x0000000008007ba8                TP_Config
  .text.Reset_Handler
-                0x0000000008007cbc       0x50 startup/startup_stm32f429xx.o
-                0x0000000008007cbc                Reset_Handler
+                0x0000000008007cd0       0x50 startup/startup_stm32f429xx.o
+                0x0000000008007cd0                Reset_Handler
  .text.Default_Handler
-                0x0000000008007d0c        0x2 startup/startup_stm32f429xx.o
-                0x0000000008007d0c                RTC_Alarm_IRQHandler
-                0x0000000008007d0c                HASH_RNG_IRQHandler
-                0x0000000008007d0c                EXTI2_IRQHandler
-                0x0000000008007d0c                TIM8_CC_IRQHandler
-                0x0000000008007d0c                UART8_IRQHandler
-                0x0000000008007d0c                SPI4_IRQHandler
-                0x0000000008007d0c                TIM1_CC_IRQHandler
-                0x0000000008007d0c                DMA2_Stream5_IRQHandler
-                0x0000000008007d0c                DMA1_Stream5_IRQHandler
-                0x0000000008007d0c                PVD_IRQHandler
-                0x0000000008007d0c                SDIO_IRQHandler
-                0x0000000008007d0c                TAMP_STAMP_IRQHandler
-                0x0000000008007d0c                CAN2_RX1_IRQHandler
-                0x0000000008007d0c                EXTI3_IRQHandler
-                0x0000000008007d0c                TIM8_TRG_COM_TIM14_IRQHandler
-                0x0000000008007d0c                TIM1_UP_TIM10_IRQHandler
-                0x0000000008007d0c                TIM8_UP_TIM13_IRQHandler
-                0x0000000008007d0c                I2C3_ER_IRQHandler
-                0x0000000008007d0c                EXTI0_IRQHandler
-                0x0000000008007d0c                I2C2_EV_IRQHandler
-                0x0000000008007d0c                DMA1_Stream2_IRQHandler
-                0x0000000008007d0c                CAN1_RX0_IRQHandler
-                0x0000000008007d0c                FPU_IRQHandler
-                0x0000000008007d0c                OTG_HS_WKUP_IRQHandler
-                0x0000000008007d0c                LTDC_ER_IRQHandler
-                0x0000000008007d0c                CAN2_SCE_IRQHandler
-                0x0000000008007d0c                DMA2_Stream2_IRQHandler
-                0x0000000008007d0c                SPI1_IRQHandler
-                0x0000000008007d0c                TIM6_DAC_IRQHandler
-                0x0000000008007d0c                TIM1_BRK_TIM9_IRQHandler
-                0x0000000008007d0c                DCMI_IRQHandler
-                0x0000000008007d0c                CAN2_RX0_IRQHandler
-                0x0000000008007d0c                DMA2_Stream3_IRQHandler
-                0x0000000008007d0c                USART6_IRQHandler
-                0x0000000008007d0c                USART3_IRQHandler
-                0x0000000008007d0c                CAN1_RX1_IRQHandler
-                0x0000000008007d0c                UART5_IRQHandler
-                0x0000000008007d0c                DMA2_Stream0_IRQHandler
-                0x0000000008007d0c                TIM4_IRQHandler
-                0x0000000008007d0c                I2C1_EV_IRQHandler
-                0x0000000008007d0c                DMA1_Stream6_IRQHandler
-                0x0000000008007d0c                DMA1_Stream1_IRQHandler
-                0x0000000008007d0c                UART4_IRQHandler
-                0x0000000008007d0c                TIM3_IRQHandler
-                0x0000000008007d0c                RCC_IRQHandler
-                0x0000000008007d0c                TIM8_BRK_TIM12_IRQHandler
-                0x0000000008007d0c                Default_Handler
-                0x0000000008007d0c                EXTI15_10_IRQHandler
-                0x0000000008007d0c                ADC_IRQHandler
-                0x0000000008007d0c                DMA1_Stream7_IRQHandler
-                0x0000000008007d0c                SPI5_IRQHandler
-                0x0000000008007d0c                TIM7_IRQHandler
-                0x0000000008007d0c                CAN2_TX_IRQHandler
-                0x0000000008007d0c                TIM5_IRQHandler
-                0x0000000008007d0c                DMA2_Stream7_IRQHandler
-                0x0000000008007d0c                I2C3_EV_IRQHandler
-                0x0000000008007d0c                EXTI9_5_IRQHandler
-                0x0000000008007d0c                RTC_WKUP_IRQHandler
-                0x0000000008007d0c                ETH_WKUP_IRQHandler
-                0x0000000008007d0c                SPI2_IRQHandler
-                0x0000000008007d0c                OTG_HS_EP1_IN_IRQHandler
-                0x0000000008007d0c                DMA1_Stream0_IRQHandler
-                0x0000000008007d0c                CAN1_TX_IRQHandler
-                0x0000000008007d0c                EXTI4_IRQHandler
-                0x0000000008007d0c                ETH_IRQHandler
-                0x0000000008007d0c                OTG_HS_EP1_OUT_IRQHandler
-                0x0000000008007d0c                WWDG_IRQHandler
-                0x0000000008007d0c                SPI6_IRQHandler
-                0x0000000008007d0c                TIM2_IRQHandler
-                0x0000000008007d0c                OTG_FS_WKUP_IRQHandler
-                0x0000000008007d0c                TIM1_TRG_COM_TIM11_IRQHandler
-                0x0000000008007d0c                OTG_HS_IRQHandler
-                0x0000000008007d0c                EXTI1_IRQHandler
-                0x0000000008007d0c                UART7_IRQHandler
-                0x0000000008007d0c                USART2_IRQHandler
-                0x0000000008007d0c                I2C2_ER_IRQHandler
-                0x0000000008007d0c                DMA2_Stream1_IRQHandler
-                0x0000000008007d0c                CAN1_SCE_IRQHandler
-                0x0000000008007d0c                FLASH_IRQHandler
-                0x0000000008007d0c                DMA2_Stream4_IRQHandler
-                0x0000000008007d0c                USART1_IRQHandler
-                0x0000000008007d0c                OTG_FS_IRQHandler
-                0x0000000008007d0c                SPI3_IRQHandler
-                0x0000000008007d0c                DMA1_Stream4_IRQHandler
-                0x0000000008007d0c                I2C1_ER_IRQHandler
-                0x0000000008007d0c                FMC_IRQHandler
-                0x0000000008007d0c                DMA2_Stream6_IRQHandler
-                0x0000000008007d0c                SAI1_IRQHandler
-                0x0000000008007d0c                DMA1_Stream3_IRQHandler
- *fill*         0x0000000008007d0e        0x2 
+                0x0000000008007d20        0x2 startup/startup_stm32f429xx.o
+                0x0000000008007d20                RTC_Alarm_IRQHandler
+                0x0000000008007d20                HASH_RNG_IRQHandler
+                0x0000000008007d20                EXTI2_IRQHandler
+                0x0000000008007d20                TIM8_CC_IRQHandler
+                0x0000000008007d20                UART8_IRQHandler
+                0x0000000008007d20                SPI4_IRQHandler
+                0x0000000008007d20                TIM1_CC_IRQHandler
+                0x0000000008007d20                DMA2_Stream5_IRQHandler
+                0x0000000008007d20                DMA1_Stream5_IRQHandler
+                0x0000000008007d20                PVD_IRQHandler
+                0x0000000008007d20                SDIO_IRQHandler
+                0x0000000008007d20                TAMP_STAMP_IRQHandler
+                0x0000000008007d20                CAN2_RX1_IRQHandler
+                0x0000000008007d20                EXTI3_IRQHandler
+                0x0000000008007d20                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008007d20                TIM1_UP_TIM10_IRQHandler
+                0x0000000008007d20                TIM8_UP_TIM13_IRQHandler
+                0x0000000008007d20                I2C3_ER_IRQHandler
+                0x0000000008007d20                EXTI0_IRQHandler
+                0x0000000008007d20                I2C2_EV_IRQHandler
+                0x0000000008007d20                DMA1_Stream2_IRQHandler
+                0x0000000008007d20                CAN1_RX0_IRQHandler
+                0x0000000008007d20                FPU_IRQHandler
+                0x0000000008007d20                OTG_HS_WKUP_IRQHandler
+                0x0000000008007d20                LTDC_ER_IRQHandler
+                0x0000000008007d20                CAN2_SCE_IRQHandler
+                0x0000000008007d20                DMA2_Stream2_IRQHandler
+                0x0000000008007d20                SPI1_IRQHandler
+                0x0000000008007d20                TIM6_DAC_IRQHandler
+                0x0000000008007d20                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008007d20                DCMI_IRQHandler
+                0x0000000008007d20                CAN2_RX0_IRQHandler
+                0x0000000008007d20                DMA2_Stream3_IRQHandler
+                0x0000000008007d20                USART6_IRQHandler
+                0x0000000008007d20                USART3_IRQHandler
+                0x0000000008007d20                CAN1_RX1_IRQHandler
+                0x0000000008007d20                UART5_IRQHandler
+                0x0000000008007d20                DMA2_Stream0_IRQHandler
+                0x0000000008007d20                TIM4_IRQHandler
+                0x0000000008007d20                I2C1_EV_IRQHandler
+                0x0000000008007d20                DMA1_Stream6_IRQHandler
+                0x0000000008007d20                DMA1_Stream1_IRQHandler
+                0x0000000008007d20                UART4_IRQHandler
+                0x0000000008007d20                TIM3_IRQHandler
+                0x0000000008007d20                RCC_IRQHandler
+                0x0000000008007d20                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008007d20                Default_Handler
+                0x0000000008007d20                EXTI15_10_IRQHandler
+                0x0000000008007d20                ADC_IRQHandler
+                0x0000000008007d20                DMA1_Stream7_IRQHandler
+                0x0000000008007d20                SPI5_IRQHandler
+                0x0000000008007d20                TIM7_IRQHandler
+                0x0000000008007d20                CAN2_TX_IRQHandler
+                0x0000000008007d20                TIM5_IRQHandler
+                0x0000000008007d20                DMA2_Stream7_IRQHandler
+                0x0000000008007d20                I2C3_EV_IRQHandler
+                0x0000000008007d20                EXTI9_5_IRQHandler
+                0x0000000008007d20                RTC_WKUP_IRQHandler
+                0x0000000008007d20                ETH_WKUP_IRQHandler
+                0x0000000008007d20                SPI2_IRQHandler
+                0x0000000008007d20                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008007d20                DMA1_Stream0_IRQHandler
+                0x0000000008007d20                CAN1_TX_IRQHandler
+                0x0000000008007d20                EXTI4_IRQHandler
+                0x0000000008007d20                ETH_IRQHandler
+                0x0000000008007d20                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008007d20                WWDG_IRQHandler
+                0x0000000008007d20                SPI6_IRQHandler
+                0x0000000008007d20                TIM2_IRQHandler
+                0x0000000008007d20                OTG_FS_WKUP_IRQHandler
+                0x0000000008007d20                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008007d20                OTG_HS_IRQHandler
+                0x0000000008007d20                EXTI1_IRQHandler
+                0x0000000008007d20                UART7_IRQHandler
+                0x0000000008007d20                USART2_IRQHandler
+                0x0000000008007d20                I2C2_ER_IRQHandler
+                0x0000000008007d20                DMA2_Stream1_IRQHandler
+                0x0000000008007d20                CAN1_SCE_IRQHandler
+                0x0000000008007d20                FLASH_IRQHandler
+                0x0000000008007d20                DMA2_Stream4_IRQHandler
+                0x0000000008007d20                USART1_IRQHandler
+                0x0000000008007d20                OTG_FS_IRQHandler
+                0x0000000008007d20                SPI3_IRQHandler
+                0x0000000008007d20                DMA1_Stream4_IRQHandler
+                0x0000000008007d20                I2C1_ER_IRQHandler
+                0x0000000008007d20                FMC_IRQHandler
+                0x0000000008007d20                DMA2_Stream6_IRQHandler
+                0x0000000008007d20                SAI1_IRQHandler
+                0x0000000008007d20                DMA1_Stream3_IRQHandler
+ *fill*         0x0000000008007d22        0x2 
  .text.GL_FillCircleAA_HiRes
-                0x0000000008007d10       0xd8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Circle.o)
-                0x0000000008007d10                GL_FillCircleAA_HiRes
+                0x0000000008007d24       0xd8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Circle.o)
+                0x0000000008007d24                GL_FillCircleAA_HiRes
  .text.GUI_AA_FillCircle
-                0x0000000008007de8       0xbc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Circle.o)
-                0x0000000008007de8                GUI_AA_FillCircle
+                0x0000000008007dfc       0xbc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Circle.o)
+                0x0000000008007dfc                GUI_AA_FillCircle
  .text._CleanLine
-                0x0000000008007ea4       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x0000000008007eb8       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
  .text._CalcClipRectHL
-                0x0000000008007ed4       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x0000000008007ee8       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
  .text._FlushLine
-                0x0000000008007f14       0xc0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
- .text._OnExit  0x0000000008007fd4       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x0000000008007f28       0xc0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+ .text._OnExit  0x0000000008007fe8       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
  .text._DrawHLine
-                0x0000000008007fe8       0xfc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x0000000008007ffc       0xfc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
  .text.GUI_AA_Init
-                0x00000000080080e4       0xb8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
-                0x00000000080080e4                GUI_AA_Init
+                0x00000000080080f8       0xb8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x00000000080080f8                GUI_AA_Init
  .text.GUI_AA_Init_HiRes
-                0x000000000800819c       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
-                0x000000000800819c                GUI_AA_Init_HiRes
+                0x00000000080081b0       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x00000000080081b0                GUI_AA_Init_HiRes
  .text.GUI_AA_HiRes2Pixel
-                0x00000000080081b4       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
-                0x00000000080081b4                GUI_AA_HiRes2Pixel
+                0x00000000080081c8       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x00000000080081c8                GUI_AA_HiRes2Pixel
  .text.GUI_AA_Exit
-                0x00000000080081cc       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
-                0x00000000080081cc                GUI_AA_Exit
+                0x00000000080081e0       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIAA_Lib.o)
+                0x00000000080081e0                GUI_AA_Exit
  .text._Color2Index_M8888I
-                0x00000000080081ec       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
+                0x0000000008008200       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
  .text._GetIndexMask_M8888I
-                0x0000000008008208        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
- *fill*         0x000000000800820e        0x2 
+                0x000000000800821c        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
+ *fill*         0x0000000008008222        0x2 
  .text._Color2IndexBulk_M8888I
-                0x0000000008008210       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
+                0x0000000008008224       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
  .text._Index2ColorBulk_M8888I
-                0x000000000800825c       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
+                0x0000000008008270       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
  .text.LCD_Index2Color_M8888I
-                0x00000000080082a8       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I_Index2Color.o)
-                0x00000000080082a8                LCD_Index2Color_M8888I
+                0x00000000080082bc       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I_Index2Color.o)
+                0x00000000080082bc                LCD_Index2Color_M8888I
  .text._PushFreeBlock
-                0x00000000080082c4       0x24 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080082d8       0x24 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text._RemoveFreeBlock
-                0x00000000080082e8       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080082fc       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text._AddFreeMemory
-                0x0000000008008328       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x000000000800833c       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text._RemoveHoles
-                0x00000000080083cc       0x9c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080083e0       0x9c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text.GUI_ALLOC_FreeFixedBlock
-                0x0000000008008468       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x0000000008008468                GUI_ALLOC_FreeFixedBlock
- .text.GUI_ALLOC_h2p
                 0x000000000800847c       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x000000000800847c                GUI_ALLOC_h2p
+                0x000000000800847c                GUI_ALLOC_FreeFixedBlock
+ .text.GUI_ALLOC_h2p
+                0x0000000008008490       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x0000000008008490                GUI_ALLOC_h2p
  .text.GUI_ALLOC_LockH
-                0x0000000008008490       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x0000000008008490                GUI_ALLOC_LockH
+                0x00000000080084a4       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080084a4                GUI_ALLOC_LockH
  .text.GUI_ALLOC_UnlockH
-                0x00000000080084ac       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x00000000080084ac                GUI_ALLOC_UnlockH
+                0x00000000080084c0       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080084c0                GUI_ALLOC_UnlockH
  .text.GUI_ALLOC_AssignMemory
-                0x00000000080084dc       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x00000000080084dc                GUI_ALLOC_AssignMemory
+                0x00000000080084f0       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080084f0                GUI_ALLOC_AssignMemory
  .text.GUI_ALLOC_Free
-                0x00000000080084ec       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x00000000080084ec                GUI_ALLOC_Free
+                0x0000000008008500       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x0000000008008500                GUI_ALLOC_Free
  .text._EnlargeBlocks
-                0x000000000800851c       0x9c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x0000000008008530       0x9c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text._InitOnce
-                0x00000000080085b8       0x68 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080085cc       0x68 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text.GUI_ALLOC_GetFixedBlock
-                0x0000000008008620       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x0000000008008620                GUI_ALLOC_GetFixedBlock
- .text._Alloc   0x00000000080086c4       0xf0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x0000000008008634       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x0000000008008634                GUI_ALLOC_GetFixedBlock
+ .text._Alloc   0x00000000080086d8       0xf0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
  .text.GUI_ALLOC_AllocNoInit
-                0x00000000080087b4       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x00000000080087b4                GUI_ALLOC_AllocNoInit
- *fill*         0x00000000080087ce        0x2 
+                0x00000000080087c8       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080087c8                GUI_ALLOC_AllocNoInit
+ *fill*         0x00000000080087e2        0x2 
  .text.GUI_ALLOC_AllocZero
-                0x00000000080087d0       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
-                0x00000000080087d0                GUI_ALLOC_AllocZero
+                0x00000000080087e4       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Alloc.o)
+                0x00000000080087e4                GUI_ALLOC_AllocZero
  .text.GL_FillCircle
-                0x000000000800880c       0xc0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Circ.o)
-                0x000000000800880c                GL_FillCircle
+                0x0000000008008820       0xc0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Circ.o)
+                0x0000000008008820                GL_FillCircle
  .text.GUI_FillCircle
-                0x00000000080088cc       0x44 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Circ.o)
-                0x00000000080088cc                GUI_FillCircle
+                0x00000000080088e0       0x44 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Circ.o)
+                0x00000000080088e0                GUI_FillCircle
  .text.GUI_CalcColorDist
-                0x0000000008008910       0x4a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008910                GUI_CalcColorDist
- *fill*         0x000000000800895a        0x2 
+                0x0000000008008924       0x4a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008924                GUI_CalcColorDist
+ *fill*         0x000000000800896e        0x2 
  .text.GUI_GetDrawMode
-                0x000000000800895c       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x000000000800895c                GUI_GetDrawMode
+                0x0000000008008970       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008970                GUI_GetDrawMode
  .text.GUI_GetVersionString
-                0x0000000008008974       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008974                GUI_GetVersionString
+                0x0000000008008988       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008988                GUI_GetVersionString
  .text.GUI_MergeRect
-                0x000000000800898c       0x56 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x000000000800898c                GUI_MergeRect
+                0x00000000080089a0       0x56 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x00000000080089a0                GUI_MergeRect
  .text.GUI_MoveRect
-                0x00000000080089e2       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x00000000080089e2                GUI_MoveRect
- *fill*         0x0000000008008a02        0x2 
+                0x00000000080089f6       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x00000000080089f6                GUI_MoveRect
+ *fill*         0x0000000008008a16        0x2 
  .text.GUI_GotoXY
-                0x0000000008008a04       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008a04                GUI_GotoXY
+                0x0000000008008a18       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008a18                GUI_GotoXY
  .text.GUI_RectsIntersect
-                0x0000000008008a24       0x3a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008a24                GUI_RectsIntersect
+                0x0000000008008a38       0x3a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008a38                GUI_RectsIntersect
  .text.GUI_SelectLCD
-                0x0000000008008a5e       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008a5e                GUI_SelectLCD
+                0x0000000008008a72       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008a72                GUI_SelectLCD
  .text.GUI_SetBkColor
-                0x0000000008008a78       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008a78                GUI_SetBkColor
+                0x0000000008008a8c       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008a8c                GUI_SetBkColor
  .text.GUI_SetColor
-                0x0000000008008a8e       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008a8e                GUI_SetColor
+                0x0000000008008aa2       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008aa2                GUI_SetColor
  .text.GUI_SetOrg
-                0x0000000008008aa4       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
-                0x0000000008008aa4                GUI_SetOrg
+                0x0000000008008ab8       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
+                0x0000000008008ab8                GUI_SetOrg
  .text._InitContext
-                0x0000000008008ae4       0x84 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
- .text._OnExit  0x0000000008008b68       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008af8       0x84 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+ .text._OnExit  0x0000000008008b7c       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
  .text.GUI_SetDefaultFont
-                0x0000000008008bb0        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
-                0x0000000008008bb0                GUI_SetDefaultFont
+                0x0000000008008bc4        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008bc4                GUI_SetDefaultFont
  .text.GUI_ClearRect
-                0x0000000008008bbc       0x6c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
-                0x0000000008008bbc                GUI_ClearRect
+                0x0000000008008bd0       0x6c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008bd0                GUI_ClearRect
  .text.GUI_Clear
-                0x0000000008008c28       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
-                0x0000000008008c28                GUI_Clear
+                0x0000000008008c3c       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008c3c                GUI_Clear
  .text.GUI__Config
-                0x0000000008008c48       0x98 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
-                0x0000000008008c48                GUI__Config
+                0x0000000008008c5c       0x98 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008c5c                GUI__Config
  .text.GUI_Init
-                0x0000000008008ce0       0xfc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
-                0x0000000008008ce0                GUI_Init
+                0x0000000008008cf4       0xfc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008cf4                GUI_Init
  .text.GUI__RegisterExit
-                0x0000000008008ddc       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
-                0x0000000008008ddc                GUI__RegisterExit
+                0x0000000008008df0       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+                0x0000000008008df0                GUI__RegisterExit
  .text.GUI_DEVICE__GetpDriver
-                0x0000000008008e04       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008e04                GUI_DEVICE__GetpDriver
+                0x0000000008008e18       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008e18                GUI_DEVICE__GetpDriver
  .text.GUI_DEVICE_Delete
-                0x0000000008008e24        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008e24                GUI_DEVICE_Delete
+                0x0000000008008e38        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008e38                GUI_DEVICE_Delete
  .text.GUI_DEVICE_Create
-                0x0000000008008e28       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008e28                GUI_DEVICE_Create
+                0x0000000008008e3c       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008e3c                GUI_DEVICE_Create
  .text.GUI_DEVICE_Unlink
-                0x0000000008008e74       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008e74                GUI_DEVICE_Unlink
+                0x0000000008008e88       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008e88                GUI_DEVICE_Unlink
  .text.GUI_DEVICE_Link
-                0x0000000008008ea4       0x84 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008ea4                GUI_DEVICE_Link
+                0x0000000008008eb8       0x84 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008eb8                GUI_DEVICE_Link
  .text.GUI_DEVICE_CreateAndLink
-                0x0000000008008f28       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008f28                GUI_DEVICE_CreateAndLink
+                0x0000000008008f3c       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008f3c                GUI_DEVICE_CreateAndLink
  .text.GUI_DEVICE_UnlinkTaskDevices
-                0x0000000008008f50        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008f50                GUI_DEVICE_UnlinkTaskDevices
+                0x0000000008008f64        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008f64                GUI_DEVICE_UnlinkTaskDevices
  .text.GUI_DEVICE_LinkDevices
-                0x0000000008008f54       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
-                0x0000000008008f54                GUI_DEVICE_LinkDevices
- .text._OnExit  0x0000000008008f64       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
+                0x0000000008008f68       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+                0x0000000008008f68                GUI_DEVICE_LinkDevices
+ .text.GUI_FillRect
+                0x0000000008008f78       0x54 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
+                0x0000000008008f78                GUI_FillRect
+ .text._OnExit  0x0000000008008fcc       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
  .text.GUI_MULTIBUF_ConfirmEx
-                0x0000000008008fac       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
-                0x0000000008008fac                GUI_MULTIBUF_ConfirmEx
+                0x0000000008009014       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
+                0x0000000008009014                GUI_MULTIBUF_ConfirmEx
  .text.GUI_MULTIBUF_ConfigEx
-                0x0000000008008fd4       0x38 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
-                0x0000000008008fd4                GUI_MULTIBUF_ConfigEx
+                0x000000000800903c       0x38 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
+                0x000000000800903c                GUI_MULTIBUF_ConfigEx
  .text.GUI_StoreKey
-                0x000000000800900c       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_OnKey.o)
-                0x000000000800900c                GUI_StoreKey
+                0x0000000008009074       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_OnKey.o)
+                0x0000000008009074                GUI_StoreKey
  .text.GUI_GetLayerPosEx
-                0x000000000800901c       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)
-                0x000000000800901c                GUI_GetLayerPosEx
+                0x0000000008009084       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)
+                0x0000000008009084                GUI_GetLayerPosEx
  .text.GUI_SelectLayer
-                0x0000000008009044       0x38 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)
-                0x0000000008009044                GUI_SelectLayer
+                0x00000000080090ac       0x38 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)
+                0x00000000080090ac                GUI_SelectLayer
  .text._GetTaskNo
-                0x000000000800907c       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
- .text._OnExit  0x00000000080090b8       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+                0x00000000080090e4       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+ .text._OnExit  0x0000000008009120       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
  .text.GUI_Unlock
-                0x00000000080090cc       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
-                0x00000000080090cc                GUI_Unlock
+                0x0000000008009134       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+                0x0000000008009134                GUI_Unlock
  .text.GUI_Lock
-                0x00000000080090e0       0x78 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
-                0x00000000080090e0                GUI_Lock
+                0x0000000008009148       0x78 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+                0x0000000008009148                GUI_Lock
  .text.GUITASK_Init
-                0x0000000008009158       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
-                0x0000000008009158                GUITASK_Init
+                0x00000000080091c0       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+                0x00000000080091c0                GUITASK_Init
  .text.GUITASK_CopyContext
-                0x00000000080091a4       0x70 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
-                0x00000000080091a4                GUITASK_CopyContext
+                0x000000000800920c       0x70 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+                0x000000000800920c                GUITASK_CopyContext
  .text._GetCharCode
-                0x0000000008009214        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
+                0x000000000800927c        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
  .text._GetCharSize
-                0x0000000008009218        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
+                0x0000000008009280        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
  .text._CalcSizeOfChar
-                0x000000000800921c        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
- .text._Encode  0x0000000008009220        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
- *fill*         0x0000000008009226        0x2 
+                0x0000000008009284        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
+ .text._Encode  0x0000000008009288        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
+ *fill*         0x000000000800928e        0x2 
  .text.GUI_SignalEvent
-                0x0000000008009228       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_WaitEvent.o)
-                0x0000000008009228                GUI_SignalEvent
+                0x0000000008009290       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_WaitEvent.o)
+                0x0000000008009290                GUI_SignalEvent
  .text.GUI__IntersectRect
-                0x0000000008009238       0x3a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
-                0x0000000008009238                GUI__IntersectRect
+                0x00000000080092a0       0x3a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
+                0x00000000080092a0                GUI__IntersectRect
  .text.GUI__IntersectRects
-                0x0000000008009272       0x56 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
-                0x0000000008009272                GUI__IntersectRects
+                0x00000000080092da       0x56 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
+                0x00000000080092da                GUI__IntersectRects
  .text.GUI__memset
-                0x00000000080092c8       0x5e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
-                0x00000000080092c8                GUI__memset
- *fill*         0x0000000008009326        0x2 
+                0x0000000008009330       0x5e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
+                0x0000000008009330                GUI__memset
+ *fill*         0x000000000800938e        0x2 
  .text._SetDrawMode
-                0x0000000008009328       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009390       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
  .text.LCD_SetDrawMode
-                0x0000000008009350        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x0000000008009350                LCD_SetDrawMode
+                0x00000000080093b8        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080093b8                LCD_SetDrawMode
  .text.LCD_DrawPixel
-                0x000000000800935c       0x60 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x000000000800935c                LCD_DrawPixel
+                0x00000000080093c4       0x60 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080093c4                LCD_DrawPixel
  .text.LCD_DrawHLine
-                0x00000000080093bc       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x00000000080093bc                LCD_DrawHLine
+                0x0000000008009424       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009424                LCD_DrawHLine
  .text.LCD_FillRect
-                0x000000000800940c       0x58 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x000000000800940c                LCD_FillRect
+                0x0000000008009474       0x58 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009474                LCD_FillRect
  .text.LCD_DrawBitmap
-                0x0000000008009464      0x224 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x0000000008009464                LCD_DrawBitmap
+                0x00000000080094cc      0x224 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080094cc                LCD_DrawBitmap
  .text.LCD_SetClipRectMax
-                0x0000000008009688       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x0000000008009688                LCD_SetClipRectMax
+                0x00000000080096f0       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080096f0                LCD_SetClipRectMax
  .text.emWin_LCD_Init
-                0x00000000080096a4       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x00000000080096a4                emWin_LCD_Init
+                0x000000000800970c       0xa4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x000000000800970c                emWin_LCD_Init
  .text.LCD_Color2Index
-                0x0000000008009748       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x0000000008009748                LCD_Color2Index
+                0x00000000080097b0       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080097b0                LCD_Color2Index
  .text.LCD_Index2Color
-                0x0000000008009764       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x0000000008009764                LCD_Index2Color
+                0x00000000080097cc       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080097cc                LCD_Index2Color
  .text.LCD_SetColorIndex
-                0x0000000008009780       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x0000000008009780                LCD_SetColorIndex
+                0x00000000080097e8       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x00000000080097e8                LCD_SetColorIndex
  .text._SetColor
-                0x0000000008009798       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009800       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
  .text.LCD_SetBkColorIndex
-                0x00000000080097b8       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x00000000080097b8                LCD_SetBkColorIndex
+                0x0000000008009820       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009820                LCD_SetBkColorIndex
  .text._SetBkColor
-                0x00000000080097d0       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009838       0x20 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
  .text.LCD_SetBkColor
-                0x00000000080097f0        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x00000000080097f0                LCD_SetBkColor
+                0x0000000008009858        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009858                LCD_SetBkColor
  .text.LCD_SetColor
-                0x00000000080097fc        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
-                0x00000000080097fc                LCD_SetColor
+                0x0000000008009864        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000008009864                LCD_SetColor
  .text.LCD_AA_MixColors16
-                0x0000000008009808       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_AA.o)
-                0x0000000008009808                LCD_AA_MixColors16
+                0x0000000008009870       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_AA.o)
+                0x0000000008009870                LCD_AA_MixColors16
  .text.LCD_SetPixelAA4_Trans
-                0x0000000008009850       0xa0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_AA.o)
-                0x0000000008009850                LCD_SetPixelAA4_Trans
- .text._OnExit  0x00000000080098f0       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
+                0x00000000080098b8       0xa0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_AA.o)
+                0x00000000080098b8                LCD_SetPixelAA4_Trans
+ .text._OnExit  0x0000000008009958       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
  .text.LCD_InitColors
-                0x000000000800990c       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
-                0x000000000800990c                LCD_InitColors
+                0x0000000008009974       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
+                0x0000000008009974                LCD_InitColors
  .text.LCD_GetpPalConvTableUncached
-                0x0000000008009948       0x6c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
-                0x0000000008009948                LCD_GetpPalConvTableUncached
+                0x00000000080099b0       0x6c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
+                0x00000000080099b0                LCD_GetpPalConvTableUncached
  .text.LCD_GetpPalConvTableBM
-                0x00000000080099b4        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
-                0x00000000080099b4                LCD_GetpPalConvTableBM
+                0x0000000008009a1c        0x4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
+                0x0000000008009a1c                LCD_GetpPalConvTableBM
  .text.LCD_InitLUT
-                0x00000000080099b8       0x88 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
-                0x00000000080099b8                LCD_InitLUT
+                0x0000000008009a20       0x88 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
+                0x0000000008009a20                LCD_InitLUT
  .text._GetDevProp
-                0x0000000008009a40       0x1e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009aa8       0x1e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
  .text._GetMaxValue
-                0x0000000008009a5e       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009ac6       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
  .text.LCD_GetBitsPerPixelEx
-                0x0000000008009a80        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009a80                LCD_GetBitsPerPixelEx
+                0x0000000008009ae8        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009ae8                LCD_GetBitsPerPixelEx
  .text.LCD_GetNumColorsEx
-                0x0000000008009a86        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009a86                LCD_GetNumColorsEx
+                0x0000000008009aee        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009aee                LCD_GetNumColorsEx
  .text.LCD_GetMirrorXEx
-                0x0000000008009a8c        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009a8c                LCD_GetMirrorXEx
+                0x0000000008009af4        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009af4                LCD_GetMirrorXEx
  .text.LCD_GetMirrorYEx
-                0x0000000008009a92        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009a92                LCD_GetMirrorYEx
+                0x0000000008009afa        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009afa                LCD_GetMirrorYEx
  .text.LCD_GetSwapXYEx
-                0x0000000008009a98        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009a98                LCD_GetSwapXYEx
- *fill*         0x0000000008009a9e        0x2 
+                0x0000000008009b00        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b00                LCD_GetSwapXYEx
+ *fill*         0x0000000008009b06        0x2 
  .text.LCD_GetNumColors
-                0x0000000008009aa0       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009aa0                LCD_GetNumColors
+                0x0000000008009b08       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b08                LCD_GetNumColors
  .text.GUI_GetBitsPerPixelEx
-                0x0000000008009ab0       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009ab0                GUI_GetBitsPerPixelEx
+                0x0000000008009b18       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b18                GUI_GetBitsPerPixelEx
  .text.LCD_GetPaletteEx
-                0x0000000008009ac4       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009ac4                LCD_GetPaletteEx
- *fill*         0x0000000008009ada        0x2 
+                0x0000000008009b2c       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b2c                LCD_GetPaletteEx
+ *fill*         0x0000000008009b42        0x2 
  .text.LCD_GetPalette
-                0x0000000008009adc       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009adc                LCD_GetPalette
+                0x0000000008009b44       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b44                LCD_GetPalette
  .text.GUI_GetpfIndex2ColorEx
-                0x0000000008009aec       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009aec                GUI_GetpfIndex2ColorEx
+                0x0000000008009b54       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b54                GUI_GetpfIndex2ColorEx
  .text.LCD_GetXSizeMax
-                0x0000000008009afc        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009afc                LCD_GetXSizeMax
+                0x0000000008009b64        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b64                LCD_GetXSizeMax
  .text.LCD_GetYSizeMax
-                0x0000000008009b02        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009b02                LCD_GetYSizeMax
+                0x0000000008009b6a        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b6a                LCD_GetYSizeMax
  .text.LCD_GetVXSizeMax
-                0x0000000008009b08        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009b08                LCD_GetVXSizeMax
- *fill*         0x0000000008009b0e        0x2 
+                0x0000000008009b70        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b70                LCD_GetVXSizeMax
+ *fill*         0x0000000008009b76        0x2 
  .text.LCD_SetDisplaySize
-                0x0000000008009b10        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009b10                LCD_SetDisplaySize
+                0x0000000008009b78        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b78                LCD_SetDisplaySize
  .text.LCD_GetXSizeDisplay
-                0x0000000008009b1c        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009b1c                LCD_GetXSizeDisplay
+                0x0000000008009b84        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b84                LCD_GetXSizeDisplay
  .text.LCD_GetYSizeDisplay
-                0x0000000008009b28        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
-                0x0000000008009b28                LCD_GetYSizeDisplay
+                0x0000000008009b90        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000008009b90                LCD_GetYSizeDisplay
  .text.LCD_GetNumLayers
-                0x0000000008009b34       0x1e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetNumDisplays.o)
-                0x0000000008009b34                LCD_GetNumLayers
- *fill*         0x0000000008009b52        0x2 
+                0x0000000008009b9c       0x1e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetNumDisplays.o)
+                0x0000000008009b9c                LCD_GetNumLayers
+ *fill*         0x0000000008009bba        0x2 
  .text.LCD_GetPixelIndex
-                0x0000000008009b54       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetP.o)
-                0x0000000008009b54                LCD_GetPixelIndex
+                0x0000000008009bbc       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetP.o)
+                0x0000000008009bbc                LCD_GetPixelIndex
  .text.LCD_GetPixelColor
-                0x0000000008009bb0        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetPixelColor.o)
-                0x0000000008009bb0                LCD_GetPixelColor
- *fill*         0x0000000008009bbe        0x2 
+                0x0000000008009c18        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetPixelColor.o)
+                0x0000000008009c18                LCD_GetPixelColor
+ *fill*         0x0000000008009c26        0x2 
  .text.LCD_SelectLCD
-                0x0000000008009bc0       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SelectLCD.o)
-                0x0000000008009bc0                LCD_SelectLCD
+                0x0000000008009c28       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SelectLCD.o)
+                0x0000000008009c28                LCD_SelectLCD
  .text.LCD_GetPosEx
-                0x0000000008009c00       0x32 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
-                0x0000000008009c00                LCD_GetPosEx
+                0x0000000008009c68       0x32 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000008009c68                LCD_GetPosEx
  .text.LCD_SetDevFunc
-                0x0000000008009c32       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
-                0x0000000008009c32                LCD_SetDevFunc
+                0x0000000008009c9a       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000008009c9a                LCD_SetDevFunc
  .text.LCD_SetLUTEntryEx
-                0x0000000008009c62       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
-                0x0000000008009c62                LCD_SetLUTEntryEx
+                0x0000000008009cca       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000008009cca                LCD_SetLUTEntryEx
  .text.LCD_SetSizeEx
-                0x0000000008009c92       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
-                0x0000000008009c92                LCD_SetSizeEx
+                0x0000000008009cfa       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000008009cfa                LCD_SetSizeEx
  .text.LCD_SetVRAMAddrEx
-                0x0000000008009cc2       0x2c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
-                0x0000000008009cc2                LCD_SetVRAMAddrEx
+                0x0000000008009d2a       0x2c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000008009d2a                LCD_SetVRAMAddrEx
  .text.LCD_SetVSizeEx
-                0x0000000008009cee       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
-                0x0000000008009cee                LCD_SetVSizeEx
- *fill*         0x0000000008009d1e        0x2 
+                0x0000000008009d56       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000008009d56                LCD_SetVSizeEx
+ *fill*         0x0000000008009d86        0x2 
  .text.LCD_UpdateColorIndices
-                0x0000000008009d20       0x24 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_UpdateColorIndices.o)
-                0x0000000008009d20                LCD_UpdateColorIndices
+                0x0000000008009d88       0x24 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_UpdateColorIndices.o)
+                0x0000000008009d88                LCD_UpdateColorIndices
  .text._GetRect
-                0x0000000008009d44       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009dac       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetPixelIndex
-                0x0000000008009d5a       0x12 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009dc2       0x12 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._GetPixelIndex
-                0x0000000008009d6c       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009dd4       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._XorPixel
-                0x0000000008009d7c       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009de4       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._FillRect
-                0x0000000008009da4      0x154 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009e0c      0x154 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._DrawHLine
-                0x0000000008009ef8        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009f60        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._DrawVLine
-                0x0000000008009f06       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009f6e       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._GetDevProp
-                0x0000000008009f16       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- *fill*         0x0000000008009f52        0x2 
+                0x0000000008009f7e       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ *fill*         0x0000000008009fba        0x2 
  .text._GetDevData
-                0x0000000008009f54       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009fbc       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._ReadRect
-                0x0000000008009f64       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000008009fcc       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._GetDevFunc
-                0x0000000008009fc0       0xe8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a028       0xe8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetChroma
-                0x000000000800a0a8       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a110       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetChromaMode
-                0x000000000800a0be       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a126       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetAlphaMode
-                0x000000000800a0d4       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._Off     0x000000000800a0ea        0xa /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._On      0x000000000800a0f4        0xa /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._SetOrg  0x000000000800a0fe       0x94 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- *fill*         0x000000000800a192        0x2 
+                0x000000000800a13c       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._Off     0x000000000800a152        0xa /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._On      0x000000000800a15c        0xa /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._SetOrg  0x000000000800a166       0x94 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ *fill*         0x000000000800a1fa        0x2 
  .text._DrawBitmap
-                0x000000000800a194      0x4e4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a1fc      0x4e4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._InitOnce.isra.4
-                0x000000000800a678       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a6e0       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetDevFunc
-                0x000000000800a69a       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- *fill*         0x000000000800a6e6        0x2 
+                0x000000000800a702       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ *fill*         0x000000000800a74e        0x2 
  .text._CopyBuffer
-                0x000000000800a6e8       0x64 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._GetPos  0x000000000800a74c       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a750       0x64 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._GetPos  0x000000000800a7b4       0x1c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetVRAM_BufferPTR
-                0x000000000800a768       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a7d0       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._ShowBuffer
-                0x000000000800a780       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._Init    0x000000000800a7a6       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._SetVis  0x000000000800a7c0       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a7e8       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._Init    0x000000000800a80e       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._SetVis  0x000000000800a828       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetAlpha
-                0x000000000800a7e8       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a850       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetVRAMAddr
-                0x000000000800a810       0x2a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
- .text._SetPos  0x000000000800a83a       0xfe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a878       0x2a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+ .text._SetPos  0x000000000800a8a2       0xfe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetSize
-                0x000000000800a938       0x42 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a9a0       0x42 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._SetVSize
-                0x000000000800a97a       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800a9e2       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .text._GetDevData
-                0x000000000800a9a0       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800aa08       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._GetDevFunc
-                0x000000000800a9b0       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800aa18       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._GetDevProp
-                0x000000000800a9c0        0xa /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
- .text._SetOrg  0x000000000800a9ca        0x8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800aa28        0xa /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+ .text._SetOrg  0x000000000800aa32        0x8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._GetRect
-                0x000000000800a9d2       0x36 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
- .text._XY2PTR  0x000000000800aa08       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800aa3a       0x36 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+ .text._XY2PTR  0x000000000800aa70       0x40 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._GetPixelIndex
-                0x000000000800aa48        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
- *fill*         0x000000000800aa56        0x2 
+                0x000000000800aab0        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+ *fill*         0x000000000800aabe        0x2 
  .text._XorPixel
-                0x000000000800aa58       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800aac0       0x5c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._SetPixelIndex
-                0x000000000800aab4       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800ab1c       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._DrawVLine
-                0x000000000800ab00       0xb4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800ab68       0xb4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._FillRect
-                0x000000000800abb4       0xb4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800ac1c       0xb4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text._DrawHLine
-                0x000000000800ac68        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
- *fill*         0x000000000800ac76        0x2 
+                0x000000000800acd0        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+ *fill*         0x000000000800acde        0x2 
  .text._DrawBitmap
-                0x000000000800ac78      0x718 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800ace0      0x718 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .text.GUI_USAGE_DecUseCnt
-                0x000000000800b390       0x32 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_Usage.o)
-                0x000000000800b390                GUI_USAGE_DecUseCnt
+                0x000000000800b3f8       0x32 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_Usage.o)
+                0x000000000800b3f8                GUI_USAGE_DecUseCnt
  .text.GUI_USAGE_AddRect
-                0x000000000800b3c2       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_Usage.o)
-                0x000000000800b3c2                GUI_USAGE_AddRect
+                0x000000000800b42a       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_Usage.o)
+                0x000000000800b42a                GUI_USAGE_AddRect
  .text.GUI_MEMDEV__WriteToActiveAlpha
-                0x000000000800b3e8      0x184 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_WriteToActiveAlpha.o)
-                0x000000000800b3e8                GUI_MEMDEV__WriteToActiveAlpha
- .text._OnExit  0x000000000800b56c       0x9c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
- .text._Findy1  0x000000000800b608       0xa6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
- .text._Findx0  0x000000000800b6ae       0x86 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
- .text._Findx1  0x000000000800b734       0x72 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
- *fill*         0x000000000800b7a6        0x2 
+                0x000000000800b450      0x184 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_WriteToActiveAlpha.o)
+                0x000000000800b450                GUI_MEMDEV__WriteToActiveAlpha
+ .text._OnExit  0x000000000800b5d4       0x9c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+ .text._Findy1  0x000000000800b670       0xa6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+ .text._Findx0  0x000000000800b716       0x86 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+ .text._Findx1  0x000000000800b79c       0x72 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+ *fill*         0x000000000800b80e        0x2 
  .text.WM__ClipAtParentBorders
-                0x000000000800b7a8       0x58 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b7a8                WM__ClipAtParentBorders
+                0x000000000800b810       0x58 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800b810                WM__ClipAtParentBorders
  .text.WM__InsertWindowIntoList
-                0x000000000800b800       0xac /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b800                WM__InsertWindowIntoList
+                0x000000000800b868       0xac /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800b868                WM__InsertWindowIntoList
  .text.WM__Client2Screen
-                0x000000000800b8ac       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b8ac                WM__Client2Screen
+                0x000000000800b914       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800b914                WM__Client2Screen
  .text._SetClipRectUserIntersect
-                0x000000000800b8bc       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800b924       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
  .text.WM__ActivateClipRect
-                0x000000000800b90c       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b90c                WM__ActivateClipRect
+                0x000000000800b974       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800b974                WM__ActivateClipRect
  .text.WM__InvalidateDrawAndDescs
-                0x000000000800b954       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b954                WM__InvalidateDrawAndDescs
+                0x000000000800b9bc       0x50 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800b9bc                WM__InvalidateDrawAndDescs
  .text.WM__RectIsNZ
-                0x000000000800b9a4       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b9a4                WM__RectIsNZ
+                0x000000000800ba0c       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800ba0c                WM__RectIsNZ
  .text.WM__SendMsgNoData
-                0x000000000800b9c6       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b9c6                WM__SendMsgNoData
+                0x000000000800ba2e       0x16 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800ba2e                WM__SendMsgNoData
  .text.WM__GetClientRectWin
-                0x000000000800b9dc       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b9dc                WM__GetClientRectWin
+                0x000000000800ba44       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800ba44                WM__GetClientRectWin
  .text.WM__GetTopLevelLayer
-                0x000000000800b9f4       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800b9f4                WM__GetTopLevelLayer
+                0x000000000800ba5c       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800ba5c                WM__GetTopLevelLayer
  .text._Invalidate1Abs
-                0x000000000800ba1c       0xa0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800ba84       0xa0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
  .text.WM__Invalidate1Abs
-                0x000000000800babc        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800babc                WM__Invalidate1Abs
+                0x000000000800bb24        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bb24                WM__Invalidate1Abs
  .text.WM_InvalidateWindowAndDescsEx
-                0x000000000800bac2       0x64 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bac2                WM_InvalidateWindowAndDescsEx
+                0x000000000800bb2a       0x64 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bb2a                WM_InvalidateWindowAndDescsEx
  .text.WM__InvalidateRect
-                0x000000000800bb26       0x76 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bb26                WM__InvalidateRect
+                0x000000000800bb8e       0x76 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bb8e                WM__InvalidateRect
  .text.WM__InvalidateRectEx
-                0x000000000800bb9c        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bb9c                WM__InvalidateRectEx
+                0x000000000800bc04        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bc04                WM__InvalidateRectEx
  .text.WM_InvalidateRect
-                0x000000000800bba2       0x82 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bba2                WM_InvalidateRect
+                0x000000000800bc0a       0x82 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bc0a                WM_InvalidateRect
  .text.WM_InvalidateWindow
-                0x000000000800bc24        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bc24                WM_InvalidateWindow
+                0x000000000800bc8c        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bc8c                WM_InvalidateWindow
  .text.WM__SelectTopLevelLayer
-                0x000000000800bc2a       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bc2a                WM__SelectTopLevelLayer
- *fill*         0x000000000800bc3e        0x2 
+                0x000000000800bc92       0x14 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bc92                WM__SelectTopLevelLayer
+ *fill*         0x000000000800bca6        0x2 
  .text.WM_SelectWindow
-                0x000000000800bc40       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bc40                WM_SelectWindow
+                0x000000000800bca8       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bca8                WM_SelectWindow
  .text.WM_CreateWindowAsChild
-                0x000000000800bc88      0x168 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bc88                WM_CreateWindowAsChild
+                0x000000000800bcf0      0x168 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bcf0                WM_CreateWindowAsChild
  .text.WM__GetNextIVR
-                0x000000000800bdf0      0x184 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bdf0                WM__GetNextIVR
+                0x000000000800be58      0x184 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800be58                WM__GetNextIVR
  .text.WM__InitIVRSearch
-                0x000000000800bf74      0x100 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800bf74                WM__InitIVRSearch
+                0x000000000800bfdc      0x100 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800bfdc                WM__InitIVRSearch
  .text.WM_Activate
-                0x000000000800c074       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800c074                WM_Activate
+                0x000000000800c0dc       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800c0dc                WM_Activate
  .text.WM_DefaultProc
-                0x000000000800c084       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800c084                WM_DefaultProc
+                0x000000000800c0ec       0x48 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800c0ec                WM_DefaultProc
  .text._cbBackWin
-                0x000000000800c0cc       0x68 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
- .text.WM_Init  0x000000000800c134       0xf0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
-                0x000000000800c134                WM_Init
+                0x000000000800c134       0x68 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+ .text.WM_Init  0x000000000800c19c       0xf0 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x000000000800c19c                WM_Init
  .text.WM_GetDesktopWindow
-                0x000000000800c224       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
-                0x000000000800c224                WM_GetDesktopWindow
+                0x000000000800c28c       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
+                0x000000000800c28c                WM_GetDesktopWindow
  .text.WM_GetFirstChild
-                0x000000000800c23c       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
-                0x000000000800c23c                WM_GetFirstChild
+                0x000000000800c2a4       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
+                0x000000000800c2a4                WM_GetFirstChild
  .text.WM_GetParent
-                0x000000000800c256       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
-                0x000000000800c256                WM_GetParent
+                0x000000000800c2be       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
+                0x000000000800c2be                WM_GetParent
  .text.WM_BringToBottom
-                0x000000000800c270       0x90 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
-                0x000000000800c270                WM_BringToBottom
+                0x000000000800c2d8       0x90 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
+                0x000000000800c2d8                WM_BringToBottom
  .text.WM_SendToParent
-                0x000000000800c300       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
-                0x000000000800c300                WM_SendToParent
+                0x000000000800c368       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
+                0x000000000800c368                WM_SendToParent
  .text.WM__GetFirstSibling
-                0x000000000800c326       0x12 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c326                WM__GetFirstSibling
+                0x000000000800c38e       0x12 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c38e                WM__GetFirstSibling
  .text.WM__GetOrgX_AA
-                0x000000000800c338       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c338                WM__GetOrgX_AA
+                0x000000000800c3a0       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c3a0                WM__GetOrgX_AA
  .text.WM__GetOrgY_AA
-                0x000000000800c350       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c350                WM__GetOrgY_AA
+                0x000000000800c3b8       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c3b8                WM__GetOrgY_AA
  .text.WM__GetPrevSibling
-                0x000000000800c368       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c368                WM__GetPrevSibling
- *fill*         0x000000000800c38e        0x2 
+                0x000000000800c3d0       0x26 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c3d0                WM__GetPrevSibling
+ *fill*         0x000000000800c3f6        0x2 
  .text.WM__SendMessage
-                0x000000000800c390       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c390                WM__SendMessage
+                0x000000000800c3f8       0x3c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c3f8                WM__SendMessage
  .text.WM__AddCriticalHandle
-                0x000000000800c3cc       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c3cc                WM__AddCriticalHandle
+                0x000000000800c434       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c434                WM__AddCriticalHandle
  .text.WM__GetClientRectEx
-                0x000000000800c3dc       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
-                0x000000000800c3dc                WM__GetClientRectEx
+                0x000000000800c444       0x22 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x000000000800c444                WM__GetClientRectEx
  .text._GetIndexMask_0
-                0x000000000800c3fe       0x52 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
+                0x000000000800c466       0x52 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
  .text._Index2Color_0
-                0x000000000800c450       0x1e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
+                0x000000000800c4b8       0x1e /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
  .text._Color2Index_0
-                0x000000000800c46e       0x52 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
+                0x000000000800c4d6       0x52 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
  .text.LCD_Index2Color_8888
-                0x000000000800c4c0        0x2 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
-                0x000000000800c4c0                LCD_Index2Color_8888
- *fill*         0x000000000800c4c2        0x2 
+                0x000000000800c528        0x2 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
+                0x000000000800c528                LCD_Index2Color_8888
+ *fill*         0x000000000800c52a        0x2 
  .text.GUIMONO_DispChar
-                0x000000000800c4c4      0x13c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
-                0x000000000800c4c4                GUIMONO_DispChar
+                0x000000000800c52c      0x13c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
+                0x000000000800c52c                GUIMONO_DispChar
  .text.GUIMONO_GetCharDistX
-                0x000000000800c600       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
-                0x000000000800c600                GUIMONO_GetCharDistX
+                0x000000000800c668       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
+                0x000000000800c668                GUIMONO_GetCharDistX
  .text.GUIMONO_GetFontInfo
-                0x000000000800c618        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
-                0x000000000800c618                GUIMONO_GetFontInfo
+                0x000000000800c680        0x6 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
+                0x000000000800c680                GUIMONO_GetFontInfo
  .text.GUIMONO_IsInFont
-                0x000000000800c61e       0x36 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
-                0x000000000800c61e                GUIMONO_IsInFont
+                0x000000000800c686       0x36 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
+                0x000000000800c686                GUIMONO_IsInFont
  .text.GUI__MixColorsBulk
-                0x000000000800c654       0x88 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
-                0x000000000800c654                GUI__MixColorsBulk
+                0x000000000800c6bc       0x88 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x000000000800c6bc                GUI__MixColorsBulk
  .text.GUI__MixColors
-                0x000000000800c6dc       0x56 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
-                0x000000000800c6dc                GUI__MixColors
- *fill*         0x000000000800c732        0x2 
- .text._OnExit  0x000000000800c734       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x000000000800c744       0x56 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x000000000800c744                GUI__MixColors
+ *fill*         0x000000000800c79a        0x2 
+ .text._OnExit  0x000000000800c79c       0x28 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
  .text.GUI__GetAlphaBuffer
-                0x000000000800c75c       0xb8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
-                0x000000000800c75c                GUI__GetAlphaBuffer
+                0x000000000800c7c4       0xb8 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x000000000800c7c4                GUI__GetAlphaBuffer
  .text.GUI__DoAlphaBlending
-                0x000000000800c814      0x1d4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
-                0x000000000800c814                GUI__DoAlphaBlending
+                0x000000000800c87c      0x1d4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x000000000800c87c                GUI__DoAlphaBlending
  .text.GUI__AllocAlphaBuffer
-                0x000000000800c9e8       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
-                0x000000000800c9e8                GUI__AllocAlphaBuffer
+                0x000000000800ca50       0x1a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x000000000800ca50                GUI__AllocAlphaBuffer
  .text.GUI__ConvertColor2Index
-                0x000000000800ca02      0x196 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__CompactPixelIndices.o)
-                0x000000000800ca02                GUI__ConvertColor2Index
+                0x000000000800ca6a      0x196 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__CompactPixelIndices.o)
+                0x000000000800ca6a                GUI__ConvertColor2Index
  .text.GUI__CompactPixelIndicesEx
-                0x000000000800cb98        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__CompactPixelIndices.o)
-                0x000000000800cb98                GUI__CompactPixelIndicesEx
+                0x000000000800cc00        0xe /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__CompactPixelIndices.o)
+                0x000000000800cc00                GUI__CompactPixelIndicesEx
  .text.GUI__ExpandPixelIndicesEx
-                0x000000000800cba6      0x17c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__ExpandPixelIndices.o)
-                0x000000000800cba6                GUI__ExpandPixelIndicesEx
- *fill*         0x000000000800cd22        0x2 
+                0x000000000800cc0e      0x17c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__ExpandPixelIndices.o)
+                0x000000000800cc0e                GUI__ExpandPixelIndicesEx
+ *fill*         0x000000000800cd8a        0x2 
  .text.LCD_ReadRectEx
-                0x000000000800cd24      0x1a4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_ReadRect.o)
+                0x000000000800cd8c      0x1a4 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_ReadRect.o)
  .text.GUI_ReadRectEx
-                0x000000000800cec8       0x60 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_ReadRect.o)
-                0x000000000800cec8                GUI_ReadRectEx
+                0x000000000800cf30       0x60 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_ReadRect.o)
+                0x000000000800cf30                GUI_ReadRectEx
  .text.LCD_SetClipRectEx
-                0x000000000800cf28       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SetClipRectEx.o)
-                0x000000000800cf28                LCD_SetClipRectEx
+                0x000000000800cf90       0x30 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SetClipRectEx.o)
+                0x000000000800cf90                LCD_SetClipRectEx
  .text.GUI_MEMDEV_Delete
-                0x000000000800cf58       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV.o)
-                0x000000000800cf58                GUI_MEMDEV_Delete
+                0x000000000800cfc0       0x4c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV.o)
+                0x000000000800cfc0                GUI_MEMDEV_Delete
  .text.GUI_MEMDEV_GetDataPtr
-                0x000000000800cfa4       0x2a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_GetDataPtr.o)
-                0x000000000800cfa4                GUI_MEMDEV_GetDataPtr
+                0x000000000800d00c       0x2a /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_GetDataPtr.o)
+                0x000000000800d00c                GUI_MEMDEV_GetDataPtr
  .text.LCD_Index2Color_888
-                0x000000000800cfce        0x2 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_888_Index2Color.o)
-                0x000000000800cfce                LCD_Index2Color_888
+                0x000000000800d036        0x2 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_888_Index2Color.o)
+                0x000000000800d036                LCD_Index2Color_888
  .text.__libc_init_array
-                0x000000000800cfd0       0x48 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
-                0x000000000800cfd0                __libc_init_array
- .text.memcpy   0x000000000800d018       0x16 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000000800d018                memcpy
- .text.memmove  0x000000000800d02e       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memmove.o)
-                0x000000000800d02e                memmove
- .text.memset   0x000000000800d062       0x10 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
-                0x000000000800d062                memset
+                0x000000000800d038       0x48 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+                0x000000000800d038                __libc_init_array
+ .text.memcpy   0x000000000800d080       0x16 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000000800d080                memcpy
+ .text.memmove  0x000000000800d096       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memmove.o)
+                0x000000000800d096                memmove
+ .text.memset   0x000000000800d0ca       0x10 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+                0x000000000800d0ca                memset
  *(.glue_7)
- .glue_7        0x000000000800d072        0x0 linker stubs
+ .glue_7        0x000000000800d0da        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800d072        0x0 linker stubs
+ .glue_7t       0x000000000800d0da        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x000000000800d072        0x2 
- .eh_frame      0x000000000800d074        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+ *fill*         0x000000000800d0da        0x2 
+ .eh_frame      0x000000000800d0dc        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
  *(.init)
- .init          0x000000000800d074        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
-                0x000000000800d074                _init
- .init          0x000000000800d078        0x8 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
+ .init          0x000000000800d0dc        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
+                0x000000000800d0dc                _init
+ .init          0x000000000800d0e0        0x8 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
  *(.fini)
- .fini          0x000000000800d080        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
-                0x000000000800d080                _fini
- .fini          0x000000000800d084        0x8 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
-                0x000000000800d08c                . = ALIGN (0x4)
-                0x000000000800d08c                _etext = .
+ .fini          0x000000000800d0e8        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crti.o
+                0x000000000800d0e8                _fini
+ .fini          0x000000000800d0ec        0x8 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
+                0x000000000800d0f4                . = ALIGN (0x4)
+                0x000000000800d0f4                _etext = .
 
-.vfp11_veneer   0x000000000800d08c        0x0
- .vfp11_veneer  0x000000000800d08c        0x0 linker stubs
+.vfp11_veneer   0x000000000800d0f4        0x0
+ .vfp11_veneer  0x000000000800d0f4        0x0 linker stubs
 
-.v4_bx          0x000000000800d08c        0x0
- .v4_bx         0x000000000800d08c        0x0 linker stubs
+.v4_bx          0x000000000800d0f4        0x0
+ .v4_bx         0x000000000800d0f4        0x0 linker stubs
 
-.iplt           0x000000000800d08c        0x0
- .iplt          0x000000000800d08c        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+.iplt           0x000000000800d0f4        0x0
+ .iplt          0x000000000800d0f4        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
 
-.rodata         0x000000000800d08c      0x98c
-                0x000000000800d08c                . = ALIGN (0x4)
+.rodata         0x000000000800d0f4      0x98c
+                0x000000000800d0f4                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000800d08c        0x5 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
- *fill*         0x000000000800d091        0x3 
- .rodata        0x000000000800d094       0x20 Src/main.o
- .rodata        0x000000000800d0b4        0x2 Src/touch.o
- *fill*         0x000000000800d0b6        0x2 
- .rodata        0x000000000800d0b8       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
-                0x000000000800d0b8                LCD_API_ColorConv_M8888I
- .rodata        0x000000000800d0d0       0x17 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
- *fill*         0x000000000800d0e7        0x1 
- .rodata        0x000000000800d0e8       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
-                0x000000000800d0e8                GUI_UC_None
- .rodata        0x000000000800d0f8        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
- .rodata        0x000000000800d104       0x34 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
-                0x000000000800d104                GUIDRV_Lin_32_API
- .rodata        0x000000000800d138      0x73c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(F6x8.o)
-                0x000000000800d138                GUI_Font6x9
-                0x000000000800d15c                GUI_Font6x8
- .rodata        0x000000000800d874       0x74 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
-                0x000000000800d874                GUI_MEMDEV_DEVICE_32
- .rodata        0x000000000800d8e8       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
-                0x000000000800d8e8                LCD_API_ColorConv_0
- .rodata        0x000000000800d900      0x100 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Mirror.o)
-                0x000000000800d900                LCD_aMirror
+ .rodata        0x000000000800d0f4        0x5 Middlewares/Third_Party/FreeRTOS/Source/tasks.o
+ *fill*         0x000000000800d0f9        0x3 
+ .rodata        0x000000000800d0fc       0x20 Src/main.o
+ .rodata        0x000000000800d11c        0x2 Src/touch.o
+ *fill*         0x000000000800d11e        0x2 
+ .rodata        0x000000000800d120       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_M8888I.o)
+                0x000000000800d120                LCD_API_ColorConv_M8888I
+ .rodata        0x000000000800d138       0x17 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
+ *fill*         0x000000000800d14f        0x1 
+ .rodata        0x000000000800d150       0x10 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
+                0x000000000800d150                GUI_UC_None
+ .rodata        0x000000000800d160        0xc /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+ .rodata        0x000000000800d16c       0x34 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x000000000800d16c                GUIDRV_Lin_32_API
+ .rodata        0x000000000800d1a0      0x73c /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(F6x8.o)
+                0x000000000800d1a0                GUI_Font6x9
+                0x000000000800d1c4                GUI_Font6x8
+ .rodata        0x000000000800d8dc       0x74 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x000000000800d8dc                GUI_MEMDEV_DEVICE_32
+ .rodata        0x000000000800d950       0x18 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
+                0x000000000800d950                LCD_API_ColorConv_0
+ .rodata        0x000000000800d968      0x100 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Mirror.o)
+                0x000000000800d968                LCD_aMirror
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x000000000800da00       0x10 Src/system_stm32f4xx.o
-                0x000000000800da00                AHBPrescTable
+                0x000000000800da68       0x10 Src/system_stm32f4xx.o
+                0x000000000800da68                AHBPrescTable
  .rodata.APBPrescTable
-                0x000000000800da10        0x8 Src/system_stm32f4xx.o
-                0x000000000800da10                APBPrescTable
-                0x000000000800da18                . = ALIGN (0x4)
+                0x000000000800da78        0x8 Src/system_stm32f4xx.o
+                0x000000000800da78                APBPrescTable
+                0x000000000800da80                . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000800da18        0x8
-                0x000000000800da18                __exidx_start = .
+.ARM            0x000000000800da80        0x8
+                0x000000000800da80                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x000000000800da18        0x8 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_udivmoddi4.o)
-                0x000000000800da20                __exidx_end = .
+ .ARM.exidx     0x000000000800da80        0x8 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_udivmoddi4.o)
+                0x000000000800da88                __exidx_end = .
 
-.rel.dyn        0x000000000800da20        0x0
- .rel.iplt      0x000000000800da20        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+.rel.dyn        0x000000000800da88        0x0
+ .rel.iplt      0x000000000800da88        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
 
-.preinit_array  0x000000000800da20        0x0
-                0x000000000800da20                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000000000800da88        0x0
+                0x000000000800da88                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x000000000800da20                PROVIDE (__preinit_array_end, .)
+                0x000000000800da88                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x000000000800da20        0x4
-                0x000000000800da20                PROVIDE (__init_array_start, .)
+.init_array     0x000000000800da88        0x4
+                0x000000000800da88                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800da20        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
-                0x000000000800da24                PROVIDE (__init_array_end, .)
+ .init_array    0x000000000800da88        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+                0x000000000800da8c                PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000800da24        0x4
+.fini_array     0x000000000800da8c        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000800da24        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
+ .fini_array    0x000000000800da8c        0x4 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x000000000800da28                _sidata = LOADADDR (.data)
+                0x000000000800da90                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x64 load address 0x000000000800da28
+.data           0x0000000020000000       0x64 load address 0x000000000800da90
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -4807,12 +4963,12 @@ LOAD /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-
                 0x0000000020000060                SystemCoreClock
                 0x0000000020000064                . = ALIGN (0x4)
                 0x0000000020000064                _edata = .
-                0x000000000800da8c                _siccmram = LOADADDR (.ccmram)
+                0x000000000800daf4                _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x0000000020000064        0x0 load address 0x000000000800da8c
+.igot.plt       0x0000000020000064        0x0 load address 0x000000000800daf4
  .igot.plt      0x0000000020000064        0x0 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtbegin.o
 
-.ccmram         0x0000000010000000        0x0 load address 0x000000000800da8c
+.ccmram         0x0000000010000000        0x0 load address 0x000000000800daf4
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sccmram = .
  *(.ccmram)
@@ -5083,97 +5239,99 @@ LOAD /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-
  .ARM.attributes
                 0x00000000000008b4       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
  .ARM.attributes
-                0x00000000000008ed       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
+                0x00000000000008ed       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
  .ARM.attributes
-                0x0000000000000926       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_OnKey.o)
+                0x0000000000000926       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
  .ARM.attributes
-                0x000000000000095f       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)
+                0x000000000000095f       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_OnKey.o)
  .ARM.attributes
-                0x0000000000000998       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
+                0x0000000000000998       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)
  .ARM.attributes
-                0x00000000000009d1       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
+                0x00000000000009d1       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Task.o)
  .ARM.attributes
-                0x0000000000000a0a       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_WaitEvent.o)
+                0x0000000000000a0a       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_UC_EncodeNone.o)
  .ARM.attributes
-                0x0000000000000a43       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
+                0x0000000000000a43       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_WaitEvent.o)
  .ARM.attributes
-                0x0000000000000a7c       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
+                0x0000000000000a7c       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Private.o)
  .ARM.attributes
-                0x0000000000000ab5       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_AA.o)
+                0x0000000000000ab5       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD.o)
  .ARM.attributes
-                0x0000000000000aee       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
+                0x0000000000000aee       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_AA.o)
  .ARM.attributes
-                0x0000000000000b27       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
+                0x0000000000000b27       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Color.o)
  .ARM.attributes
-                0x0000000000000b60       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetNumDisplays.o)
+                0x0000000000000b60       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetEx.o)
  .ARM.attributes
-                0x0000000000000b99       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetP.o)
+                0x0000000000000b99       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetNumDisplays.o)
  .ARM.attributes
-                0x0000000000000bd2       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetPixelColor.o)
+                0x0000000000000bd2       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetP.o)
  .ARM.attributes
-                0x0000000000000c0b       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SelectLCD.o)
+                0x0000000000000c0b       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_GetPixelColor.o)
  .ARM.attributes
-                0x0000000000000c44       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
+                0x0000000000000c44       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SelectLCD.o)
  .ARM.attributes
-                0x0000000000000c7d       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_UpdateColorIndices.o)
+                0x0000000000000c7d       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Set.o)
  .ARM.attributes
-                0x0000000000000cb6       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
+                0x0000000000000cb6       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_UpdateColorIndices.o)
  .ARM.attributes
-                0x0000000000000cef       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(F6x8.o)
+                0x0000000000000cef       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDRV_Lin_32.o)
  .ARM.attributes
-                0x0000000000000d28       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
+                0x0000000000000d28       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(F6x8.o)
  .ARM.attributes
-                0x0000000000000d61       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_Usage.o)
+                0x0000000000000d61       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_32.o)
  .ARM.attributes
-                0x0000000000000d9a       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_WriteToActiveAlpha.o)
+                0x0000000000000d9a       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_Usage.o)
  .ARM.attributes
-                0x0000000000000dd3       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
+                0x0000000000000dd3       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_WriteToActiveAlpha.o)
  .ARM.attributes
-                0x0000000000000e0c       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
+                0x0000000000000e0c       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM.o)
  .ARM.attributes
-                0x0000000000000e45       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Touch.o)
+                0x0000000000000e45       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Lib.o)
  .ARM.attributes
-                0x0000000000000e7e       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
+                0x0000000000000e7e       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM_Touch.o)
  .ARM.attributes
-                0x0000000000000eb7       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
+                0x0000000000000eb7       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(WM__Private.o)
  .ARM.attributes
-                0x0000000000000ef0       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
+                0x0000000000000ef0       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_0.o)
  .ARM.attributes
-                0x0000000000000f29       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
+                0x0000000000000f29       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_8888_Index2Color.o)
  .ARM.attributes
-                0x0000000000000f62       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
+                0x0000000000000f62       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_CharM.o)
  .ARM.attributes
-                0x0000000000000f9b       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__CompactPixelIndices.o)
+                0x0000000000000f9b       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__Alpha.o)
  .ARM.attributes
-                0x0000000000000fd4       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__ExpandPixelIndices.o)
+                0x0000000000000fd4       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__CompactPixelIndices.o)
  .ARM.attributes
-                0x000000000000100d       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Mirror.o)
+                0x000000000000100d       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI__ExpandPixelIndices.o)
  .ARM.attributes
-                0x0000000000001046       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_ReadRect.o)
+                0x0000000000001046       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_Mirror.o)
  .ARM.attributes
-                0x000000000000107f       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SetClipRectEx.o)
+                0x000000000000107f       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_ReadRect.o)
  .ARM.attributes
-                0x00000000000010b8       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV.o)
+                0x00000000000010b8       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(LCD_SetClipRectEx.o)
  .ARM.attributes
-                0x00000000000010f1       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_GetDataPtr.o)
+                0x00000000000010f1       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV.o)
  .ARM.attributes
-                0x000000000000112a       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_888_Index2Color.o)
+                0x000000000000112a       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUIDEV_GetDataPtr.o)
  .ARM.attributes
-                0x0000000000001163       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
+                0x0000000000001163       0x39 /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUICC_888_Index2Color.o)
  .ARM.attributes
-                0x0000000000001197       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000000000119c       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x00000000000011cb       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memmove.o)
+                0x00000000000011d0       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000000000011ff       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
+                0x0000000000001204       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memmove.o)
  .ARM.attributes
-                0x0000000000001233       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_aeabi_uldivmod.o)
+                0x0000000000001238       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/../../../../arm-atollic-eabi/lib/armv7e-m/fpu/libc_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x0000000000001255       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_udivmoddi4.o)
+                0x000000000000126c       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x0000000000001289       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_dvmd_tls.o)
+                0x000000000000128e       0x34 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000000000012ab       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
+                0x00000000000012c2       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x00000000000012e4       0x22 /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.0.1/ARMTools/bin/../lib/gcc/arm-atollic-eabi/6.3.1/armv7e-m/fpu/crtn.o
 OUTPUT(ltdc_sdram_test.elf elf32-littlearm)
 
 .debug_info     0x0000000000000000    0x2b0d5
@@ -5467,6 +5625,7 @@ OUTPUT(ltdc_sdram_test.elf elf32-littlearm)
  .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Common.o)
  .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Core.o)
  .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_Device.o)
+ .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_DrawLib.o)
  .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_MULTIBUF.o)
  .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_OnKey.o)
  .comment       0x00000000000000ea       0x6f /home/ruslan/STM32Cube/Repository/STM32Cube_FW_F4_V1.23.0/Middlewares/ST/STemWin/Lib/STemWin_CM4_OS_wc32.a(GUI_SelectLayer.o)

@@ -204,32 +204,16 @@ int main(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
-//	tp_state_t tp_state;
-//	char str[20] = {0};
-//	/* USER CODE BEGIN 5 */
-//	while (1)
-//	{
-//	  if (HAL_GPIO_ReadPin(TP_INT_GPIO_Port, TP_INT_Pin) == 1)
-//	  {
-//		  TP_GetState(&tp_state);
-//		  if (tp_state.touchDetected)
-//		  {
-//			  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
-//			  LCD_DrawString(0, 20, (uint8_t*)str, CENTER_MODE);
-//			  LCD_DrawPixel(tp_state.x, tp_state.y, LCD_COLOR_LIGHTRED);
-//		  }
-//	  }
-//	}
-
-	  GUI_Init();
-	  GUI_SelectLayer(0);
-	  GUI_SetBkColor(GUI_BLUE);
-	  GUI_Clear();
-	  GUI_SetColor(GUI_YELLOW);
-	  GUI_AA_FillCircle(100, 150, 40);
-	  GUI_SetColor(GUI_ORANGE);
-	  GUI_FillCircle(150, 100, 40);
-
+	GUI_Init();
+	GUI_SelectLayer(0);
+	GUI_SetBkColor(GUI_BLUE);
+	GUI_Clear();
+	GUI_SetColor(GUI_YELLOW);
+	GUI_AA_FillCircle(100, 150, 40);
+	GUI_SetColor(GUI_ORANGE);
+	GUI_FillCircle(150, 100, 40);
+	GUI_SetColor(GUI_MAGENTA);
+	GUI_FillRect(2, 2, 50, 50);
 	while (1)
 	{
 
