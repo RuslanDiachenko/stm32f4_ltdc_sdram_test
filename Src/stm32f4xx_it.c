@@ -72,6 +72,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern LTDC_HandleTypeDef  hltdc;
 extern DMA2D_HandleTypeDef hdma2d;
 /* USER CODE BEGIN EV */
 
@@ -187,6 +188,16 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief  This function handles LTDC global interrupt request.
+  * @param  None
+  * @retval None
+  */
+void LTDC_IRQHandler(void)
+{
+  HAL_LTDC_IRQHandler(&hltdc);
+}
 
 /**
   * @brief This function handles DMA2D global interrupt.

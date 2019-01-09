@@ -47,6 +47,8 @@
 #include "ltdc.h"
 #include "sdram.h"
 #include "touch.h"
+#include "GUI.h"
+#include "WM.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,11 +69,11 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-DMA2D_HandleTypeDef hdma2d;
+//DMA2D_HandleTypeDef hdma2d;
 
 I2C_HandleTypeDef hi2c3;
 
-LTDC_HandleTypeDef hltdc;
+//LTDC_HandleTypeDef hltdc;
 
 SPI_HandleTypeDef hspi5;
 
@@ -85,10 +87,8 @@ osThreadId defaultTaskHandle;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_LTDC_Init(void);
 static void MX_SPI5_Init(void);
 static void MX_FMC_Init(void);
-static void MX_DMA2D_Init(void);
 static void MX_I2C3_Init(void);
 void StartDefaultTask(void const * argument);
 
@@ -129,18 +129,26 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_LTDC_Init();
+  //MX_LTDC_Init();
   MX_SPI5_Init();
   MX_FMC_Init();
-  MX_DMA2D_Init();
+  //MX_DMA2D_Init();
   MX_I2C3_Init();
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
-  LCD_PowerOn();
-  HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
+  MyLCD_PowerOn();
+  //HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
   TP_Config();
 
-  LCD_FillScreen(0x00);
+  /* Enable CRC to Unlock GUI */
+  __HAL_RCC_CRC_CLK_ENABLE();
+
+  /* Enable Back up SRAM */
+  __HAL_RCC_BKPSRAM_CLK_ENABLE();
+
+  //LCD_FillScreen(0x00);
+  //LCD_FontsInit();
+
 
   /* USER CODE END 2 */
 
@@ -169,6 +177,7 @@ int main(void)
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
  
+  GUI_X_InitOS();
 
   /* Start scheduler */
   osKernelStart();
@@ -195,21 +204,35 @@ int main(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void const * argument)
 {
-	tp_state_t tp_state;
-	char str[20] = {0};
-	/* USER CODE BEGIN 5 */
+//	tp_state_t tp_state;
+//	char str[20] = {0};
+//	/* USER CODE BEGIN 5 */
+//	while (1)
+//	{
+//	  if (HAL_GPIO_ReadPin(TP_INT_GPIO_Port, TP_INT_Pin) == 1)
+//	  {
+//		  TP_GetState(&tp_state);
+//		  if (tp_state.touchDetected)
+//		  {
+//			  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
+//			  LCD_DrawString(0, 20, (uint8_t*)str, CENTER_MODE);
+//			  LCD_DrawPixel(tp_state.x, tp_state.y, LCD_COLOR_LIGHTRED);
+//		  }
+//	  }
+//	}
+
+	  GUI_Init();
+	  GUI_SelectLayer(0);
+	  GUI_SetBkColor(GUI_BLUE);
+	  GUI_Clear();
+	  GUI_SetColor(GUI_YELLOW);
+	  GUI_AA_FillCircle(100, 150, 40);
+	  GUI_SetColor(GUI_ORANGE);
+	  GUI_FillCircle(150, 100, 40);
+
 	while (1)
 	{
-	  if (HAL_GPIO_ReadPin(TP_INT_GPIO_Port, TP_INT_Pin) == 1)
-	  {
-		  TP_GetState(&tp_state);
-		  if (tp_state.touchDetected)
-		  {
-			  sprintf(str, "x=%03d, y=%03d", tp_state.x, tp_state.y);
-			  LCD_DrawString(0, 20, (uint8_t*)str, CENTER_MODE);
-			  LCD_DrawPixel(tp_state.x, tp_state.y, LCD_COLOR_LIGHTRED);
-		  }
-	  }
+
 	}
 	/* USER CODE END 5 */
 }
@@ -277,45 +300,45 @@ void SystemClock_Config(void)
   * @param None
   * @retval None
   */
-static void MX_DMA2D_Init(void)
-{
-
-  /* USER CODE BEGIN DMA2D_Init 0 */
-
-  /* USER CODE END DMA2D_Init 0 */
-
-  /* USER CODE BEGIN DMA2D_Init 1 */
-
-  /* USER CODE END DMA2D_Init 1 */
-  hdma2d.Instance = DMA2D;
-  hdma2d.Init.Mode = DMA2D_M2M_BLEND;
-  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB888;
-  hdma2d.Init.OutputOffset = 0;
-  hdma2d.LayerCfg[0].InputOffset = 0;
-  hdma2d.LayerCfg[0].InputColorMode = DMA2D_INPUT_RGB888;
-  hdma2d.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
-  hdma2d.LayerCfg[0].InputAlpha = 0;
-  hdma2d.LayerCfg[1].InputOffset = 0;
-  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB888;
-  hdma2d.LayerCfg[1].AlphaMode = DMA2D_REPLACE_ALPHA;
-  hdma2d.LayerCfg[1].InputAlpha = 0;
-  if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_DMA2D_ConfigLayer(&hdma2d, 0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN DMA2D_Init 2 */
-
-  /* USER CODE END DMA2D_Init 2 */
-
-}
+//static void MX_DMA2D_Init(void)
+//{
+//
+//  /* USER CODE BEGIN DMA2D_Init 0 */
+//
+//  /* USER CODE END DMA2D_Init 0 */
+//
+//  /* USER CODE BEGIN DMA2D_Init 1 */
+//
+//  /* USER CODE END DMA2D_Init 1 */
+//  hdma2d.Instance = DMA2D;
+//  hdma2d.Init.Mode = DMA2D_M2M_BLEND;
+//  hdma2d.Init.ColorMode = DMA2D_OUTPUT_RGB888;
+//  hdma2d.Init.OutputOffset = 0;
+//  hdma2d.LayerCfg[0].InputOffset = 0;
+//  hdma2d.LayerCfg[0].InputColorMode = DMA2D_INPUT_RGB888;
+//  hdma2d.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
+//  hdma2d.LayerCfg[0].InputAlpha = 0;
+//  hdma2d.LayerCfg[1].InputOffset = 0;
+//  hdma2d.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB888;
+//  hdma2d.LayerCfg[1].AlphaMode = DMA2D_REPLACE_ALPHA;
+//  hdma2d.LayerCfg[1].InputAlpha = 0;
+//  if (HAL_DMA2D_Init(&hdma2d) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  if (HAL_DMA2D_ConfigLayer(&hdma2d, 0) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  if (HAL_DMA2D_ConfigLayer(&hdma2d, 1) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  /* USER CODE BEGIN DMA2D_Init 2 */
+//
+//  /* USER CODE END DMA2D_Init 2 */
+//
+//}
 
 /**
   * @brief I2C3 Initialization Function
@@ -368,62 +391,62 @@ static void MX_I2C3_Init(void)
   * @param None
   * @retval None
   */
-static void MX_LTDC_Init(void)
-{
-
-  /* USER CODE BEGIN LTDC_Init 0 */
-
-  /* USER CODE END LTDC_Init 0 */
-
-  LTDC_LayerCfgTypeDef pLayerCfg = {0};
-
-  /* USER CODE BEGIN LTDC_Init 1 */
-
-  /* USER CODE END LTDC_Init 1 */
-  hltdc.Instance = LTDC;
-  hltdc.Init.HSPolarity = LTDC_HSPOLARITY_AL;
-  hltdc.Init.VSPolarity = LTDC_VSPOLARITY_AL;
-  hltdc.Init.DEPolarity = LTDC_DEPOLARITY_AL;
-  hltdc.Init.PCPolarity = LTDC_PCPOLARITY_IPC;
-  hltdc.Init.HorizontalSync = 8;
-  hltdc.Init.VerticalSync = 0;
-  hltdc.Init.AccumulatedHBP = 29;
-  hltdc.Init.AccumulatedVBP = 3;
-  hltdc.Init.AccumulatedActiveW = 269;
-  hltdc.Init.AccumulatedActiveH = 323;
-  hltdc.Init.TotalWidth = 279;
-  hltdc.Init.TotalHeigh = 327;
-  hltdc.Init.Backcolor.Blue = 0;
-  hltdc.Init.Backcolor.Green = 0;
-  hltdc.Init.Backcolor.Red = 0;
-  if (HAL_LTDC_Init(&hltdc) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  pLayerCfg.WindowX0 = 0;
-  pLayerCfg.WindowX1 = 240;
-  pLayerCfg.WindowY0 = 0;
-  pLayerCfg.WindowY1 = 320;
-  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB888;
-  pLayerCfg.Alpha = 255;
-  pLayerCfg.Alpha0 = 0;
-  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_CA;
-  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_CA;
-  pLayerCfg.FBStartAdress = 0;
-  pLayerCfg.ImageWidth = 240;
-  pLayerCfg.ImageHeight = 320;
-  pLayerCfg.Backcolor.Blue = 0;
-  pLayerCfg.Backcolor.Green = 0;
-  pLayerCfg.Backcolor.Red = 0;
-  if (HAL_LTDC_ConfigLayer(&hltdc, &pLayerCfg, 0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN LTDC_Init 2 */
-
-  /* USER CODE END LTDC_Init 2 */
-
-}
+//static void MX_LTDC_Init(void)
+//{
+//
+//  /* USER CODE BEGIN LTDC_Init 0 */
+//
+//  /* USER CODE END LTDC_Init 0 */
+//
+//  LTDC_LayerCfgTypeDef pLayerCfg = {0};
+//
+//  /* USER CODE BEGIN LTDC_Init 1 */
+//
+//  /* USER CODE END LTDC_Init 1 */
+//  hltdc.Instance = LTDC;
+//  hltdc.Init.HSPolarity = LTDC_HSPOLARITY_AL;
+//  hltdc.Init.VSPolarity = LTDC_VSPOLARITY_AL;
+//  hltdc.Init.DEPolarity = LTDC_DEPOLARITY_AL;
+//  hltdc.Init.PCPolarity = LTDC_PCPOLARITY_IPC;
+//  hltdc.Init.HorizontalSync = 8;
+//  hltdc.Init.VerticalSync = 0;
+//  hltdc.Init.AccumulatedHBP = 29;
+//  hltdc.Init.AccumulatedVBP = 3;
+//  hltdc.Init.AccumulatedActiveW = 269;
+//  hltdc.Init.AccumulatedActiveH = 323;
+//  hltdc.Init.TotalWidth = 279;
+//  hltdc.Init.TotalHeigh = 327;
+//  hltdc.Init.Backcolor.Blue = 0;
+//  hltdc.Init.Backcolor.Green = 0;
+//  hltdc.Init.Backcolor.Red = 0;
+//  if (HAL_LTDC_Init(&hltdc) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  pLayerCfg.WindowX0 = 0;
+//  pLayerCfg.WindowX1 = 240;
+//  pLayerCfg.WindowY0 = 0;
+//  pLayerCfg.WindowY1 = 320;
+//  pLayerCfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB888;
+//  pLayerCfg.Alpha = 255;
+//  pLayerCfg.Alpha0 = 0;
+//  pLayerCfg.BlendingFactor1 = LTDC_BLENDING_FACTOR1_CA;
+//  pLayerCfg.BlendingFactor2 = LTDC_BLENDING_FACTOR2_CA;
+//  pLayerCfg.FBStartAdress = 0;
+//  pLayerCfg.ImageWidth = 240;
+//  pLayerCfg.ImageHeight = 320;
+//  pLayerCfg.Backcolor.Blue = 0;
+//  pLayerCfg.Backcolor.Green = 0;
+//  pLayerCfg.Backcolor.Red = 0;
+//  if (HAL_LTDC_ConfigLayer(&hltdc, &pLayerCfg, 0) != HAL_OK)
+//  {
+//    Error_Handler();
+//  }
+//  /* USER CODE BEGIN LTDC_Init 2 */
+//
+//  /* USER CODE END LTDC_Init 2 */
+//
+//}
 
 /**
   * @brief SPI5 Initialization Function
