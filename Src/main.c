@@ -40,6 +40,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "cmsis_os.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -76,6 +77,7 @@ SPI_HandleTypeDef hspi5;
 
 SDRAM_HandleTypeDef hsdram1;
 
+osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -88,6 +90,8 @@ static void MX_SPI5_Init(void);
 static void MX_FMC_Init(void);
 static void MX_DMA2D_Init(void);
 static void MX_I2C3_Init(void);
+void StartDefaultTask(void const * argument);
+
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -104,13 +108,7 @@ static void MX_I2C3_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	/*
-	uint8_t *dma2d_in1;
-	uint8_t *dma2d_in2;
 
-	dma2d_in1 = (uint8_t *) ((uint32_t)(3 * BUFFER_OFFSET) + LCD_FRAME_BUFFER);
-	dma2d_in2 = (uint8_t *) ((uint32_t)(4 * BUFFER_OFFSET) + LCD_FRAME_BUFFER);
-	*/
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -142,46 +140,66 @@ int main(void)
   HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
   TP_Config();
 
-  LCD_FillScreen(LCD_COLOR_BLACK);
-  LCD_FontsInit();
-  LCD_SetFont(&Font24);
-  LCD_SetTextColor(LCD_COLOR_YELLOW);
-  LCD_SetBackColor(LCD_COLOR_BLUE);
-  LCD_DrawChar(10, 10, (uint8_t) 'T');
-  LCD_DrawChar(27, 10, (uint8_t) 'e');
-  LCD_DrawChar(44, 10, (uint8_t) 's');
-  LCD_DrawChar(61, 10, (uint8_t) 't');
-
-  LCD_SetFont(&Font16);
-  LCD_SetBackColor(LCD_COLOR_DARKBLUE);
-  LCD_SetTextColor(LCD_COLOR_LIGHTRED);
-  LCD_DrawString(10, 30, (uint8_t *)"Left 16", LEFT_MODE);
-
-  LCD_SetFont(&Font8);
-  LCD_SetBackColor(LCD_COLOR_DARKCYAN);
-  LCD_SetTextColor(LCD_COLOR_MAGENTA);
-  LCD_DrawString(10, 50, (uint8_t *)"Right 8", RIGHT_MODE);
-
-  LCD_SetFont(&Font24);
-  LCD_SetBackColor(LCD_COLOR_BLACK);
-  LCD_SetTextColor(LCD_COLOR_CYAN);
-  LCD_DrawString(10, 100, (uint8_t *)"Center 24", CENTER_MODE);
-
-  LCD_SetTextColor(LCD_COLOR_DARKMAGENTA);
-  LCD_DrawString(0, 200, (uint8_t *)"Left 24", LEFT_MODE);
-  HAL_Delay(2000);
-  LCD_SetFont(&Font20);
-  LCD_SetTextColor(LCD_COLOR_ORANGE);
   LCD_FillScreen(0x00);
 
-  tp_state_t tp_state;
-  char str[20] = {0};
   /* USER CODE END 2 */
+
+  /* USER CODE BEGIN RTOS_MUTEX */
+  /* add mutexes, ... */
+  /* USER CODE END RTOS_MUTEX */
+
+  /* USER CODE BEGIN RTOS_SEMAPHORES */
+  /* add semaphores, ... */
+  /* USER CODE END RTOS_SEMAPHORES */
+
+  /* USER CODE BEGIN RTOS_TIMERS */
+  /* start timers, add new ones, ... */
+  /* USER CODE END RTOS_TIMERS */
+
+  /* Create the thread(s) */
+  /* definition and creation of defaultTask */
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+
+  /* USER CODE BEGIN RTOS_THREADS */
+  /* add threads, ... */
+  /* USER CODE END RTOS_THREADS */
+
+  /* USER CODE BEGIN RTOS_QUEUES */
+  /* add queues, ... */
+  /* USER CODE END RTOS_QUEUES */
+ 
+
+  /* Start scheduler */
+  osKernelStart();
+  
+  /* We should never get here as control is now taken by the scheduler */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void const * argument)
+{
+	tp_state_t tp_state;
+	char str[20] = {0};
+	/* USER CODE BEGIN 5 */
+	while (1)
+	{
 	  if (HAL_GPIO_ReadPin(TP_INT_GPIO_Port, TP_INT_Pin) == 1)
 	  {
 		  TP_GetState(&tp_state);
@@ -191,12 +209,9 @@ int main(void)
 			  LCD_DrawString(0, 20, (uint8_t*)str, CENTER_MODE);
 			  LCD_DrawPixel(tp_state.x, tp_state.y, LCD_COLOR_LIGHTRED);
 		  }
-  	  }
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
+	  }
+	}
+	/* USER CODE END 5 */
 }
 
 /**
