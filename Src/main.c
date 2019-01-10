@@ -49,6 +49,8 @@
 #include "touch.h"
 #include "GUI.h"
 #include "WM.h"
+#include "DIALOG.h"
+#include "MESSAGEBOX.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -146,9 +148,6 @@ int main(void)
   /* Enable Back up SRAM */
   __HAL_RCC_BKPSRAM_CLK_ENABLE();
 
-  //LCD_FillScreen(0x00);
-  //LCD_FontsInit();
-
 
   /* USER CODE END 2 */
 
@@ -202,21 +201,117 @@ int main(void)
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
+extern GUI_BITMAP bmstickman_50x50;
+extern GUI_CONST_STORAGE GUI_BITMAP bmfilebrowser;
+extern GUI_CONST_STORAGE GUI_BITMAP _bmWhiteCircle_10x10;
+extern GUI_CONST_STORAGE GUI_BITMAP _bmWhiteCircle_6x6;
+extern GUI_CONST_STORAGE GUI_BITMAP bmSTLogo;
+
+static uint32_t idx = 0;
+
+static void setGuiProfile(void)
+{
+    FRAMEWIN_SetDefaultSkinClassic();
+	PROGBAR_SetDefaultSkinClassic();
+	RADIO_SetDefaultSkinClassic();
+	SCROLLBAR_SetDefaultSkinClassic();
+	SLIDER_SetDefaultSkinClassic();
+	SPINBOX_SetDefaultSkinClassic();
+	BUTTON_SetDefaultSkinClassic();
+	DROPDOWN_SetDefaultSkinClassic();
+	MULTIPAGE_SetDefaultSkinClassic();
+	CHECKBOX_SetDefaultSkinClassic();
+    FRAMEWIN_SetDefaultTextColor(0, GUI_WHITE);
+    FRAMEWIN_SetDefaultTextColor(1, GUI_WHITE);
+
+    FRAMEWIN_SetDefaultFont(GUI_FONT_10_ASCII);
+
+	FRAMEWIN_SetDefaultClientColor(GUI_LIGHTGRAY | 0x20F50000);
+	FRAMEWIN_SetDefaultTitleHeight(15);
+
+	TREEVIEW_SetDefaultBkColor(TREEVIEW_CI_SEL, GUI_LIGHTGRAY | 0x20E50000);
+	TREEVIEW_SetDefaultBkColor(TREEVIEW_CI_UNSEL, GUI_LIGHTGRAY | 0x20E50000);
+	TREEVIEW_SetDefaultTextColor(TREEVIEW_CI_SEL, GUI_BLUE);
+
+	WINDOW_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000);
+	MULTIPAGE_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000, 0);
+	MULTIPAGE_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000, 1);
+	MULTIPAGE_SetDefaultFont(GUI_FONT_10_ASCII);
+	CHECKBOX_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000);
+
+	CALENDAR_SetDefaultSize(CALENDAR_SI_HEADER, 20 );
+	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_X, 25 );
+	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_Y, 21 );
+
+	MULTIPAGE_SetDefaultBkColor (GUI_WHITE, 1);
+
+	SPINBOX_SetDefaultButtonSize(15);
+	LISTVIEW_SetDefaultGridColor(GUI_WHITE);
+	SCROLLBAR_SetDefaultWidth(16);
+
+	HEADER_SetDefaultBkColor(0x00C5903E);
+	HEADER_SetDefaultTextColor(GUI_WHITE);
+	SCROLLBAR_SetDefaultColor(GUI_LIGHTGRAY | 0x20F50000, SCROLLBAR_CI_THUMB);
+	SCROLLBAR_SetDefaultColor(GUI_LIGHTGRAY | 0x20F50000, SCROLLBAR_CI_SHAFT);
+	SCROLLBAR_SetDefaultColor(GUI_LIGHTGRAY | 0x20F50000, SCROLLBAR_CI_ARROW);
+	CHOOSEFILE_SetDelim('/');
+}
+
+static void _cb(WM_MESSAGE *pMsg)
+{
+	uint16_t   xPos, Step = 20, i;
+	const GUI_BITMAP * pBm;
+
+	switch (pMsg->MsgId)
+	{
+	case WM_PAINT:
+	  GUI_SetBkColor(GUI_LIGHTBLUE);
+	  GUI_Clear();
+
+	  GUI_DrawBitmap(&bmSTLogo, (LCD_GetXSize() - bmSTLogo.XSize)/2 , (LCD_GetYSize() - bmSTLogo.YSize)/2);
+
+	  for (i = 0, xPos = LCD_GetXSize() / 2 - 2 * Step; i < 5; i++, xPos += Step)
+	  {
+	    pBm = (idx == i) ? &_bmWhiteCircle_10x10 : &_bmWhiteCircle_6x6;
+	    GUI_DrawBitmap(pBm, xPos - pBm->XSize / 2, 250 - pBm->YSize / 2);
+	  }
+	  break;
+
+	default:
+	  WM_DefaultProc(pMsg);
+	}
+}
+
 void StartDefaultTask(void const * argument)
 {
 	GUI_Init();
-	GUI_SelectLayer(0);
+	WM_MULTIBUF_Enable(1);
+	setGuiProfile();
 	GUI_SetBkColor(GUI_BLUE);
 	GUI_Clear();
-	GUI_SetColor(GUI_YELLOW);
-	GUI_AA_FillCircle(100, 150, 40);
-	GUI_SetColor(GUI_ORANGE);
-	GUI_FillCircle(150, 100, 40);
-	GUI_SetColor(GUI_MAGENTA);
-	GUI_FillRect(2, 2, 50, 50);
+//	GUI_SetColor(GUI_YELLOW);
+//	GUI_AA_FillCircle(100, 150, 40);
+//	GUI_SetColor(GUI_ORANGE);
+//	GUI_FillCircle(150, 100, 40);
+//	GUI_SetColor(GUI_MAGENTA);
+//	GUI_FillRect(2, 2, 50, 50);
+//	GUI_DrawBitmap(&bmstickman_50x50, 50, 200);
+//	GUI_DrawBitmap(&bmfilebrowser, 100, 200);
+//	GUI_SetColor(GUI_DARKMAGENTA);
+//	GUI_SetFont(GUI_FONT_COMIC24B_ASCII);
+//	GUI_DispStringAt("Hello world!", 10, 10);
+	WM_SetCallback(WM_HBKWIN, _cb);
+	GUI_RECT Rect = {45, 230, 195, 280};
+	uint8_t loop = 16;
+	while (loop--)
+	{
+		idx = (16 - loop) % 5;
+		WM_InvalidateArea(&Rect);
+		GUI_Delay(500);
+	}
 	while (1)
 	{
-
+		osDelay(10);
 	}
 	/* USER CODE END 5 */
 }
