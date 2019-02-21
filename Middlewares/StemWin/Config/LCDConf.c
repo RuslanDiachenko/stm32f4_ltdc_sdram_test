@@ -72,8 +72,8 @@
 #define LCD_SWAP_XY  1
 #define LCD_MIRROR_Y 1
 
-#define XSIZE_PHYS 240
-#define YSIZE_PHYS 320
+#define XSIZE_PHYS 480//240
+#define YSIZE_PHYS 272//320
 
 #define NUM_BUFFERS  3 /* Number of multiple buffers to be used */
 #define NUM_VSCREENS 1 /* Number of virtual screens to be used */
@@ -624,6 +624,7 @@ static void LCD_LL_Init(void)
       //MX_SPI5_Init();
       MyLCD_PowerOn();
       /* Set LCD Timings */
+      /*
       hltdc.Init.HorizontalSync = 9;
       hltdc.Init.VerticalSync = 1;
       hltdc.Init.AccumulatedHBP = 29;
@@ -632,6 +633,16 @@ static void LCD_LL_Init(void)
       hltdc.Init.AccumulatedActiveW = 269;
       hltdc.Init.TotalHeigh = 327;
       hltdc.Init.TotalWidth = 279;
+	  */
+
+      hltdc.Init.HorizontalSync = 9;
+      hltdc.Init.VerticalSync = 1;
+      hltdc.Init.AccumulatedHBP = 29;
+      hltdc.Init.AccumulatedVBP = 3;
+      hltdc.Init.AccumulatedActiveH = 275;
+      hltdc.Init.AccumulatedActiveW = 449;
+      hltdc.Init.TotalHeigh = 279;
+      hltdc.Init.TotalWidth = 459;
 
       /* background value */
       hltdc.Init.Backcolor.Blue = 0;

@@ -285,34 +285,34 @@ static void _cb(WM_MESSAGE *pMsg)
 void StartDefaultTask(void const * argument)
 {
 	GUI_Init();
-	WM_MULTIBUF_Enable(1);
-	setGuiProfile();
+//	WM_MULTIBUF_Enable(1);
+//	setGuiProfile();
 	GUI_SetBkColor(GUI_BLUE);
 	GUI_Clear();
-//	GUI_SetColor(GUI_YELLOW);
-//	GUI_AA_FillCircle(100, 150, 40);
-//	GUI_SetColor(GUI_ORANGE);
-//	GUI_FillCircle(150, 100, 40);
-//	GUI_SetColor(GUI_MAGENTA);
-//	GUI_FillRect(2, 2, 50, 50);
-//	GUI_DrawBitmap(&bmstickman_50x50, 50, 200);
-//	GUI_DrawBitmap(&bmfilebrowser, 100, 200);
-//	GUI_SetColor(GUI_DARKMAGENTA);
-//	GUI_SetFont(GUI_FONT_COMIC24B_ASCII);
-//	GUI_DispStringAt("Hello world!", 10, 10);
-	WM_SetCallback(WM_HBKWIN, _cb);
-	GUI_RECT Rect = {45, 230, 195, 280};
-	uint8_t loop = 16;
-	while (loop--)
-	{
-		idx = (16 - loop) % 5;
-		WM_InvalidateArea(&Rect);
-		GUI_Delay(500);
-	}
-	while (1)
-	{
-		osDelay(10);
-	}
+	GUI_SetColor(GUI_YELLOW);
+	GUI_AA_FillCircle(100, 150, 40);
+	GUI_SetColor(GUI_ORANGE);
+	GUI_FillCircle(150, 100, 40);
+	GUI_SetColor(GUI_MAGENTA);
+	GUI_FillRect(2, 2, 50, 50);
+	GUI_DrawBitmap(&bmstickman_50x50, 50, 200);
+	GUI_DrawBitmap(&bmfilebrowser, 100, 200);
+	GUI_SetColor(GUI_DARKMAGENTA);
+	GUI_SetFont(GUI_FONT_COMIC24B_ASCII);
+	GUI_DispStringAt("Hello world!", 10, 10);
+//	WM_SetCallback(WM_HBKWIN, _cb);
+//	GUI_RECT Rect = {45, 230, 195, 280};
+//	uint8_t loop = 16;
+//	while (loop--)
+//	{
+//		idx = (16 - loop) % 5;
+//		WM_InvalidateArea(&Rect);
+//		GUI_Delay(500);
+//	}
+//	while (1)
+//	{
+//		osDelay(10);
+//	}
 	/* USER CODE END 5 */
 }
 
