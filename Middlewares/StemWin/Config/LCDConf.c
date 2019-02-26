@@ -72,8 +72,8 @@
 #define LCD_SWAP_XY  1
 #define LCD_MIRROR_Y 1
 
-#define XSIZE_PHYS 480//240
-#define YSIZE_PHYS 272//320
+#define XSIZE_PHYS 480//480//240
+#define YSIZE_PHYS 272//272//320
 
 #define NUM_BUFFERS  3 /* Number of multiple buffers to be used */
 #define NUM_VSCREENS 1 /* Number of virtual screens to be used */
@@ -83,8 +83,8 @@
 #undef  GUI_NUM_LAYERS
 #define GUI_NUM_LAYERS 1
 
-#define COLOR_CONVERSION_0 GUICC_M8888I
-#define DISPLAY_DRIVER_0   GUIDRV_LIN_32
+#define COLOR_CONVERSION_0  GUICC_M8888I
+#define DISPLAY_DRIVER_0    /* GUIDRV_LIN_OSY_32 */    GUIDRV_LIN_32
 
 
 #if (GUI_NUM_LAYERS > 1)
@@ -640,9 +640,9 @@ static void LCD_LL_Init(void)
       hltdc.Init.AccumulatedHBP = 29;
       hltdc.Init.AccumulatedVBP = 3;
       hltdc.Init.AccumulatedActiveH = 275;
-      hltdc.Init.AccumulatedActiveW = 449;
+      hltdc.Init.AccumulatedActiveW = 509;
       hltdc.Init.TotalHeigh = 279;
-      hltdc.Init.TotalWidth = 459;
+      hltdc.Init.TotalWidth = 519;
 
       /* background value */
       hltdc.Init.Backcolor.Blue = 0;

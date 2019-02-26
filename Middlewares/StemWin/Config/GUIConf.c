@@ -9,7 +9,7 @@
 
 // Define the available number of bytes available for the GUI
 
-#define GUI_NUMBYTES  (140) *  1024
+#define GUI_NUMBYTES  (140 * 1024)
 
 //
 // 32 bit aligned memory area

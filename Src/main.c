@@ -139,7 +139,6 @@ int main(void)
   /* USER CODE BEGIN 2 */
   SDRAM_init(&hsdram1);
   MyLCD_PowerOn();
-  //HAL_LTDC_SetAddress(&hltdc,(uint32_t) LCD_FRAME_BUFFER + BUFFER_OFFSET,0);
   TP_Config();
 
   /* Enable CRC to Unlock GUI */
@@ -285,8 +284,8 @@ static void _cb(WM_MESSAGE *pMsg)
 void StartDefaultTask(void const * argument)
 {
 	GUI_Init();
-//	WM_MULTIBUF_Enable(1);
-//	setGuiProfile();
+	WM_MULTIBUF_Enable(1);
+	setGuiProfile();
 	GUI_SetBkColor(GUI_BLUE);
 	GUI_Clear();
 	GUI_SetColor(GUI_YELLOW);
@@ -297,22 +296,26 @@ void StartDefaultTask(void const * argument)
 	GUI_FillRect(2, 2, 50, 50);
 	GUI_DrawBitmap(&bmstickman_50x50, 50, 200);
 	GUI_DrawBitmap(&bmfilebrowser, 100, 200);
+
 	GUI_SetColor(GUI_DARKMAGENTA);
 	GUI_SetFont(GUI_FONT_COMIC24B_ASCII);
-	GUI_DispStringAt("Hello world!", 10, 10);
-//	WM_SetCallback(WM_HBKWIN, _cb);
-//	GUI_RECT Rect = {45, 230, 195, 280};
-//	uint8_t loop = 16;
-//	while (loop--)
-//	{
-//		idx = (16 - loop) % 5;
-//		WM_InvalidateArea(&Rect);
-//		GUI_Delay(500);
-//	}
-//	while (1)
-//	{
-//		osDelay(10);
-//	}
+	GUI_RECT rect = {0, 0, 480, 272};
+	GUI_DispStringInRectWrapEx("Hello world", &rect, GUI_TA_TOP, GUI_WRAPMODE_NONE, GUI_ROTATE_CCW);
+	//GUI_DispStringAt("Hello world!", 10, 10);
+
+	WM_SetCallback(WM_HBKWIN, _cb);
+	GUI_RECT Rect = {0, 0, 480, 272};
+	uint8_t loop = 16;
+	while (loop--)
+	{
+		idx = (16 - loop) % 5;
+		WM_InvalidateArea(&Rect);
+		GUI_Delay(500);
+	}
+	while (1)
+	{
+		osDelay(10);
+	}
 	/* USER CODE END 5 */
 }
 
