@@ -208,54 +208,6 @@ extern GUI_CONST_STORAGE GUI_BITMAP bmSTLogo;
 
 static uint32_t idx = 0;
 
-static void setGuiProfile(void)
-{
-    FRAMEWIN_SetDefaultSkinClassic();
-	PROGBAR_SetDefaultSkinClassic();
-	RADIO_SetDefaultSkinClassic();
-	SCROLLBAR_SetDefaultSkinClassic();
-	SLIDER_SetDefaultSkinClassic();
-	SPINBOX_SetDefaultSkinClassic();
-	BUTTON_SetDefaultSkinClassic();
-	DROPDOWN_SetDefaultSkinClassic();
-	MULTIPAGE_SetDefaultSkinClassic();
-	CHECKBOX_SetDefaultSkinClassic();
-    FRAMEWIN_SetDefaultTextColor(0, GUI_WHITE);
-    FRAMEWIN_SetDefaultTextColor(1, GUI_WHITE);
-
-    FRAMEWIN_SetDefaultFont(GUI_FONT_10_ASCII);
-
-	FRAMEWIN_SetDefaultClientColor(GUI_LIGHTGRAY | 0x20F50000);
-	FRAMEWIN_SetDefaultTitleHeight(15);
-
-	TREEVIEW_SetDefaultBkColor(TREEVIEW_CI_SEL, GUI_LIGHTGRAY | 0x20E50000);
-	TREEVIEW_SetDefaultBkColor(TREEVIEW_CI_UNSEL, GUI_LIGHTGRAY | 0x20E50000);
-	TREEVIEW_SetDefaultTextColor(TREEVIEW_CI_SEL, GUI_BLUE);
-
-	WINDOW_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000);
-	MULTIPAGE_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000, 0);
-	MULTIPAGE_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000, 1);
-	MULTIPAGE_SetDefaultFont(GUI_FONT_10_ASCII);
-	CHECKBOX_SetDefaultBkColor(GUI_LIGHTGRAY | 0x20E50000);
-
-	CALENDAR_SetDefaultSize(CALENDAR_SI_HEADER, 20 );
-	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_X, 25 );
-	CALENDAR_SetDefaultSize(CALENDAR_SI_CELL_Y, 21 );
-
-	MULTIPAGE_SetDefaultBkColor (GUI_WHITE, 1);
-
-	SPINBOX_SetDefaultButtonSize(15);
-	LISTVIEW_SetDefaultGridColor(GUI_WHITE);
-	SCROLLBAR_SetDefaultWidth(16);
-
-	HEADER_SetDefaultBkColor(0x00C5903E);
-	HEADER_SetDefaultTextColor(GUI_WHITE);
-	SCROLLBAR_SetDefaultColor(GUI_LIGHTGRAY | 0x20F50000, SCROLLBAR_CI_THUMB);
-	SCROLLBAR_SetDefaultColor(GUI_LIGHTGRAY | 0x20F50000, SCROLLBAR_CI_SHAFT);
-	SCROLLBAR_SetDefaultColor(GUI_LIGHTGRAY | 0x20F50000, SCROLLBAR_CI_ARROW);
-	CHOOSEFILE_SetDelim('/');
-}
-
 static void _cb(WM_MESSAGE *pMsg)
 {
 	uint16_t   xPos, Step = 20, i;
@@ -285,8 +237,43 @@ void StartDefaultTask(void const * argument)
 {
 	GUI_Init();
 	WM_MULTIBUF_Enable(1);
-	setGuiProfile();
 	GUI_SetBkColor(GUI_BLUE);
+	GUI_Clear();
+	GUI_MEMDEV_Handle hMemSource;
+	GUI_MEMDEV_Handle hMemDest;
+	GUI_RECT RectSource = {0, 0, 69, 39};
+	GUI_RECT RectDest = {0, 0, 79, 79};
+	hMemSource = GUI_MEMDEV_CreateFixed(RectSource.x0, RectSource.y0,
+	 RectSource.x1 - RectSource.x0 + 1,
+	 RectSource.y1 - RectSource.y0 + 1,
+	 GUI_MEMDEV_NOTRANS,
+	 GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);
+	hMemDest = GUI_MEMDEV_CreateFixed(RectDest.x0, RectDest.y0,
+	 RectDest.x1 - RectDest.x0 + 1,
+	 RectDest.y1 - RectDest.y0 + 1,
+	 GUI_MEMDEV_NOTRANS,
+	 GUI_MEMDEV_APILIST_32, GUI_COLOR_CONV_888);
+	GUI_MEMDEV_Select(hMemSource);
+	GUI_DrawGradientV(RectSource.x0, RectSource.y0,
+	 RectSource.x1, RectSource.y1,
+	 GUI_WHITE, GUI_DARKGREEN);
+	GUI_SetColor(GUI_BLUE);
+	GUI_SetFont(&GUI_Font20B_ASCII);
+	GUI_SetTextMode(GUI_TM_TRANS);
+	GUI_DispStringInRect("emWin", &RectSource, GUI_TA_HCENTER | GUI_TA_VCENTER);
+	GUI_DrawRect(0, 0, RectSource.x1, RectSource.y1);
+	GUI_MEMDEV_Select(hMemDest);
+	GUI_Clear();
+	GUI_MEMDEV_Select(0);
+	GUI_MEMDEV_RotateHQ(hMemSource, hMemDest,
+	 (RectDest.x1 - RectSource.x1) / 2,
+	 (RectDest.y1 - RectSource.y1) / 2,
+	 90 * 1000,
+	 0.9 * 1000);
+	GUI_MEMDEV_CopyToLCDAt(hMemSource, 10, (RectDest.y1 - RectSource.y1) / 2);
+	GUI_MEMDEV_CopyToLCDAt(hMemDest, 100, 0);
+
+	HAL_Delay(1000);
 	GUI_Clear();
 	GUI_SetColor(GUI_YELLOW);
 	GUI_AA_FillCircle(100, 150, 40);
@@ -299,19 +286,17 @@ void StartDefaultTask(void const * argument)
 
 	GUI_SetColor(GUI_DARKMAGENTA);
 	GUI_SetFont(GUI_FONT_COMIC24B_ASCII);
-	GUI_RECT rect = {0, 0, 480, 272};
-	GUI_DispStringInRectWrapEx("Hello world", &rect, GUI_TA_TOP, GUI_WRAPMODE_NONE, GUI_ROTATE_CCW);
-	//GUI_DispStringAt("Hello world!", 10, 10);
+	GUI_DispStringAt("Hello world!", 10, 10);
 
-	WM_SetCallback(WM_HBKWIN, _cb);
-	GUI_RECT Rect = {0, 0, 480, 272};
-	uint8_t loop = 16;
-	while (loop--)
-	{
-		idx = (16 - loop) % 5;
-		WM_InvalidateArea(&Rect);
-		GUI_Delay(500);
-	}
+//	WM_SetCallback(WM_HBKWIN, _cb);
+//	GUI_RECT Rect = {0, 0, 480, 272};
+//	uint8_t loop = 16;
+//	while (loop--)
+//	{
+//		idx = (16 - loop) % 5;
+//		WM_InvalidateArea(&Rect);
+//		GUI_Delay(500);
+//	}
 	while (1)
 	{
 		osDelay(10);
